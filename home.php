@@ -8,14 +8,6 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 get_header();
 
-?>
-<section id="the-home" class="section higher">
-    <div class="container">
-        <div id="the-home-wr">
-        </div>
-    </div>
-</section>
-<?php
-
+get_template_part('queries/new-post-query');
 
 get_footer();

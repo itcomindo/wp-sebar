@@ -11,7 +11,7 @@ use Carbon_Fields\Field;
 
 
 //topbar left field
-function mm_topbar_left_field()
+function mm_topbar_left_field_inc()
 {
     return [
         Field::make('checkbox', 'enable_topbar', 'Enable Topbar')
@@ -50,7 +50,7 @@ function mm_get_topbar_left_inc()
 
 
 //topbar right field
-function mm_topbar_right_field()
+function mm_topbar_right_field_inc()
 {
     return [
         Field::make('select', 'topbar_right_content', 'Topbar Right Content')

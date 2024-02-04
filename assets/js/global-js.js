@@ -57,6 +57,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+        //mentahan ads before header start
+
+        //if screen width > 541px
+        if (window.innerWidth < 601) {
+            var closeAdsBeforeHeader = '<span class="close-ads">close ads</span>';
+            setTimeout(function () {
+                jQuery('#ads-before-header').append(closeAdsBeforeHeader);
+
+                jQuery('.close-ads').on('click', function () {
+                    jQuery('#ads-before-header').slideUp();
+                });
+            }, 1000);
+
+        }
+
+
+        // mentahan ads before header end
+
+
+
 
 
 

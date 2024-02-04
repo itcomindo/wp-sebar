@@ -8,12 +8,12 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 use Carbon_Fields\Field;
 //topbar left field
-function mm_header_left_field()
+function mm_header_left_field_inc()
 {
     return [
 
         //fields start below this line
-        Field::make('select', 'header_left_content', 'Header Left Content')
+        Field::make('select', 'header_left_content', 'Header Logo Option')
             ->add_options([
                 'text' => 'Text',
                 'image' => 'Image',

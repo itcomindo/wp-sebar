@@ -6,7 +6,7 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 
-
+echo mm_show_ads_before_header_mobile();
 
 ?>
 
@@ -19,10 +19,11 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 
             <div id="header-right" class="h100">
-                <div class="ads ads-horizontal">
-                    <span>ADS</span>
-                    <span>Ads Horizontal</span>
-                </div>
+
+                <?php
+                mm_show_ads_header();
+                ?>
+
             </div>
         </div>
     </div>

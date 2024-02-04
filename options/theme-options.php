@@ -28,8 +28,8 @@ function mm_theme_options()
     Container::make('theme_options', 'Topbar')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_topbar_left_field(),
-            ...mm_topbar_right_field()
+            ...mm_topbar_left_field_inc(),
+            ...mm_topbar_right_field_inc()
         ]);
 
     //Header
@@ -37,7 +37,14 @@ function mm_theme_options()
         ->set_page_parent($container)
         ->add_fields([
             // ...mm_get_topbar_left_field(),
-            ...mm_header_left_field(),
+            ...mm_header_left_field_inc(),
             // ...mm_get_topbar_right_field()
+        ]);
+
+    //Ads
+    Container::make('theme_options', 'Ads')
+        ->set_page_parent($container)
+        ->add_fields([
+            ...mm_ads_header_field_inc()
         ]);
 }
