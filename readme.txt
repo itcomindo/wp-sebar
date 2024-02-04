@@ -1,0 +1,1 @@
+WP Sebar adalah tema WordPress dengan genre berita.
