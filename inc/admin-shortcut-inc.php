@@ -55,6 +55,9 @@ if (current_user_can('administrator') && is_user_logged_in()) {
     //add new plugin
     echo '<li><a href="' . esc_url(admin_url('plugin-install.php')) . '">Add New Plugin</a></li>';
 
+    //logout
+    echo '<li><a href="' . esc_url(wp_logout_url()) . '">Logout</a></li>';
+
     echo '</ul>';
     echo '</div>';
 }
