@@ -124,6 +124,15 @@ div {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
 ul,
 ol,
 li,
@@ -551,6 +560,8 @@ ul.header-menu li a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem 1rem;
+  align-items: stretch;
+  justify-content: stretch;
 }
 
 .np {
@@ -560,6 +571,11 @@ ul.header-menu li a:hover {
   border: 1px solid var(--transparent-dark-2);
   border-radius: 10px;
   box-shadow: 0 0 20px var(--transparent-dark-1);
+  background: linear-gradient(
+    to bottom,
+    var(--transparent-light-8),
+    var(--transparent-dark-1)
+  );
 }
 
 .np:hover .np-top a.np-fim-wr img {
@@ -592,7 +608,7 @@ a.np-cat-link {
   top: 8px;
   left: 8px;
   z-index: 2;
-  background-color: var(--transparent-dark-3);
+  background-color: var(--transparent-dark-7);
   color: var(--color-light-1);
   line-height: 1.1;
   padding: 4px 8px;
@@ -610,7 +626,7 @@ a.np-cat-link {
 }
 
 .np-bot {
-  padding: 1.75rem 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
 }

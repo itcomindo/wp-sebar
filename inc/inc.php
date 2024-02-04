@@ -11,3 +11,5 @@ require_once get_template_directory() . '/inc/topbar-inc.php';
 require_once get_template_directory() . '/inc/timezone-inc.php';
 require_once get_template_directory() . '/inc/header-inc.php';
 require_once get_template_directory() . '/inc/ads/ads-inc.php';
+require_once get_template_directory() . '/inc/featured-image-inc.php';
+require_once get_template_directory() . '/inc/post-meta-inc.php';

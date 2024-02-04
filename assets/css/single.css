@@ -1,0 +1,33 @@
+#the-content h1,
+#the-content h2,
+#the-content h3,
+#the-content h4,
+#the-content h5,
+#the-content h6 {
+  margin: 1rem 0;
+  line-height: 1.2;
+  color: var(--color-dark-1);
+}
+
+#the-content h2 {
+  font-size: var(--font-clamp-3);
+}
+
+#the-content h3 {
+  font-size: var(--font-clamp-2);
+}
+
+#the-content h4 {
+  font-size: var(--font-clamp-1);
+}
+
+#the-content h5,
+#the-content h6 {
+  font-size: 1.4rem;
+}
+
+#the-content ul li,
+#the-content ol li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
