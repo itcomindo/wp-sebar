@@ -41,6 +41,13 @@ function mm_theme_options()
             // ...mm_get_topbar_right_field()
         ]);
 
+    //Home
+    Container::make('theme_options', 'Home')
+        ->set_page_parent($container)
+        ->add_fields([
+            ...mm_home_field_inc()
+        ]);
+
     //Ads
     Container::make('theme_options', 'Ads')
         ->set_page_parent($container)

@@ -8,7 +8,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 
 
-function mm_get_post_meta($post_id)
+function mm_get_post_meta_inc($post_id)
 {
     $pm = array();
     $pm['author'] = get_the_author_meta('display_name', $post_id);

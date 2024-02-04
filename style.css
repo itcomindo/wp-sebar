@@ -272,6 +272,10 @@ h3.query-head {
   font-weight: 500;
 }
 
+.post-view {
+  font-size: 80%;
+}
+
 /**
 =========================
 * Custom CSS END
@@ -367,6 +371,100 @@ h3.query-head {
   height: auto;
   border-radius: 10px;
 }
+
+/**
+=========================
+* Most View Post Style.css
+* @todo Most View Post Style.css
+*=========================
+*/
+#mp {
+  background-color: black;
+}
+#mp:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-light-2);
+}
+#mp-wr {
+  padding-top: 2rem;
+}
+#mp-wr:before {
+  content: "Most Viewed Posts";
+  position: absolute;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-weight: 900;
+  /* background-color: var(--color-accent-3-dark); */
+  background: linear-gradient(
+    to right,
+    var(--color-dark-1),
+    var(--color-dark-3)
+  );
+  line-height: 1;
+  padding: 4px 8px;
+  color: var(--color-light-1);
+}
+#mp-wr:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark-1);
+  top: 21px;
+  left: 0;
+}
+
+ul.mp-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-items: stretch;
+  height: 17rem;
+}
+ul.mp-list li.mp-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 5 - 1rem);
+  background-color: var(--color-light-1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 4px;
+  height: 100%;
+}
+
+.mp-item-top {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.mp-item-top a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mp-item-top a img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: 0.2s linear all;
+}
+.mp-item-bot {
+  padding: 1rem;
+  overflow: auto;
+}
+
 /**
 =========================
 * Topbar
@@ -576,6 +674,8 @@ ul.header-menu li a:hover {
     var(--transparent-light-8),
     var(--transparent-dark-1)
   );
+  justify-content: stretch;
+  align-items: stretch;
 }
 
 .np:hover .np-top a.np-fim-wr img {
@@ -584,7 +684,7 @@ ul.header-menu li a:hover {
 }
 .np-top {
   display: flex;
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
   flex-direction: column;
 }
 
@@ -599,9 +699,10 @@ a.np-fim-wr {
 
 a.np-fim-wr img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  /* height: 100%; */
+  object-fit: contain;
   transition: 0.2s linear all;
-  object-fit: cover;
 }
 a.np-cat-link {
   position: absolute;
@@ -609,7 +710,8 @@ a.np-cat-link {
   left: 8px;
   z-index: 2;
   background-color: var(--transparent-dark-7);
-  color: var(--color-light-1);
+  /* color: var(--color-light-1); */
+  color: var(--color-light-4);
   line-height: 1.1;
   padding: 4px 8px;
 }
@@ -619,9 +721,20 @@ a.np-cat-link {
   right: 8px;
   bottom: 8px;
   z-index: 2;
-  background-color: var(--transparent-dark-3);
-  color: var(--color-light-1);
+  background-color: var(--transparent-dark-7);
+  /* color: var(--color-light-1); */
+  color: var(--color-light-4);
   line-height: 1.1;
+  padding: 4px 8px;
+}
+
+.np-top .post-view {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  line-height: 1.1;
+  background-color: var(--transparent-dark-7);
+  color: var(--color-light-4);
   padding: 4px 8px;
 }
 
@@ -629,6 +742,7 @@ a.np-cat-link {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  min-height: calc(100% / 4);
 }
 
 .np:first-child {
@@ -686,6 +800,9 @@ a.np-cat-link {
 *=========================
 */
 @media screen and (max-width: 804px) {
+  ul.mp-list li.mp-item {
+    width: calc(100% / 4 - 1rem);
+  }
   #np-wr.s1 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -703,6 +820,11 @@ a.np-cat-link {
 @media screen and (max-width: 768px) {
   .trigger-search-box {
     display: flex;
+  }
+
+  ul.mp-list li.mp-item {
+    width: calc(100% / 3 - 1rem);
+    min-height: 17rem;
   }
 
   .search-form-wr {
@@ -767,6 +889,9 @@ a.np-cat-link {
 @media screen and (max-width: 600px) {
   #ads-before-header {
     display: block;
+  }
+  ul.mp-list li.mp-item {
+    width: calc(100% / 2 - 1rem);
   }
 }
 
@@ -881,6 +1006,9 @@ a.np-cat-link {
 *=========================
 */
 @media screen and (max-width: 428px) {
+  ul.mp-list li.mp-item {
+    width: calc(100% - 1rem);
+  }
   h3.query-head {
     font-size: 15px;
     margin: 4px auto;

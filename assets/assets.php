@@ -61,7 +61,19 @@ function mm_load_assets()
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
 
     //load global-js.js from assets/js
-    wp_enqueue_script('mm-global-js', get_template_directory_uri() . '/assets/js/global-js.js', array('jquery'), $theme_version, true);
+    wp_enqueue_script('mm-global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), $theme_version, true);
+
+    if (is_home()) {
+        //load flickity css
+        wp_enqueue_style('flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', array('mm-global-style'), '2.2.2', 'all');
+
+        //load flickity js
+        wp_enqueue_script('flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array('jquery'), '2.2.2', true);
+
+
+        //load home js
+        wp_enqueue_script('mm-home-js', get_template_directory_uri() . '/assets/js/home.js', array('jquery'), $theme_version, true);
+    }
 
 
 
