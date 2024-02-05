@@ -14,12 +14,21 @@ function mm_theme_options()
 {
     $container = Container::make('theme_options', 'Theme Options')
         ->add_fields([
+
+
+            Field::make('html', 'crb_information_text')
+                ->set_html('<a class="button button-primary button-large" href="//facebook.com/joomblaster" target="_blank">Cek Update</a>'),
+
+
+
             // select style
             Field::make('select', 'style_is', 'Choose Style')
                 ->add_options([
                     'style-1' => 'Style 1',
                     'style-2' => 'Style 2',
                 ]),
+
+
         ]);
 
 

@@ -7,13 +7,27 @@
 defined('ABSPATH') or die('No script kiddies please!');
 
 
+if (is_category()) {
+    //get current category Name
+    $page_title = single_cat_title('', false);
+} elseif (is_tag()) {
+    //get current tag Name
+    $page_title = single_tag_title('', false);
+} else {
+    $page_title = 'Berita Terbaru';
+}
+
+
+
 ?>
 
 
-<div id="np-pr" class="section high">
+<div id="np-pr" class="section small">
     <div class="container">
         <div id="np-head-wr">
-            <h2 class="section-head section-head-small with-square-dot">Berita Terbaru</h2>
+            <h2 class="section-head section-head-small with-square-dot">
+                <?php echo esc_html($page_title); ?>
+            </h2>
         </div>
         <div id="np-wr" class="s1">
             <?php

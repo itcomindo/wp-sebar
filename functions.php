@@ -73,3 +73,12 @@ require_once get_template_directory() . '/assets/assets.php';
 require_once get_template_directory() . '/inc/inc.php';
 require_once get_template_directory() . '/components/components.php';
 require_once get_template_directory() . '/plugins/plugins.php';
+
+
+
+// experimental 1 start
+
+
+
+
+//experimental 1 end
