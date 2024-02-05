@@ -267,11 +267,6 @@ ul.list-no-style.horizontal-list li {
   overflow: visible !important;
 }
 
-h3.query-head {
-  font-size: 17px;
-  font-weight: 500;
-}
-
 .post-view {
   font-size: 80%;
 }
@@ -286,15 +281,17 @@ h3.query-head {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-dark-3);
+  background-color: var(--color-dark-1);
   opacity: 0.4;
-  transition: 0.2s linear background-color;
+  transition: all 0.2s linear;
 }
+
 .hover-overlay:hover a.fim-wr:before {
-  background-color: var(--color-dark-3);
-  opacity: 0.2;
-  transition: 0.2s linear background-color;
+  background-color: var(--color-dark-1);
+  opacity: 0.6;
+  transition: background-color 0.2s all;
 }
+
 .hover-scale a.fim-wr img {
   transition: 0.2s linear transform;
 }
@@ -303,6 +300,7 @@ h3.query-head {
   transform: scale(1.1);
   transition: 0.2s linear transform;
 }
+
 a.link-with-bg-color-accent-1 {
   background-color: var(--color-accent-1);
   color: var(--color-light-1);
@@ -724,106 +722,6 @@ ul.header-menu li a:hover {
 
 /**
 =========================
-* New Post Query style.css
-* @todo New Post Query style.css
-*=========================
-*/
-
-#np-wr.s1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: stretch;
-  gap: 1.75rem 1rem;
-  overflow: hidden;
-}
-#np-wr.s1 .np {
-  width: calc(100% / 4 - 1rem);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: whitesmoke;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--transparent-dark-1);
-  border-radius: 10px;
-}
-
-#np-wr.s1 .np-top {
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-
-a.np-cat-link {
-  position: absolute;
-  top: 8px;
-  left: 1rem;
-}
-
-.post-view {
-  position: absolute;
-  bottom: 8px;
-  left: 1rem;
-}
-
-.np-post-date {
-  position: absolute;
-  right: 1rem;
-  bottom: 8px;
-  background-color: var(--transparent-dark-3);
-  color: var(--color-light-1);
-  padding: 4px 8px;
-}
-#np-wr.s1 .np-top a.fim-wr {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 0;
-}
-#np-wr.s1 .np-top a.fim-wr img.fim {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-#np-wr.s1 .np-bot {
-  padding: 1.75rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-#np-wr.s1 .np:first-child {
-  width: calc(100% / 2 - 1rem);
-}
-#np-wr.s1 .np:first-child .np-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#np-wr.s1 .np:first-child .np-bot {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  background-color: var(--transparent-dark-8);
-}
-#np-wr.s1 .np:first-child .np-bot h3.query-head a {
-  color: var(--color-light-1);
-}
-
-#np-wr.s1 .np:first-child .post-view,
-#np-wr.s1 .np:first-child .post-date {
-  color: var(--color-light-1);
-  z-index: 5;
-}
-
-/**
-=========================
 * media query style.css
 * @todo media query style.css
 *=========================
@@ -863,18 +761,6 @@ a.np-cat-link {
   }
   ul.mp-list li.mp-item {
     width: calc(100% / 4 - 1rem);
-  }
-  #np-wr.s1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #np-wr.s1 .np {
-    width: auto;
-  }
-  #np-wr.s1 .np:first-child {
-    width: auto;
-    aspect-ratio: 16/9;
-    grid-column: 1 / span 3;
   }
 }
 
@@ -1027,47 +913,6 @@ a.np-cat-link {
 
 /**
 =========================
-* 494px
-* @todo 494px
-*=========================
-*/
-@media screen and (max-width: 494px) {
-  #np-wr.s1 {
-    grid-template-columns: 1fr;
-  }
-  #np-wr.s1 .np:first-child {
-    grid-column: auto;
-  }
-  .np:first-child .np-bot {
-    background-color: var(--transparent-dark-8);
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  .np-bot {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: var(--transparent-dark-8);
-  }
-  .np-bot h3.query-head a {
-    color: var(--color-light-1);
-  }
-  h3.query-head {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  .np-post-date {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    bottom: unset;
-  }
-}
-
-/**
-=========================
 * 428px
 * @todo 428px
 *=========================
@@ -1084,11 +929,6 @@ a.np-cat-link {
   #np-wr.s1 .np:first-child .np-bot {
     padding: 1rem;
   }
-  .post-view {
-    position: absolute;
-    bottom: unset;
-    top: -1.5rem;
-  }
 }
 
 /**
@@ -1100,8 +940,5 @@ a.np-cat-link {
 @media screen and (max-width: 393px) {
   .trigger-search-box {
     right: 16px;
-  }
-  #np-wr.s1 .np-bot {
-    padding: 0.5rem;
   }
 }

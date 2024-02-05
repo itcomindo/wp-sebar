@@ -10,7 +10,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 
-<div id="np-pr" class="section higher">
+<div id="np-pr" class="section high">
     <div class="container">
         <div id="np-head-wr">
             <h2 class="section-head section-head-small with-square-dot">Berita Terbaru</h2>
@@ -78,7 +78,7 @@ function mm_get_new_posts_query()
             $post_id = get_the_ID();
             $post_views = mm_get_post_views($post_id);
 ?>
-            <div class="np hover-scale hover-overlay">
+            <div class="np hover-overlay">
                 <div class="np-top">
 
                     <a class="fim-wr np-fim-wr" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
@@ -101,7 +101,6 @@ function mm_get_new_posts_query()
                     <h3 class="query-head">
                         <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" rel="bookmark">
                             <?php
-                            //echo esc_html(get_the_title());
                             echo mm_get_custom_post_title(80);
                             ?>
                         </a>
