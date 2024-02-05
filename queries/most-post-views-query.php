@@ -11,7 +11,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 
-<div id="mp" class="section medium">
+<div id="mp" class="section medium" <?php echo most_view_post_auto_slide(); ?>>
     <div class="container">
         <div id="mp-wr">
             <?php

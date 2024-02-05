@@ -10,8 +10,11 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 
-<div id="np-pr" class="section small">
+<div id="np-pr" class="section higher">
     <div class="container">
+        <div id="np-head-wr">
+            <h2 class="section-head section-head-small with-square-dot">Berita Terbaru</h2>
+        </div>
         <div id="np-wr" class="s1">
             <?php
             echo mm_get_new_posts_query();
@@ -92,14 +95,18 @@ function mm_get_new_posts_query()
 
 
 
-                    <?php echo mm_show_post_views(); ?>
+
                 </div>
                 <div class="np-bot">
                     <h3 class="query-head">
                         <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" rel="bookmark">
-                            <?php echo esc_html(get_the_title()); ?>
+                            <?php
+                            //echo esc_html(get_the_title());
+                            echo mm_get_custom_post_title(80);
+                            ?>
                         </a>
                     </h3>
+                    <?php echo mm_show_post_views(); ?>
                 </div>
             </div>
         <?php
