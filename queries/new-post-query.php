@@ -75,16 +75,22 @@ function mm_get_new_posts_query()
             $post_id = get_the_ID();
             $post_views = mm_get_post_views($post_id);
 ?>
-            <div class="np">
+            <div class="np hover-scale hover-overlay">
                 <div class="np-top">
-                    <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" class="the-link np-cat-link text-smallest" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category"><?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?></a>
 
-                    <span class="post-date np-post-date text-smallest"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['post-date'])); ?></span>
-                    <a class="np-fim-wr" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
+                    <a class="fim-wr np-fim-wr" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
                         <?php
                         echo mm_get_featured_image($post_id);
                         ?>
                     </a>
+
+
+                    <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" class="the-link np-cat-link link-with-bg-color-accent-1 cat-link text-smallest" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category"><?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?></a>
+
+                    <span class="post-date np-post-date text-smallest"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['post-date'])); ?></span>
+
+
+
 
                     <?php echo mm_show_post_views(); ?>
                 </div>

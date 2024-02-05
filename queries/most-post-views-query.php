@@ -54,9 +54,12 @@ function mm_get_most_post_view_posts()
             $mp->the_post();
             $post_id = get_the_ID();
 ?>
-            <li class="mp-item">
+            <li class="mp-item hover-overlay hover-scale">
                 <div class="mp-item-top">
-                    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
+
+                    <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" class="the-link mp-cat-link link-with-bg-color-accent-1 text-smallest" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category"><?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?></a>
+
+                    <a class="fim-wr" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
                         <?php
                         echo mm_get_featured_image($post_id);
                         ?>
