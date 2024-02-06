@@ -19,8 +19,11 @@ function mm_load_assets()
     //load normalize
     wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css', array(), '8.0.1', 'all');
 
-    //load fontawesome
+    //load fontawesome 5.15.3
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', array(), '5.15.3', 'all');
+
+    //load fontawesome 6.5.1
+    wp_enqueue_style('fontawesome-651', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1', 'all');
 
     //style.css from the theme
     wp_enqueue_style('mm-global-style', get_template_directory_uri() . '/style.css', array('normalize'), $theme_version, 'all');
