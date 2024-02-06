@@ -407,6 +407,10 @@ a.pbcc-load-more {
   #np-wr.s1 .np {
     aspect-ratio: 16/9;
   }
+  #pbc.s1 #pbc-left-bot {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /**
