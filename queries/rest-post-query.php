@@ -15,6 +15,7 @@ function mm_get_rest_post_query()
         $the_args = [
             'post_type' => 'post',
             'posts_per_page' => 10,
+            'offset' => 7,
             'cat' => $cat_id,
             'paged' => $paged,
         ];
@@ -24,6 +25,7 @@ function mm_get_rest_post_query()
         $the_args = [
             'post_type' => 'post',
             'posts_per_page' => 10,
+            'offset' => 7,
             'tag_id' => $tag_id,
             'paged' => $paged,
         ];
