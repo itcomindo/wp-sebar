@@ -342,7 +342,9 @@ a.link-with-bg-color-accent-1 {
   background-color: var(--color-dark-3);
   padding: 1rem;
 }
-
+.next-page-button {
+  display: none;
+}
 /**
 =========================
 * Custom CSS END

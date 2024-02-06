@@ -84,6 +84,15 @@ function mm_load_assets()
         //load single-js.js from assets/js
         wp_enqueue_script('mm-single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $theme_version, true);
     }
+
+
+    if (is_tag() || is_category()) {
+        //load infinite-scroll.js
+        wp_enqueue_script('infinite-scroll-js', 'https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js', array('jquery'), '2.2.2', true);
+
+
+        wp_enqueue_script('cat-tag-js', get_template_directory_uri() . '/assets/js/cat-tag.js', array(), $theme_version, true);
+    }
 }
 
 add_action('wp_enqueue_scripts', 'mm_load_assets');

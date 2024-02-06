@@ -16,7 +16,9 @@ defined('ABSPATH') or die('No script kiddies please!');
                 <div id="crp-left" class="crp-col">
                     <?php
                     mm_get_rest_post_query();
+                    mm_next_page_button();
                     ?>
+
                 </div>
                 <div id="crp-right" class="the-sidebar">
                     <aside>

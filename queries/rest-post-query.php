@@ -10,24 +10,25 @@ defined('ABSPATH') or die('No script kiddies please!');
 function mm_get_rest_post_query()
 {
     if (is_category()) {
-        //get category id
         $cat_id = get_query_var('cat');
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $the_args = [
             'post_type' => 'post',
             'posts_per_page' => 10,
-            'offset' => 7,
             'cat' => $cat_id,
+            'paged' => $paged,
         ];
     } elseif (is_tag()) {
-        //get tag id
         $tag_id = get_query_var('tag_id');
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $the_args = [
             'post_type' => 'post',
             'posts_per_page' => 10,
-            'offset' => 7,
             'tag_id' => $tag_id,
+            'paged' => $paged,
         ];
     }
+
 
     $the_query = new WP_Query($the_args);
     if ($the_query->have_posts()) {
@@ -54,4 +55,20 @@ function mm_get_rest_post_query()
         echo '</div>';
     }
     wp_reset_query();
+}
+
+
+
+function mm_next_page_button()
+{
+    global $wp_query; // Global query object
+
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max_num_pages = $wp_query->max_num_pages;
+
+    if ($paged < $max_num_pages) {
+        $next_page = intval($paged) + 1;
+        $link = get_pagenum_link($next_page);
+        echo '<a href="' . esc_url($link) . '" class="next-page-button">Next Page</a>';
+    }
 }
