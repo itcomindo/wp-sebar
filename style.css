@@ -338,6 +338,11 @@ a.link-with-bg-color-accent-1 {
   padding-right: 1.5rem !important;
 }
 
+.the-sidebar {
+  background-color: var(--color-dark-3);
+  padding: 1rem;
+}
+
 /**
 =========================
 * Custom CSS END
@@ -783,6 +788,7 @@ ul.sosmed-box-list {
   width: 75%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   font-size: 1.3rem;
 }
@@ -841,6 +847,45 @@ ul.vertical-menu li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/**
+=========================
+* RestPost Style.css
+* @todo RestPost Style.css
+*=========================
+*/
+
+.rp-wr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  gap: 1.75rem 1rem;
+}
+.rp {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  overflow: hidden;
+  gap: 8px;
+  border-bottom: 1px dashed var(--transparent-dark-2);
+}
+.dtop {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+
+.dtop a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.dtop a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /**
@@ -1054,6 +1099,12 @@ ul.vertical-menu li a {
   #np-wr.s1 .np-bot,
   #np-wr.s1 .np:first-child .np-bot {
     padding: 1rem;
+  }
+  .rp-wr {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    gap: 1.75rem 0;
   }
 }
 

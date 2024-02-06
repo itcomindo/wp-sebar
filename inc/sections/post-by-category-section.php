@@ -17,7 +17,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 
 
-        <div id="pbc-wr">
+        <div id="pbc-wr" class="has-sidebar">
 
             <div id="pbc-left">
 
@@ -46,7 +46,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 
             <!-- post by cat right side (sidebar) -->
-            <div id="pbc-right">
+            <div class="the-sidebar">
                 <aside class="aside">
                     <h3>Heading 3</h3>
                     <span>Span Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus.</span>
@@ -102,8 +102,7 @@ function mm_get_pbc()
                                     </a>
                                 </div>
                                 <div class="pbcc-bot">
-                                    <h3 class="pbcc-title"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
-                                    <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</span> -->
+                                    <h3 class="the-post-title"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
                                 </div>
                             </div>
                     <?php
@@ -144,7 +143,7 @@ function mm_get_pbc_fallback()
                         </a>
                     </div>
                     <div class="pbcc-bot">
-                        <h3 class="pbcc-title"><a href="#" title="Post Title">Judul Post</a></h3>
+                        <h3 class="the-post-title"><a href="#" title="Post Title">Judul Post</a></h3>
                         <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</span> -->
                     </div>
                 </div>
@@ -169,7 +168,7 @@ function mm_get_pbc_fallback()
                         </a>
                     </div>
                     <div class="pbcc-bot">
-                        <h3 class="pbcc-title"><a href="#" title="Post Title">Judul Post</a></h3>
+                        <h3 class="the-post-title"><a href="#" title="Post Title">Judul Post</a></h3>
                         <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</span> -->
                     </div>
                 </div>
@@ -193,7 +192,7 @@ function mm_get_pbc_fallback()
                         </a>
                     </div>
                     <div class="pbcc-bot">
-                        <h3 class="pbcc-title"><a href="#" title="Post Title">Judul Post</a></h3>
+                        <h3 class="the-post-title"><a href="#" title="Post Title">Judul Post</a></h3>
                         <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati.</span> -->
                     </div>
                 </div>
@@ -217,7 +216,7 @@ function mm_get_pbc_fallback()
                         </a>
                     </div>
                     <div class="pbcc-bot">
-                        <h3 class="pbcc-title"><a href="#" title="Post Title">Judul Post</a></h3>
+                        <h3 class="the-post-title"><a href="#" title="Post Title">Judul Post</a></h3>
                     </div>
                 </div>
             <?php
