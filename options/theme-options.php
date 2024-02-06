@@ -54,7 +54,16 @@ function mm_theme_options()
     Container::make('theme_options', 'Home')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_home_field_inc()
+            ...mm_home_field_inc(),
+
+
+
+            Field::make('separator', 'pbc_sep', 'Home Section Post By Category')
+                ->set_classes('mm-sep'),
+
+            ...mm_pbc_field_inc(),
+
+
         ]);
 
     //Ads
