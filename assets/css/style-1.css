@@ -30,7 +30,10 @@ body {
 * @todo New Post Query style 1
 *=========================
 */
-
+#np-pr {
+  background-color: var(--color-background-primary);
+  z-index: 2;
+}
 #np-wr.s1 {
   display: flex;
   flex-wrap: wrap;
