@@ -33,9 +33,6 @@ $post_view = mm_show_post_views();
                     ?>
                 </div>
             </div>
-            <div id="sing-mid">
-                iklan
-            </div>
             <div id="sing-right" class="the-sidebar">
                 <aside>
                     sidebar

@@ -97,13 +97,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
         mmShowHeaderMenuChildren();
-
-
-
-
-
-
         //menambahkan class active pada li.menu-item-has-children end
+
+
+
+
+        //mentahan close ads fixed bottom start
+
+
+        function closeAdsFixedBottom() {
+            var $afbClose = jQuery('.afb-close');
+            jQuery($afbClose).on('click', function () {
+                jQuery('#afb').addClass('hide');
+            });
+        }
+        closeAdsFixedBottom();
+
+
+        //mentahan close ads fixed bottom end
 
 
 
