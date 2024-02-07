@@ -42,6 +42,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+
+
         // mentahan social box start
         jQuery('.trigger-social-box').on('click', function () {
             jQuery('#topbar-right').toggleClass('active');
@@ -71,6 +73,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         jQuery('#ads-before-header').slideUp();
                     });
                 }, 1000);
+
+                jQuery(window).scroll(function () {
+                    var scrolledY = jQuery(window).scrollTop();
+                    jQuery('#ads-before-header').css('transform', 'translate3d(0px, ' + scrolledY * 0.5 + 'px, 0px)');
+                });
 
             }
         }

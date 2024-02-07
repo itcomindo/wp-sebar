@@ -372,7 +372,7 @@ a.pbcc-load-more {
     grid-column: 1 / span 2;
   }
   h3.the-post-title {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin: 4px 0;
     line-height: 1.3;
   }
