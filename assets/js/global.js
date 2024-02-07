@@ -38,6 +38,72 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }, 250));
 
         mm_find_image_width_height(); // Panggil sekali saat load
+        // Event listener untuk resize window dengan debouncing End
+
+
+
+
+        //mentahan add class active to li.menu-item-has-children start pada saat di hover
+
+        function mmShowHeaderMenuChildren() {
+            var iwr = '<span class="iwr"><i class="fa-solid fa-angle-down"></i></span>';
+            jQuery('li.menu-item-has-children').append(iwr);
+            jQuery('li.menu-item-has-children > a').click(function (e) {
+                e.preventDefault();
+                var _this = jQuery(this).parent();
+                var isActive = _this.hasClass('active');
+                jQuery('li.menu-item-has-children').removeClass('active');
+                jQuery('ul.sub-menu').removeClass('active');
+                if (!isActive) {
+                    _this.addClass('active');
+                    _this.find('ul.sub-menu').addClass('active');
+                }
+            });
+            jQuery(document).click(function (e) {
+                if (!jQuery(e.target).closest('li.menu-item-has-children').length) {
+                    jQuery('li.menu-item-has-children').removeClass('active');
+                    jQuery('ul.sub-menu').removeClass('active');
+                }
+            });
+
+            function toggleHeaderMenu() {
+                var screenWidth = window.innerWidth;
+                var mobMenuHeader = jQuery('#mobm');
+                if (screenWidth < 992) {
+                    if (!jQuery('.chm').length) {
+                        var chm = '<span class="chm">X</span>';
+                        jQuery('nav#header-menu-nav').prepend(chm);
+                        jQuery('nav#header-menu-nav').prepend(mobMenuHeader);
+                    }
+                    jQuery('.header-menu-trigger').on('click', function () {
+                        jQuery('nav#header-menu-nav').toggleClass('active');
+                        jQuery('body').toggleClass('no-scroll');
+                    });
+                    jQuery('.chm').on('click', function () {
+                        jQuery('nav#header-menu-nav').removeClass('active');
+                        jQuery('body').removeClass('no-scroll');
+                    });
+                } else {
+                    jQuery('.chm').remove();
+                    mobMenuHeader.remove();
+                }
+            }
+
+            toggleHeaderMenu();
+
+            jQuery(window).resize(function () {
+                toggleHeaderMenu();
+            });
+        }
+
+        mmShowHeaderMenuChildren();
+
+
+
+
+
+
+        //menambahkan class active pada li.menu-item-has-children end
 
 
 

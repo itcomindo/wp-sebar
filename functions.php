@@ -81,5 +81,4 @@ require_once get_template_directory() . '/queries/queries.php';
 
 
 
-
 //experimental 1 end
