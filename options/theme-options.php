@@ -66,6 +66,14 @@ function mm_theme_options()
 
         ]);
 
+
+    //Single
+    Container::make('theme_options', 'Single')
+        ->set_page_parent($container)
+        ->add_fields([
+            ...mm_single_fields_inc(),
+        ]);
+
     //Ads
     Container::make('theme_options', 'Ads')
         ->set_page_parent($container)

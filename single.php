@@ -25,6 +25,11 @@ $post_view = mm_show_post_views();
                 <div id="the-content" class="sing-left-col">
                     <?php
                     the_content();
+                    //if comment open
+                    if (comments_open()) {
+                        comment_form();
+                    }
+                    comments_template();
                     ?>
                 </div>
             </div>
