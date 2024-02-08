@@ -46,18 +46,11 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 
             <!-- post by cat right side (sidebar) -->
-            <div class="the-sidebar">
-                <aside class="aside">
-                    <h3>Heading 3</h3>
-                    <span>Span Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus.</span>
-                    <ul>
-                        <li><a href="#">Link</a>Lorem ipsum dolor sit, amet consectetur</li>
-                        <li>dignissimos commodi repudiandae pariatur! Excepturi, aperiam esse.</li>
-                        <li>Lorem ipsum dolor sit, amet consectetur</li>
-                        <li>dignissimos commodi repudiandae pariatur! Excepturi, aperiam esse.</li>
-                    </ul>
-                </aside>
-            </div>
+
+            <?php
+            get_sidebar();
+            ?>
+
         </div>
     </div>
 </div>
@@ -105,7 +98,7 @@ function mm_get_pbc()
                                     </a>
                                 </div>
                                 <div class="pbcc-bot">
-                                    <h3 class="the-post-title"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
+                                    <h3 class="the-post-title small"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
                                 </div>
                             </div>
                     <?php

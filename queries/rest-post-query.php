@@ -49,7 +49,7 @@ function mm_get_rest_post_query()
                 </div>
 
                 <div class="dbot">
-                    <h3 class="the-post-title"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
+                    <h3 class="the-post-title small"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
                 </div>
             </div>
 <?php

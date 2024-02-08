@@ -4,16 +4,59 @@
 
 #sing-wr {
   display: grid;
-  grid-template-columns: 1fr 332px;
+  grid-template-columns: 1fr 316px;
   gap: 8px;
 }
-
+ul.sing-post-meta-list {
+  padding: 0 1rem;
+  position: relative;
+}
+ul.sing-post-meta-list .post-view {
+  color: var(--color-text-primary);
+  position: relative;
+  font-size: 16px;
+  bottom: unset;
+  left: unset;
+}
 #sing-left {
-  padding: 1rem 0;
   background-color: var(--color-light-1);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+#the-toc {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: aliceblue;
+  overflow: hidden;
+}
+#the-toc:before {
+  content: "Table of Contents";
+  padding-left: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-light-1);
+  display: block;
+  background-color: var(--color-light-2);
+}
+
+ul.toc-list {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 600;
+  padding: 8px;
+}
+ul.toc-list li {
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+}
+ul.toc-list li:hover {
+  color: var(--color-accent-1);
 }
 
 .sing-left-col {
@@ -22,16 +65,32 @@
 
 #sing-fim-wr {
   overflow: hidden;
+  border-radius: 10px;
   aspect-ratio: 16/9;
 }
 #sing-fim-wr img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
-#sing-right {
+#the-content-wr {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 180px;
+  overflow: hidden;
+}
+
+#the-content-sidebar {
   padding: 1rem;
+  background-color: var(--color-background-primary);
+  border-radius: 10px;
+}
+
+#the-content {
+  display: flex;
+  flex-direction: column;
 }
 
 #the-content h1,
@@ -40,26 +99,26 @@
 #the-content h4,
 #the-content h5,
 #the-content h6 {
-  margin: 1rem 0;
-  line-height: 1.2;
+  margin: 4px 0;
+  line-height: 1;
   color: var(--color-dark-1);
 }
 
 #the-content h2 {
-  font-size: var(--font-clamp-3);
-}
-
-#the-content h3 {
   font-size: var(--font-clamp-2);
 }
 
-#the-content h4 {
+#the-content h3 {
   font-size: var(--font-clamp-1);
+}
+
+#the-content h4 {
+  font-size: 1.4rem;
 }
 
 #the-content h5,
 #the-content h6 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 #the-content ul li,
@@ -68,6 +127,9 @@
   line-height: 1.5;
 }
 
+#sing-right {
+  padding: 1rem;
+}
 /**
 =========================
 * Media Queries single.css

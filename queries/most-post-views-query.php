@@ -66,7 +66,9 @@ function mm_get_most_post_view_posts()
                     </a>
                 </div>
                 <div class="mp-item-bot">
-                    <a class="fw600" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
+                    <h3 class="the-post-title medium">
+                        <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
+                    </h3>
                 </div>
             </li>
 <?php

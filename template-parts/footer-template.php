@@ -55,7 +55,7 @@ defined('ABSPATH') or die('No script kiddies please!');
             <div id="foo-bot">
 
                 <div id="foo-left" class="foo-col">
-                    <h3 class="section-head section-head-small with-square-dot">Foo Header</h3>
+                    <h3 class="the-card-head bigger">About</h3>
                     <div class="foo-col-inner">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?
@@ -64,7 +64,7 @@ defined('ABSPATH') or die('No script kiddies please!');
                 </div>
 
                 <div id="foo-mid" class="foo-col">
-                    <h3 class="section-head section-head-small with-square-dot">Footer Menu</h3>
+                    <h3 class="the-card-head bigger">Footer Menu</h3>
                     <div class="foo-col-inner">
                         <nav id="footer-nav">
                             <ul class="list-no-style footer-menu vertical-menu">
@@ -81,7 +81,7 @@ defined('ABSPATH') or die('No script kiddies please!');
                 </div>
 
                 <div id="foo-right" class="foo-col">
-                    <h3 class="section-head section-head-small with-square-dot">Foo Header</h3>
+                    <h3 class="the-card-head bigger">Foo Header</h3>
                     <div class="foo-col-inner">
                         <span>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?

@@ -78,7 +78,7 @@ function mm_get_new_posts_query()
 
                 </div>
                 <div class="np-bot">
-                    <h3 class="query-head">
+                    <h3 class="the-post-title medium">
                         <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" rel="bookmark">
                             <?php
                             echo mm_get_custom_post_title(80);
