@@ -11,21 +11,15 @@
 *=========================
 */
 
-/* @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&family=Rajdhani:wght@300;500;600;700&family=Roboto+Mono&display=swap"); */
-
-/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700;800;900&family=Rajdhani:wght@300;500;600;700&family=Roboto+Mono&display=swap"); */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 :root {
-  /* --font-primary: "Mulish", sans-serif; */
   --font-primary: "Poppins", sans-serif;
-  --font-display: "Rajdhani", sans-serif;
-  /* --font-display: "Poppins", sans-serif; */
+  --font-display: "Montserrat", sans-serif;
   --transparent-light-1: rgba(255, 255, 255, 0.1);
   --transparent-light-2: rgba(255, 255, 255, 0.2);
   --transparent-light-3: rgba(255, 255, 255, 0.3);
@@ -348,6 +342,9 @@ a.link-with-bg-color-accent-1 {
 body.no-scroll {
   overflow: hidden;
 }
+.flickity-page-dots .dot {
+  border-radius: unset !important;
+}
 /**
 =========================
 * Custom CSS END
@@ -527,10 +524,11 @@ body.no-scroll {
 * @todo Most View Post Style.css
 *=========================
 */
-#mp {
-  background-color: black;
-}
-#mp:before {
+/* #mp {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+} */
+/* #mp:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -538,11 +536,11 @@ body.no-scroll {
   top: 0;
   left: 0;
   background-color: var(--color-light-2);
-}
-#mp-wr {
+} */
+/* #mp-wr {
   padding-top: 2rem;
-}
-#mp-wr:before {
+} */
+/* #mp-wr:before {
   content: "Most Viewed Posts";
   position: absolute;
   font-family: var(--font-display);
@@ -551,7 +549,6 @@ body.no-scroll {
   left: 0;
   font-size: 14px;
   font-weight: 900;
-  /* background-color: var(--color-accent-3-dark); */
   background: linear-gradient(
     to right,
     var(--color-dark-1),
@@ -560,8 +557,8 @@ body.no-scroll {
   line-height: 1;
   padding: 4px 8px;
   color: var(--color-light-1);
-}
-#mp-wr:after {
+} */
+/* #mp-wr:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -569,26 +566,25 @@ body.no-scroll {
   background-color: var(--color-dark-1);
   top: 21px;
   left: 0;
-}
+} */
 
 ul.mp-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  align-items: stretch;
-  height: 17rem;
+  width: 100%;
+  padding: 1rem;
 }
 ul.mp-list li.mp-item {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 5 - 1rem);
-  background-color: var(--color-light-1);
+  background: linear-gradient(
+    to bottom,
+    var(--color-light-1),
+    var(--transparent-light-5)
+  );
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 4px;
-  height: 100%;
+  margin: 8px;
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset; */
+  border: 1px solid var(--transparent-dark-1);
 }
 
 .mp-item-top {
@@ -632,8 +628,9 @@ a.mp-cat-link {
 }
 .mp-item-bot {
   padding: 1rem;
-  overflow: auto;
-  min-height: 10rem;
+}
+.mp-item-bot a {
+  font-family: var(--font-display);
 }
 
 /**
@@ -1264,9 +1261,6 @@ ul.vertical-menu li a {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
-  ul.mp-list li.mp-item {
-    width: calc(100% / 4 - 1rem);
-  }
 }
 
 /**
@@ -1280,10 +1274,10 @@ ul.vertical-menu li a {
     display: flex;
   }
 
-  ul.mp-list li.mp-item {
+  /* ul.mp-list li.mp-item {
     width: calc(100% / 3 - 1rem);
     min-height: 17rem;
-  }
+  } */
 
   .search-form-wr {
     position: absolute;

@@ -11,7 +11,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 
-<div id="mp" class="section medium" <?php echo most_view_post_auto_slide(); ?>>
+<div id="mp" class="section small" <?php echo most_view_post_auto_slide(); ?>>
     <div class="container">
         <div id="mp-wr">
             <?php
@@ -34,7 +34,7 @@ function mm_get_most_post_view_posts()
     $most_view_post_number = carbon_get_theme_option('most_view_post_number');
     $args = array(
         'post_type' => 'post', // Atau custom post type Anda
-        'posts_per_page' => 8, // Jumlah post yang ingin ditampilkan, -1 untuk semua post
+        'posts_per_page' => 7, // Jumlah post yang ingin ditampilkan, -1 untuk semua post
         'meta_key' => 'mm_post_views_count', // Kunci meta untuk jumlah view
         'orderby' => 'meta_value_num', // Mengurutkan berdasarkan nilai numerik meta
         'order' => 'DESC', // Urutan dari yang terbesar ke terkecil
@@ -66,7 +66,7 @@ function mm_get_most_post_view_posts()
                     </a>
                 </div>
                 <div class="mp-item-bot">
-                    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
+                    <a class="fw600" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
                 </div>
             </li>
 <?php
