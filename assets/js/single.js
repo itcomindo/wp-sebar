@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             var jumlahKata = postContent.split(' ').length;
             console.log(jumlahKata);
             var waktuBaca = Math.ceil(jumlahKata / kataPerMenit);
-            jQuery('.ert').text('Estimasi waktu baca: ' + waktuBaca + ' menit');
+            jQuery('.ert').text('Reading Time: ' + waktuBaca + ' minutes');
         }
         mm_wrt();
         //estimasi waktu baca end

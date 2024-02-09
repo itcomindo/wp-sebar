@@ -13,7 +13,7 @@ $post_view = mm_show_post_views();
 if ($post_view == '') {
     $post_view = '';
 } else {
-    $post_view = '<li class="singpbviews">Post Views: ' . $post_view . '</li>';
+    $post_view = '<li class="singpbviews"><span>' . $post_view . '</span> <span>views</span></li>';
 }
 
 
@@ -37,7 +37,7 @@ $post_id = get_the_ID();
                 </div>
                 <ul class="sing-post-meta-list list-no-style text-smaller">
                     <!-- category -->
-                    <li class="singpbcat">Post in Category: <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo mm_get_post_meta_inc($post_id)['category-name']; ?>"><?php echo mm_get_post_meta_inc($post_id)['category-name']; ?></a></li>
+                    <li class="singpbcat">Category: <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo mm_get_post_meta_inc($post_id)['category-name']; ?>"><?php echo mm_get_post_meta_inc($post_id)['category-name']; ?></a></li>
 
                     <!-- views -->
                     <?php echo $post_view; ?>
