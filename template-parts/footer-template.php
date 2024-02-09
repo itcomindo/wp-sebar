@@ -116,3 +116,8 @@ require_once get_template_directory() . '/inc/admin-shortcut-inc.php';
 if (carbon_get_theme_option('enable_floating_ads')) {
     get_template_part('inc/ads/ads-floating-lr-inc');
 }
+
+//if user not login
+if (!is_user_logged_in()) {
+    get_template_part('components/uc-component');
+}
