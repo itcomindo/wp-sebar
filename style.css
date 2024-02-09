@@ -545,6 +545,83 @@ body.no-scroll {
   object-fit: cover;
 }
 
+.ads-flo {
+  position: fixed;
+  width: 128px;
+  min-width: 128px;
+  min-height: 608px;
+  height: 608px;
+  max-height: 608px;
+  overflow: hidden;
+  top: 40px;
+  z-index: 99;
+  transition: 0.2s linear all;
+}
+.ads-flo.fixed {
+  transform: translateY(-40px);
+  transition: 0.2s linear all;
+}
+
+#ads-flo-left {
+  left: 50%;
+  color: var(--color-light-1);
+  margin-left: -680px;
+}
+
+.ads-flo-wr.text {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-3);
+}
+.ads-flo-wr.image {
+  padding: 0;
+}
+
+.ads-flo-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+  text-align: center;
+  font-size: 80%;
+}
+
+.ads-flo-image {
+  height: 100%;
+}
+.ads-flo-image a.ads-flo-link {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 0 4px;
+}
+.ads-flo-image a.ads-flo-link img.find-this {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ads-flo-text a.ads-flo-btn {
+  height: auto;
+  width: max-content;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  line-height: 1.2;
+  display: block;
+  padding: 4px 8px;
+}
+
+#ads-flo-right {
+  right: 50%;
+  margin-right: -680px;
+}
+
 /**
 =========================
 * Most View Post Style.css
@@ -1094,6 +1171,18 @@ ul.vertical-menu li a {
     width: 100%;
     height: 100%;
     transition: 0.2s linear all;
+  }
+}
+
+/**
+=========================
+* 1365px
+* @todo 1365px
+*=========================
+*/
+@media screen and (max-width: 1365px) {
+  .ads-flo {
+    display: none;
   }
 }
 

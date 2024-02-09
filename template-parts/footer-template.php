@@ -6,9 +6,14 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 
+if (carbon_get_theme_option('enable_floating_ads')) {
+    $ads_floating = 'data-ads-floating="true"';
+} else {
+    $ads_floating = '';
+}
 
 ?>
-<footer id="foo" class="section high">
+<footer id="foo" class="section high" <?php echo $ads_floating; ?>>
     <div class="container">
         <div id="foo-wr">
             <div id="foo-top">
@@ -108,3 +113,6 @@ defined('ABSPATH') or die('No script kiddies please!');
 <?php
 
 require_once get_template_directory() . '/inc/admin-shortcut-inc.php';
+if (carbon_get_theme_option('enable_floating_ads')) {
+    get_template_part('inc/ads/ads-floating-lr-inc');
+}

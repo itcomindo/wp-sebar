@@ -78,6 +78,7 @@ function mm_theme_options()
     Container::make('theme_options', 'Ads')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_ads_header_field_inc()
+            ...mm_ads_header_field_inc(),
+            ...mm_ads_floating_field_inc(),
         ]);
 }

@@ -167,6 +167,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+        //ads floating start
+
+        function adsFloating() {
+            function adsFlo() {
+                var adsFlo = jQuery('footer').attr('data-ads-floating');
+                if (adsFlo == 'true') {
+                    //when scroll 40px from top add class fixed to .ads-flo else remove class fixed
+                    jQuery(window).scroll(function () {
+                        if (jQuery(this).scrollTop() > 40) {
+                            jQuery('.ads-flo').addClass('fixed');
+                        } else {
+                            jQuery('.ads-flo').removeClass('fixed');
+                        }
+                    });
+                }
+            }
+            adsFlo();
+        }
+        adsFloating();
+
+
+
+        //ads floating end
+
+
+
+
+
 
 
 
