@@ -201,16 +201,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             function uc() {
                 if (!jQuery('body').hasClass('logged-in')) {
                     jQuery('#uc').hide().slideUp();
-                    console.log('no logged in');
                     setTimeout(function () {
                         jQuery('#uc').show().slideDown();
-                        jQuery('body').addClass('no-scroll');
                     }, 3000);
-
-
                     jQuery('.close-uc').on('click', function () {
                         jQuery('#uc').slideUp().hide().remove();
-                        jQuery('body').removeClass('no-scroll');
                     });
                 }
             }

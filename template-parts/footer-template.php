@@ -119,5 +119,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
 
 //if user not login
 if (!is_user_logged_in()) {
-    get_template_part('components/uc-component');
+    if (!mm_is_devmode()) {
+        get_template_part('components/uc-component');
+    }
 }
