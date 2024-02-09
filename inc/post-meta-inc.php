@@ -56,7 +56,7 @@ function mm_get_post_meta_inc($post_id)
 
 
     //post views
-    $post_views = get_post_meta($post_id, 'post_views', true);
+    $post_views = mm_get_post_views($post_id);
     if (empty($post_views)) {
         $pm['post-views'] = '0 Views';
     } elseif ($post_views == 1) {

@@ -578,6 +578,16 @@ ul.mp-list li.mp-item {
   aspect-ratio: 16/9;
   overflow: hidden;
 }
+.mp-item-top .post-views {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: var(--transparent-dark-3);
+  color: var(--color-light-1);
+  padding: 4px 8px;
+  border-radius: 5px;
+  z-index: 2;
+}
 a.mp-cat-link {
   position: absolute;
   z-index: 2;

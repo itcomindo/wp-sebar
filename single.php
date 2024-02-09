@@ -5,10 +5,9 @@
  */
 
 defined('ABSPATH') or die('No script kiddies please!');
-// $post_id = get_the_ID();
-
+$post_id = get_the_ID();
 get_header();
-$post_view = mm_show_post_views();
+$post_view = mm_get_post_views($post_id);
 
 if ($post_view == '') {
     $post_view = '';
@@ -53,6 +52,7 @@ $post_id = get_the_ID();
                     <div id="the-content" class="sing-left-col">
                         <?php
                         the_content();
+                        get_template_part('components/post-tags-component');
                         if (comments_open()) {
                             comment_form();
                         }

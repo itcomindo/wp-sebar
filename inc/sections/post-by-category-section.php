@@ -89,10 +89,19 @@ function mm_get_pbc()
                             $pbcq->the_post();
                             $title = mm_get_custom_post_title(80);
                             $permalink = get_the_permalink();
+                            $post_id = get_the_ID();
+                            $post_type = mm_get_post_type($post_id);
                             $featured_image = mm_get_featured_image(get_the_ID());
                     ?>
                             <div class="pbcc">
+                                <?php echo $post_type; ?>
                                 <div class="pbcc-top">
+                                    <!-- post view -->
+                                    <span class="post-views text-smallest">
+                                        <?php
+                                        echo mm_get_post_meta_inc($post_id)['post-views'];
+                                        ?>
+                                    </span>
                                     <a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>" rel="bookmark">
                                         <?php echo $featured_image; ?>
                                     </a>

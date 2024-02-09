@@ -64,6 +64,12 @@ function mm_get_most_post_view_posts()
                         echo mm_get_featured_image($post_id);
                         ?>
                     </a>
+
+
+                    <!-- post views -->
+                    <span class="post-views text-smallest"><?php echo mm_get_post_meta_inc($post_id)['post-views']; ?></span>
+
+
                 </div>
                 <div class="mp-item-bot">
                     <h3 class="the-post-title medium">

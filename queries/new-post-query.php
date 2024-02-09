@@ -57,8 +57,12 @@ function mm_get_new_posts_query()
             $np_query->the_post();
             $post_id = get_the_ID();
             $post_views = mm_get_post_views($post_id);
+            $post_type = mm_get_post_type($post_id);
+
 ?>
             <div class="np hover-overlay">
+                <?php echo $post_type; ?>
+
                 <div class="np-top">
 
                     <a class="fim-wr np-fim-wr" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
@@ -85,7 +89,13 @@ function mm_get_new_posts_query()
                             ?>
                         </a>
                     </h3>
-                    <?php echo mm_show_post_views(); ?>
+
+                    <!-- post view -->
+                    <span class="post-views text-smallest">
+                        <?php
+                        echo mm_get_post_meta_inc($post_id)['post-views'];
+                        ?>
+                    </span>
                 </div>
             </div>
         <?php

@@ -26,3 +26,18 @@ function remove_comment_notes($defaults)
     return $defaults;
 }
 add_filter('comment_form_defaults', 'remove_comment_notes');
+
+
+
+
+
+/**
+ *  Disable Guttenberg
+ */
+function mm_disable_guttenberg()
+{
+    if (carbon_get_theme_option('disable_guttenberg')) {
+        add_filter('use_block_editor_for_post', '__return_false', 10);
+    }
+}
+add_action('init', 'mm_disable_guttenberg');

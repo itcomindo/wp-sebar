@@ -18,6 +18,12 @@ function mm_single_fields_inc()
             ->set_classes('mm-sep'),
 
 
+        //checkbox to disable guttenberg
+        Field::make('checkbox', 'disable_guttenberg', 'Disable Guttenberg')
+            ->set_option_value('yes')
+            ->set_default_value(true),
+
+
         Field::make('checkbox', 'show_estimated_reading_time', 'Show Estimated Reading Time')
             ->set_option_value('yes')
             ->set_default_value(true),

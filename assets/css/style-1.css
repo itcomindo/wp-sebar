@@ -34,6 +34,21 @@ body {
   background-color: var(--color-background-primary);
   z-index: 2;
 }
+.the-post-type {
+  z-index: 5;
+  background: var(--transparent-dark-3);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
 #np-wr.s1 {
   display: flex;
   flex-wrap: wrap;
@@ -112,6 +127,9 @@ a.np-cat-link {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+#np-wr.s1 .np-bot .post-views {
+  color: var(--color-light-1);
 }
 
 #np-wr.s1 .np:first-child h3.query-head {
@@ -227,11 +245,26 @@ h3.query-head {
   align-items: flex-start;
   border-bottom: 1px dashed var(--transparent-dark-1);
 }
+#pbc.s1 .pbcc.pbcc:not(:first-child) .the-post-type {
+  top: unset;
+  right: 0;
+  bottom: 0;
+}
 
 #pbc.s1 .pbcc-top {
   aspect-ratio: 16/9;
   border-radius: 5px;
   overflow: hidden;
+}
+#pbc.s1 .pbcc-top .post-views {
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  left: 4px;
+  background-color: var(--transparent-dark-4);
+  color: var(--color-light-1);
+  font-size: 60%;
+  line-height: 1;
 }
 #pbc.s1 .pbcc-top a {
   width: 100%;
@@ -248,6 +281,17 @@ h3.query-head {
   border-radius: 5px;
 }
 
+#pbc.s1 .pbcc:first-child .pbcc-top .post-views {
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  left: 4px;
+  background-color: var(--transparent-dark-4);
+  color: var(--color-light-1);
+  font-size: 70%;
+  line-height: 1;
+  padding: 4px 8px;
+}
 #pbc.s1 .pbcc:first-child {
   display: grid;
   grid-template-columns: 1fr;
