@@ -303,20 +303,21 @@ a.pbcc-load-more {
   flex-direction: column;
 }
 #respond h3#reply-title {
-  font-size: 18px !important;
+  font-size: 13px !important;
   line-height: 1.2 !important;
   margin: 8px 0 !important;
   background-color: var(--color-accent-1-dark);
   color: var(--color-light-1);
   width: max-content;
   padding: 4px 8px;
+  font-weight: 500;
 }
 
 #commentform {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
 }
 #commentform p {
   display: flex;

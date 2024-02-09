@@ -10,6 +10,9 @@
 ul.sing-post-meta-list {
   padding: 0 1rem;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 ul.sing-post-meta-list .post-view {
   color: var(--color-text-primary);
@@ -22,7 +25,60 @@ ul.sing-post-meta-list .post-view {
   background-color: var(--color-light-1);
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
   gap: 1rem;
+}
+.post-published:before {
+  content: "";
+  position: absolute;
+  bottom: -55%;
+  left: 0;
+  border-top: 25px solid var(--color-accent-1-dark);
+  border-right: 25px solid var(--color-accent-1-dark);
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid var(--color-accent-1-dark);
+  z-index: -1;
+}
+
+.post-published {
+  background-color: var(--color-accent-1-dark);
+  width: 50px;
+  z-index: 0;
+  color: var(--color-light-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(-1rem - 5px);
+  right: 0;
+  padding-top: 4px;
+}
+.singpbdate {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.singpbmonth,
+.singpbyear {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.singpbauthor {
+  display: block;
+  position: relative;
+  margin-top: 75px;
+}
+
+li.singpbcat a {
+  color: var(--color-accent-1-dark);
+  font-weight: 600;
+}
+
+h1#single-post-title {
+  margin-top: 0px;
 }
 
 #the-toc {
@@ -136,6 +192,23 @@ ul.toc-list li:hover {
 * @todo media queries single-css
 *=========================
 */
+
+/**
+=========================
+* 991px
+* @todo 991px
+*=========================
+*/
+@media screen and (max-width: 991px) {
+  #the-content-wr {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+  }
+  #the-content-sidebar {
+    margin-top: 1rem;
+  }
+}
 
 /**
 =========================

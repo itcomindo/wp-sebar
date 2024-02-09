@@ -73,9 +73,8 @@ function mm_show_post_views($post_id = null)
         $post_id = $post->ID;
     }
     $post_views = mm_get_post_views($post_id);
-    //if post views is not 0
     if ($post_views != 0) {
-        $post_views = '<span class="post-view">' . $post_views . ' <i class="fas fa-eye"></i></span>';
+        $post_views = $post_views;
     } else {
         $post_views = '';
     }

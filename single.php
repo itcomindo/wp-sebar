@@ -9,6 +9,14 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 get_header();
 $post_view = mm_show_post_views();
+
+if ($post_view == '') {
+    $post_view = '';
+} else {
+    $post_view = '<li class="singpbviews">Post Views: ' . $post_view . '</li>';
+}
+
+
 $post_id = get_the_ID();
 ?>
 <!-- <span class="estimasi-waktu-baca"></span> -->
@@ -19,29 +27,23 @@ $post_id = get_the_ID();
             <!-- content left -->
             <div id="sing-left">
                 <div id="sing-title-wr" class="sing-left-col">
-                    <h1 class="section-head section-head-medium"><?php the_title(); ?></h1>
-                </div>
-                <ul class="sing-post-meta-list list-no-style">
                     <!-- date -->
-                    <li><?php echo mm_get_post_meta_inc($post_id)['post-date']; ?></li>
+                    <div class="post-published text-small"><span class="singpbdate"><?php echo mm_get_post_meta_inc($post_id)['published-post-date']; ?></span> <span class="singpbmonth"> <?php echo mm_get_post_meta_inc($post_id)['published-post-month']; ?></span><span class="singpbyear"><?php echo mm_get_post_meta_inc($post_id)['published-post-year']; ?></span></div>
 
                     <!-- author -->
-                    <li><?php echo mm_get_post_meta_inc($post_id)['author']; ?></li>
+                    <span class="text-small singpbauthor">Author: <?php echo mm_get_post_meta_inc($post_id)['author']; ?></span>
 
+                    <h1 id="single-post-title" class="section-head section-head-medium"><?php the_title(); ?></h1>
+                </div>
+                <ul class="sing-post-meta-list list-no-style text-smaller">
                     <!-- category -->
-                    <li><a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo mm_get_post_meta_inc($post_id)['category-name']; ?>"><?php echo mm_get_post_meta_inc($post_id)['category-name']; ?></a></li>
+                    <li class="singpbcat">Post in Category: <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo mm_get_post_meta_inc($post_id)['category-name']; ?>"><?php echo mm_get_post_meta_inc($post_id)['category-name']; ?></a></li>
 
                     <!-- views -->
-                    <li><?php echo $post_view; ?></li>
+                    <?php echo $post_view; ?>
 
                     <!-- estimate reading time -->
                     <li><span class="ert"></span></li>
-
-                    <!-- comments count -->
-                    <li><?php echo mm_get_post_meta_inc($post_id)['comment-count']; ?></li>
-
-
-
 
                 </ul>
                 <div id="sing-fim-wr">

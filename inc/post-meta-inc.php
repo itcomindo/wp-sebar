@@ -23,7 +23,15 @@ function mm_get_post_meta_inc($post_id)
         $pm['author'] = $author;
     }
 
-    $pm['post-date'] = get_the_date('F j, Y', $post_id);
+    $pm['published-post'] = get_the_date('F j, Y', $post_id);
+    $pm['updated-post'] = get_the_modified_date('F j, Y', $post_id);
+    //month
+    $pm['published-post-month'] = get_the_date('M', $post_id);
+    //day
+    $pm['published-post-date'] = get_the_date('d', $post_id);
+    //year
+    $pm['published-post-year'] = get_the_date('Y', $post_id);
+
     $pm['time'] = get_the_time('g:i a', $post_id);
 
     // Mendapatkan nama dan link kategori
@@ -44,6 +52,17 @@ function mm_get_post_meta_inc($post_id)
         $pm['comment-count'] = $comment_count . ' Comment';
     } else {
         $pm['comment-count'] = $comment_count . ' Comments';
+    }
+
+
+    //post views
+    $post_views = get_post_meta($post_id, 'post_views', true);
+    if (empty($post_views)) {
+        $pm['post-views'] = '0 Views';
+    } elseif ($post_views == 1) {
+        $pm['post-views'] = $post_views . ' View';
+    } else {
+        $pm['post-views'] = $post_views . ' Views';
     }
 
     return $pm;

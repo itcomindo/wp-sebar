@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             var jumlahKata = postContent.split(' ').length;
             console.log(jumlahKata);
             var waktuBaca = Math.ceil(jumlahKata / kataPerMenit);
-            jQuery('.ert').text('Time reading ' + waktuBaca);
+            jQuery('.ert').text('Estimasi waktu baca: ' + waktuBaca + ' menit');
         }
         mm_wrt();
         //estimasi waktu baca end
@@ -49,6 +49,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         mm_toc();
         //toc end
+
+
+
+        //move #respond to #the-sidebar start
+
+        function mm_move_respond() {
+            function moveRespond() {
+                $screenWidth = jQuery(window).width();
+                if ($screenWidth < 992) {
+                    jQuery('#respond').appendTo('#the-content-sidebar');
+                } else {
+                    jQuery('#respond').appendTo('#the-content');
+                }
+            }
+            moveRespond();
+            jQuery(window).resize(function () {
+                moveRespond();
+            });
+        }
+        mm_move_respond();
+
+
+        //move #respond to #the-sidebar end
 
 
 

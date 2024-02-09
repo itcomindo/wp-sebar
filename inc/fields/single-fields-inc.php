@@ -44,6 +44,12 @@ function mm_single_fields_inc()
             '),
 
 
+        //checkbox enabling TOC
+        Field::make('checkbox', 'show_toc', 'Show Table of Contents')
+            ->set_option_value('yes')
+            ->set_default_value(true),
+
+
 
 
 
