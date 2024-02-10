@@ -28,6 +28,7 @@ defined('ABSPATH') || exit;
     }
     get_template_part('template-parts/header-template');
     get_template_part('template-parts/header-menu-template');
+    get_template_part('inc/ads/ads-after-header-menu-inc');
     wp_body_open();
     ?>
 

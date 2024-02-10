@@ -609,6 +609,13 @@ ul.uc-cta-list li a {
   object-fit: cover;
 }
 
+/**
+=========================
+* Ads Floating Left and Right
+* @todo Ads Floating Left and Right style.css
+*=========================
+*/
+
 .ads-flo {
   position: fixed;
   width: 160px;
@@ -684,6 +691,32 @@ ul.uc-cta-list li a {
 #ads-flo-right {
   right: 50%;
   margin-right: -690px;
+}
+
+/**
+=========================
+* Ads After Header Menu
+* @todo Ads After Header Menu style.css
+*=========================
+*/
+
+#afm.ads-text {
+  min-height: 250px;
+  height: 250px;
+  background-color: var(--color-dark-1);
+  color: var(--color-light-1);
+}
+#afm.ads-text .container,
+#afm.ads-text #afm-wr,
+#afm.ads-text .afm-content {
+  height: 100%;
+}
+
+.afm-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /**
