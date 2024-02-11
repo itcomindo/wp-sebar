@@ -35,9 +35,9 @@ function mm_get_most_post_view_posts()
     $args = array(
         'post_type' => 'post', // Atau custom post type Anda
         'posts_per_page' => 7, // Jumlah post yang ingin ditampilkan, -1 untuk semua post
-        'meta_key' => 'mm_post_views_count', // Kunci meta untuk jumlah view
         'orderby' => 'meta_value_num', // Mengurutkan berdasarkan nilai numerik meta
         'order' => 'DESC', // Urutan dari yang terbesar ke terkecil
+        'meta_key' => 'mm_post_views_count', // Kunci meta untuk jumlah view
         'meta_query' => array(
             array(
                 'key' => 'mm_post_views_count',
