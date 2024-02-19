@@ -1,0 +1,9 @@
+.mm-sep {
+  background-color: black;
+  color: white;
+}
+.mm-sep h3 {
+  font-size: 16px;
+  color: white;
+  margin: 4px 0;
+}

@@ -17,7 +17,7 @@ function mm_post_custom_fields()
         ->add_fields([
 
             //separator
-            Field::make('separator', 'postcustomsep', 'Post Custom Fields')
+            Field::make('separator', 'postcustomsep', 'Post Options')
                 ->set_classes('mm-sep'),
 
 
@@ -51,6 +51,7 @@ function mm_post_custom_fields()
 
             //complex fields contain: text fields for video title, video url, image field for custom thumbnail, and text for duration
             Field::make('complex', 'post_videos', 'Video')
+                ->set_layout('tabbed-horizontal')
                 ->add_fields([
                     Field::make('text', 'video_title', 'Video Title')
                         ->set_required(true),

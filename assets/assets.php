@@ -97,3 +97,19 @@ function mm_load_assets()
 }
 
 add_action('wp_enqueue_scripts', 'mm_load_assets');
+
+
+
+
+
+
+function mm_admin_backend()
+{
+    //load admin-backend.css from assets/css
+    wp_enqueue_style('mm-admin-backend', get_template_directory_uri() . '/assets/css/admin-backend.css', array(), '1.0.0', 'all');
+
+    //load admin-backend.js from assets/js
+    wp_enqueue_script('mm-admin-backend-js', get_template_directory_uri() . '/assets/js/admin-backend.js', array('jquery'), '1.0.0', true);
+}
+
+add_action('admin_enqueue_scripts', 'mm_admin_backend');

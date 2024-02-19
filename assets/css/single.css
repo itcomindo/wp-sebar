@@ -22,14 +22,7 @@ ul.sing-post-meta-list li {
 ul.sing-post-meta-list li:first-child {
   padding-left: 0;
 }
-ul.sing-post-meta-list li:after {
-  content: "/";
-  position: absolute;
-  right: -8px;
-}
-ul.sing-post-meta-list li:last-child:after {
-  display: none;
-}
+
 ul.sing-post-meta-list .post-view {
   color: var(--color-text-primary);
   position: relative;

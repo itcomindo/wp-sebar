@@ -7,12 +7,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //estimasi waktu baca start
         function mm_wrt() {
-            var kataPerMenit = 150;
-            var postContent = jQuery('#the-content').text();
-            var jumlahKata = postContent.split(' ').length;
-            console.log(jumlahKata);
-            var waktuBaca = Math.ceil(jumlahKata / kataPerMenit);
-            jQuery('.ert').text('Reading Time: ' + waktuBaca + ' minutes');
+            function theErt() {
+                var dataErt = jQuery('#sing').attr('data-ert');
+                if (dataErt == 'true') {
+                    var kataPerMenit = 150;
+                    var postContent = jQuery('#the-content').text();
+                    var jumlahKata = postContent.split(' ').length;
+                    console.log(jumlahKata);
+                    var waktuBaca = Math.ceil(jumlahKata / kataPerMenit);
+                    jQuery('.ert').text('Reading Time: ' + waktuBaca + ' minutes');
+                }
+            }
+            theErt();
         }
         mm_wrt();
         //estimasi waktu baca end
@@ -38,14 +44,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //toc start
 
         function mm_toc() {
-            var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
-            jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
-                var current = jQuery(this);
-                current.attr("id", "mm_toc" + i);
-                toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
+
+
+            function theToc() {
+                var is_toc_enabled = jQuery('#the-content').attr('data-toc');
+                console.log(is_toc_enabled);
+                if (is_toc_enabled == 'true') {
+                    var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
+                    jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
+                        var current = jQuery(this);
+                        current.attr("id", "mm_toc" + i);
+                        toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
+                    });
+                    toc += "</ul></div>";
+                    jQuery("#the-content").prepend(toc);
+                }
+            }
+            theToc();
+
+            jQuery(window).resize(function () {
+                theToc();
             });
-            toc += "</ul></div>";
-            jQuery("#the-content").prepend(toc);
+
+
         }
         mm_toc();
         //toc end
