@@ -60,7 +60,7 @@ function mm_get_new_posts_query()
             $post_type = mm_get_post_type($post_id);
 
 ?>
-            <div class="np hover-overlay">
+            <div class="np hover overlay-color">
                 <?php echo $post_type; ?>
 
                 <div class="np-top">
@@ -76,14 +76,10 @@ function mm_get_new_posts_query()
 
                     <span class="post-date np-post-date text-smallest"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['published-post'])); ?></span>
 
-
-
-
-
                 </div>
                 <div class="np-bot">
-                    <h3 class="the-post-title medium">
-                        <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" rel="bookmark">
+                    <h3 class="head smallest font-secondary">
+                        <a class="fw500" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>" rel="bookmark">
                             <?php
                             echo mm_get_custom_post_title(80);
                             ?>

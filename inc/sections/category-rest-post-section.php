@@ -20,11 +20,9 @@ defined('ABSPATH') or die('No script kiddies please!');
                     ?>
 
                 </div>
-                <div id="crp-right" class="the-sidebar">
-                    <aside>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odio deleniti sunt, magnam laboriosam maiores culpa ut molestiae sapiente repellat voluptatibus harum nulla! Iste reprehenderit dolor, explicabo quis nostrum hic.
-                    </aside>
-                </div>
+                <?php
+                get_sidebar();
+                ?>
             </div>
         </div>
     </div>

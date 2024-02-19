@@ -65,7 +65,7 @@ function mm_get_header_left()
         } else {
             $header_left = 'WP Free News Theme';
         }
-        return '<h2 class="section-head section-head-medium"><a href="/" title="' . $site_name . '">' . $header_left . '</a></h2>';
+        return '<h2 class="head small"><a href="/" title="' . $site_name . '">' . $header_left . '</a></h2>';
     } else {
         $header_left = carbon_get_theme_option('header_left_image');
         return '<a class="header-logo-wr" href="/"><img class="find-this" src="' . $header_left . '" alt="' . $site_name . '" title="' . $site_name . '"></a>';

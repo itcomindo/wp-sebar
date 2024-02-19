@@ -28,6 +28,9 @@ function mm_load_assets()
     //style.css from the theme
     wp_enqueue_style('mm-global-style', get_template_directory_uri() . '/style.css', array('normalize'), $theme_version, 'all');
 
+    //global.css from assets/css
+    wp_enqueue_style('mm-global-css', get_template_directory_uri() . '/assets/css/global.css', array('mm-global-style'), $theme_version, 'all');
+
     $style_is = carbon_get_theme_option('style_is');
     if ($style_is == 'style-1') {
         wp_enqueue_style('mm-style-1', get_template_directory_uri() . '/assets/css/style-1.css', array('mm-global-style'), $theme_version, 'all');

@@ -17,7 +17,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
     <div class="container">
         <div id="foo-wr">
             <div id="foo-top">
-                <h2 class="section-head section-head-medium">
+                <h2 class="head small">
                     WP Sebar
                 </h2>
                 <span>Jln. Mujahidin 1 No.112, Larangan, Kreo Selatan, Kota Tangerang, Banten Indonesia 15154</span>
@@ -60,7 +60,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
             <div id="foo-bot">
 
                 <div id="foo-left" class="foo-col">
-                    <h3 class="the-card-head bigger">About</h3>
+                    <h3 class="head smaller">About</h3>
                     <div class="foo-col-inner">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?
@@ -69,7 +69,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
                 </div>
 
                 <div id="foo-mid" class="foo-col">
-                    <h3 class="the-card-head bigger">Footer Menu</h3>
+                    <h3 class="head smaller">Footer Menu</h3>
                     <div class="foo-col-inner">
                         <nav id="footer-nav">
                             <ul class="list-no-style footer-menu vertical-menu">
@@ -86,7 +86,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
                 </div>
 
                 <div id="foo-right" class="foo-col">
-                    <h3 class="the-card-head bigger">Foo Header</h3>
+                    <h3 class="head smaller">Foo Header</h3>
                     <div class="foo-col-inner">
                         <span>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?

@@ -62,10 +62,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
             theToc();
 
-            jQuery(window).resize(function () {
-                theToc();
-            });
-
 
         }
         mm_toc();

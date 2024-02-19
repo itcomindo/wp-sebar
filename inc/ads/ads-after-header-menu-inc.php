@@ -14,7 +14,7 @@ if ($ads_after_header_menu) {
         <div class="container">
             <div id="afm-wr">
                 <div class="afm-content">
-                    <h3 class="afm-head section-head section-head-small">Ads After Header</h3>
+                    <h3 class="afm-head head small">Ads After Header</h3>
                     <span class="afm-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <a href="#" class="afm-btn the-btn">Get it Now</a>
                 </div>

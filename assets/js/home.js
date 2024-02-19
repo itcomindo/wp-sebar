@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     centerMode: true,
                     centerPadding: '60px',
                     slidesToShow: 4,
-                    autoplay: true,
+                    autoplay: false,
                     autoplaySpeed: $speed,
                     arrows: false,
                     pauseOnHover: true,

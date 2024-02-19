@@ -52,7 +52,7 @@ if (carbon_get_theme_option('show_toc')) {
         <span class="text-small singpbauthor">Author: <?php echo mm_get_post_meta_inc($post_id)['author']; ?></span>
 
         <!-- post title -->
-        <h1 id="single-post-title" class="section-head section-head-medium"><?php the_title(); ?></h1>
+        <h1 id="single-post-title" class="head medium"><?php the_title(); ?></h1>
 
 
     </div>
@@ -94,7 +94,7 @@ if (carbon_get_theme_option('show_toc')) {
 
         <div id="the-content-sidebar">
             <aside>
-                <h3 class="the-sidebar-head medium">Konten Sidebar</h3>
+                <h3 class="head smaller">Konten Sidebar</h3>
             </aside>
         </div>
     </div>

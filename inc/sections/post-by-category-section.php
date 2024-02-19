@@ -31,7 +31,6 @@ defined('ABSPATH') or die('No script kiddies please!');
 
                     <?php
                     if (carbon_get_theme_option('pbc')) {
-                        // echo 'ada';
                         mm_get_pbc();
                     } else {
                         mm_get_pbc_fallback();
@@ -77,7 +76,6 @@ function mm_get_pbc()
                 <div class="pbcc-name clip-90"><?php echo esc_html($pbc_cat_name); ?></div>
                 <div class="pbcc-wr">
                     <?php
-                    // $post_not_in = post_to_exclude_query();
                     $post_not_in = $post_ids = post_to_exclude_query();
                     $pbcq = new WP_Query(array(
                         'cat' => $pbc_cat_id,
@@ -107,7 +105,11 @@ function mm_get_pbc()
                                     </a>
                                 </div>
                                 <div class="pbcc-bot">
-                                    <h3 class="the-post-title small"><a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>"><?php echo esc_html($title); ?></a></h3>
+                                    <h3 class="head text-smaller">
+                                        <a class="fw500" href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>">
+                                            <?php echo esc_html($title); ?>
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                     <?php
