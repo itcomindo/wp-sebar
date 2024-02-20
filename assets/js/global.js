@@ -194,23 +194,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-
         //uc start
 
         function mmUC() {
             function uc() {
                 if (!jQuery('body').hasClass('logged-in')) {
-                    jQuery('#uc').hide().slideUp();
+                    jQuery('#uc').hide();
                     setTimeout(function () {
-                        jQuery('#uc').show().slideDown();
-                    }, 3000);
-                    jQuery('.close-uc').on('click', function () {
-                        jQuery('#uc').slideUp().hide().remove();
-                    });
+                        jQuery('#uc').show().addClass('active');
+                        jQuery('body').addClass('no-scroll');
+
+                        setTimeout(function () {
+                            jQuery('#uc-wr').addClass('active');
+                        }, 2000);
+
+                        jQuery('.close-uc, #uc.active').on('click', function () {
+                            jQuery('#uc').remove();
+                            jQuery('body').removeClass('no-scroll');
+                        });
+                    }, 1000);
+
                 }
             }
             uc();
-            //resize window
             jQuery(window).resize(function () {
                 uc();
             });
@@ -220,6 +226,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         //uc end
+
+
+
+
 
 
 

@@ -4,20 +4,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //jq start below
 
-        // function mmAdminShortcut() {
-        //     jQuery('.admin-shortcut-trigger').on('click', function () {
-        //         jQuery('.admin-shortcut-trigger').addClass('hide');
-        //         jQuery('.admin-shortcut').addClass('active');
-        //     });
-
-        //     jQuery('.admin-shortcut-close').on('click', function () {
-        //         jQuery('.admin-shortcut').removeClass('active');
-        //         jQuery('.admin-shortcut-trigger').removeClass('hide');
-        //     });
-        // }
-        // mmAdminShortcut();
-
-
         function mmAdSc() {
             jQuery('.admin-shortcut-trigger').on('click', function () {
                 jQuery('.admin-shortcut-trigger').addClass('hide');
@@ -37,6 +23,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
         }
         mmAdSc();
+
+
+
 
 
 

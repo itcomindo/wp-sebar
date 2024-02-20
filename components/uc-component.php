@@ -10,10 +10,10 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 <div id="uc" class="section">
     <div class="container">
-        <div id="uc-wr">
-            <span class="close-uc">X</span>
-            <h1>UnderConstruction</h1>
-            <span>Tema WordPress ini masih dalam tahap pengembangan. Kritik, saran dan donasi dapat dilakukan melalui:</span>
+        <div id="uc-wr" class="animate__animated animate__bounce animate__delay-2s 2s">
+            <span class="close-uc cursor-pointer">X</span>
+            <h1 class="head smaller">UnderConstruction</h1>
+            <span class="text-small">Tema WordPress ini masih dalam tahap pengembangan. Kritik, saran dan donasi dapat dilakukan melalui:</span>
             <ul class="list-no-style uc-cta-list">
                 <!-- facebook -->
                 <li><a href="//facebook.com/joomblaster"><i class="fab fa-facebook"></i></a></li>

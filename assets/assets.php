@@ -25,6 +25,9 @@ function mm_load_assets()
     //load fontawesome 6.5.1
     wp_enqueue_style('fontawesome-651', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1', 'all');
 
+    //load animate.css
+    wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
+
     //style.css from the theme
     wp_enqueue_style('mm-global-style', get_template_directory_uri() . '/style.css', array('normalize'), $theme_version, 'all');
 
