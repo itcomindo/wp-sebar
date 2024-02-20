@@ -74,9 +74,14 @@ if (carbon_get_theme_option('show_toc')) {
 
 
     <!-- featured image -->
-    <div id="sing-fim-wr">
-        <?php echo mm_get_featured_image(get_the_ID()); ?>
-    </div>
+    <!-- <div id="sing-fim-wr"> -->
+    <?php
+    // echo mm_get_featured_image(get_the_ID());
+    ?>
+    <!-- </div> -->
+    <?php
+    echo mm_single_video_player();
+    ?>
 
 
     <div id="the-content-wr">

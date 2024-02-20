@@ -200,9 +200,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             function uc() {
                 if (!jQuery('body').hasClass('logged-in')) {
                     jQuery('#uc').hide();
+
                     setTimeout(function () {
                         jQuery('#uc').show().addClass('active');
-                        jQuery('body').addClass('no-scroll');
+                        // jQuery('body').addClass('no-scroll');
 
                         setTimeout(function () {
                             jQuery('#uc-wr').addClass('active');
@@ -210,7 +211,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                         jQuery('.close-uc, #uc.active').on('click', function () {
                             jQuery('#uc').remove();
-                            jQuery('body').removeClass('no-scroll');
+                            // jQuery('body').removeClass('no-scroll');
                         });
                     }, 1000);
 

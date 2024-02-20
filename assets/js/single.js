@@ -93,6 +93,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+
+        //video start
+
+
+        function mm_video() {
+            var videoID = jQuery('.vid-item').first().attr('data-video');
+            jQuery('.vid-player iframe').attr('src', 'https://www.youtube.com/embed/' + videoID + '?autoplay=1');
+
+            // Event handler untuk klik pada setiap vid-item
+            jQuery('.vid-item').on('click', function () {
+                var videoID = jQuery(this).attr('data-video');
+                jQuery('.vid-player iframe').attr('src', 'https://www.youtube.com/embed/' + videoID + '?autoplay=1');
+            });
+        }
+
+        mm_video();
+
+
+
+        //video end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //jq end above
 
 

@@ -80,5 +80,11 @@ require_once get_template_directory() . '/queries/queries.php';
 // experimental 1 start
 
 
+// experimental 1 end
 
-//experimental 1 end
+
+//experimental 2 start
+// experimental 2 end
+
+//experimental 3 start
+// experimental 3 end

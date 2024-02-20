@@ -230,6 +230,64 @@ ul.post-tags li a {
 #sing-right {
   padding: 1rem;
 }
+
+/**
+=========================
+* Single Video
+* @todo single video
+*=========================
+*/
+.vid-player {
+  background-color: var(--color-dark-1);
+  aspect-ratio: 16/9;
+}
+.vid-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.vid-items-wr {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px;
+  background-color: darkred;
+}
+.vid-items-wr.one {
+  display: none;
+}
+.vid-items-wr.one .vid-item {
+  width: calc(100% - 8px);
+  aspect-ratio: 16/9;
+}
+
+.vid-items-wr.two .vid-item {
+  width: calc(50% - 8px);
+  aspect-ratio: 16/9;
+}
+
+.vid-items-wr.three .vid-item {
+  width: calc(33.3333% - 8px);
+  aspect-ratio: 16/9;
+}
+
+.vid-items-wr.four .vid-item {
+  width: calc(100% / 4 - 8px);
+  aspect-ratio: 16/9;
+}
+
+.vid-item img.find-this {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 /**
 =========================
 * Media Queries single.css
