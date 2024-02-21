@@ -80,7 +80,14 @@ if (carbon_get_theme_option('show_toc')) {
     ?>
     <!-- </div> -->
     <?php
-    echo mm_single_video_player();
+    $fim = carbon_get_post_meta(get_the_ID(), 'the_post_type');
+    if ('video' === $fim) {
+        echo  mm_single_video_player();
+    } else {
+        echo '<div id="sing-fim-wr">';
+        echo mm_get_featured_image(get_the_ID());
+        echo '</div>';
+    }
     ?>
 
 
@@ -94,6 +101,11 @@ if (carbon_get_theme_option('show_toc')) {
                 comment_form();
             }
             comments_template();
+
+
+            mm_get_related_post_by_tag_query();
+
+
             ?>
         </div>
 
