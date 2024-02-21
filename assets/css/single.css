@@ -149,7 +149,7 @@ ul.toc-list li:hover {
 }
 
 #the-content-sidebar {
-  padding: 1rem;
+  padding: 1rem 8px;
   background-color: var(--color-background-primary);
   border-radius: 10px;
 }

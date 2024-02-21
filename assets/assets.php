@@ -68,6 +68,10 @@ function mm_load_assets()
     //load global-js.js from assets/js
     wp_enqueue_script('mm-global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), $theme_version, true);
 
+
+    //load temporary.css
+    wp_enqueue_style('mm-temporary-css', get_template_directory_uri() . '/assets/css/temporary.css', array('mm-global-style'), $theme_version, 'all');
+
     if (is_home()) {
 
         //load slick css
@@ -87,6 +91,10 @@ function mm_load_assets()
     if (is_single()) {
         //load single.css from assets/css
         wp_enqueue_style('mm-single-style', get_template_directory_uri() . '/assets/css/single.css', array('mm-global-style'), $theme_version, 'all');
+
+
+        //load stickyJs
+        wp_enqueue_script('sticky-js', 'https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js', array('jquery'), '1.3.0', true);
 
         //load single-js.js from assets/js
         wp_enqueue_script('mm-single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $theme_version, true);

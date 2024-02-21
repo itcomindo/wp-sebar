@@ -119,7 +119,11 @@ if (carbon_get_theme_option('show_toc')) {
 
         <div id="the-content-sidebar">
             <aside>
-                <h3 class="head smaller">Konten Sidebar</h3>
+                <h3 class="head smaller">ADS</h3>
+                <div id="iklan">
+                    <span>Lorem ipsum dolor sit amet.</span>
+                    <a class="btn" href="#">Beli Dong</a>
+                </div>
             </aside>
         </div>
     </div>

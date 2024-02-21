@@ -116,6 +116,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+        //sticky start
+
+
+
+        if (jQuery(window).width() >= 768) {
+            var sticky = new Sticky('#the-content-sidebar aside');
+        }
+
+
+        //sticky end
+
+
+
 
 
 
