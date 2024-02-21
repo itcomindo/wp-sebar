@@ -16,10 +16,11 @@ function mm_get_related_post_by_tag_query()
         if ($tags) {
             $tag_ids = array();
             foreach ($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+            $related_post_number = carbon_get_theme_option('related_post_number');
             $args = array(
                 'tag__in' => $tag_ids,
                 'post__not_in' => array($post_id),
-                'posts_per_page' => 3,
+                'posts_per_page' => $related_post_number,
                 'ignore_sticky_posts' => 1
             );
             $related_posts = new WP_Query($args);

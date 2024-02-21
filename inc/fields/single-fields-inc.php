@@ -56,6 +56,26 @@ function mm_single_fields_inc()
             ->set_default_value(true),
 
 
+        //checkbox enabling related post
+        Field::make('checkbox', 'show_related_post', 'Show Related Post')
+            ->set_option_value('yes')
+            ->set_default_value(true),
+
+        //select related post by tag or category
+        Field::make('select', 'related_post_by', 'Related Post By')
+            ->add_options([
+                'tag' => 'Tag',
+                'category' => 'Category'
+            ])
+            ->set_default_value('tag'),
+
+        //input number of related post
+        Field::make('text', 'related_post_number', 'Number of Related Post')
+            ->set_default_value(3)
+            ->set_attribute('type', 'number')
+            ->set_help_text('Number of related post to show'),
+
+
 
 
 
