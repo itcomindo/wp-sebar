@@ -6,7 +6,7 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 ?>
-<div id="afb" class="active">
+<div id="afb" class="hide">
     <div class="afb-close">X</div>
     <div class="afb-wr">
         <div class="afb-content">

@@ -117,8 +117,7 @@
   -o-object-fit: contain;
   object-fit: contain;
 }
-
-#afb.active {
+#afb {
   background-color: black;
   position: fixed;
   z-index: 99;
@@ -131,9 +130,17 @@
   transition: 0.2s linear all;
 }
 #afb.hide {
-  transform: translateX(-50%) translateY(calc(100% + 30px));
+  visibility: hidden;
+  transform: translate(-50%, calc(100% + 30px));
   transition: 0.2s linear all;
 }
+
+#afb.active {
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: 0.2s linear all;
+}
+
 #afb.active .afb-close {
   position: absolute;
   width: 30px;

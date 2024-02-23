@@ -6,14 +6,30 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 
+
+//check if floating ads left and right is enable
 if (carbon_get_theme_option('enable_floating_ads')) {
     $ads_floating = 'data-ads-floating="true"';
 } else {
     $ads_floating = '';
 }
 
+
+//check if ads floating bottom is enable
+if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
+    $ads_fixed_bottom = 'data-ads-fixed-bottom="true"';
+} else {
+    $ads_fixed_bottom = 'data-ads-fixed-bottom="false"';
+}
+
+
+
+
+
+
+
 ?>
-<footer id="foo" class="section high" <?php echo $ads_floating; ?>>
+<footer id="foo" class="section high" <?php echo $ads_floating . ' ' . $ads_fixed_bottom; ?>>
     <div class="container">
         <div id="foo-wr">
             <div id="foo-top">

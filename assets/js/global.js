@@ -4,6 +4,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //jq start below
 
+        //get screen width start
+
+
+        function mmGetScreenWidth() {
+            var $screenWidth = window.innerWidth;
+            return $screenWidth;
+
+        }
+
+
+
+
+        //get screen width end
+
         function mm_find_image_width_height() {
             var imgs = jQuery('img.find-this');
             imgs.each(function () {
@@ -105,13 +119,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //mentahan close ads fixed bottom start
 
 
-        function closeAdsFixedBottom() {
-            var $afbClose = jQuery('.afb-close');
-            jQuery($afbClose).on('click', function () {
-                jQuery('#afb').addClass('hide');
-            });
+        function mmAdsFixedBottom() {
+
+            var $adsFloBotStatus = jQuery('#foo').attr('data-ads-fixed-bottom');
+            console.log($adsFloBotStatus);
+
+            function runAdsFloBottom() {
+                var $adsFloBottom = jQuery('#afb');
+                setTimeout(function () {
+                    $adsFloBottom.removeClass('hide').addClass('active');
+                }, 2000);
+                var $afbClose = jQuery('.afb-close');
+                jQuery($afbClose).on('click', function () {
+                    jQuery('#afb').removeClass('active').addClass('hide');
+                });
+            }
+            var $sw = mmGetScreenWidth();
+            if ($adsFloBotStatus == 'true' && $sw > 541) {
+                runAdsFloBottom();
+            }
+
+
+
+
         }
-        closeAdsFixedBottom();
+        mmAdsFixedBottom();
 
 
         //mentahan close ads fixed bottom end
@@ -122,9 +154,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         // mentahan social box start
-        jQuery('.trigger-social-box').on('click', function () {
-            jQuery('#topbar-right').toggleClass('active');
-        });
+        // jQuery('.trigger-social-box').on('click', function () {
+        //     jQuery('#topbar-right').toggleClass('active');
+        // });
         //mentahan social box end
 
 
@@ -169,11 +201,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //ads floating start
 
-        function adsFloating() {
+        function adsFloatingLeftRight() {
             function adsFlo() {
                 var adsFlo = jQuery('footer').attr('data-ads-floating');
                 if (adsFlo == 'true') {
-                    //when scroll 40px from top add class fixed to .ads-flo else remove class fixed
                     jQuery(window).scroll(function () {
                         if (jQuery(this).scrollTop() > 40) {
                             jQuery('.ads-flo').addClass('fixed');
@@ -185,7 +216,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
             adsFlo();
         }
-        adsFloating();
+        adsFloatingLeftRight();
 
 
 
