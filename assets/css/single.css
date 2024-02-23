@@ -37,6 +37,10 @@ ul.sing-post-meta-list .post-view {
   padding-top: 1rem;
   gap: 1rem;
 }
+
+#the-content-inner {
+  padding: 0 8px;
+}
 .post-published:before {
   content: "";
   position: absolute;
@@ -125,7 +129,7 @@ ul.toc-list li:hover {
 }
 
 .sing-left-col {
-  padding: 0 1rem;
+  padding: 0;
 }
 
 #sing-fim-wr {
@@ -297,7 +301,7 @@ ul.post-tags li a {
 .related-post-wr {
   display: flex;
   flex-direction: column;
-  gap: 1;
+  gap: 1rem;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
@@ -307,9 +311,7 @@ ul.post-tags li a {
 .relpos-head {
   font-size: 90% !important;
   font-weight: 500;
-  /* margin: 8px 0 !important; */
   line-height: 1.5 !important;
-  font-family: var(--font-secondary);
 }
 
 ul.related-post-list {

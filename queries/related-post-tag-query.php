@@ -26,7 +26,7 @@ function mm_get_related_post_by_tag_query()
             $related_posts = new WP_Query($args);
             if ($related_posts->have_posts()) {
                 echo '<div class="related-post-wr">';
-                echo '<h3 class="related-post-wr-head">Related Posts</h3>';
+                echo '<h3 class="head smaller">Related Posts</h3>';
                 echo '<ul class="list-no-style related-post-list">';
                 while ($related_posts->have_posts()) {
                     $related_posts->the_post();

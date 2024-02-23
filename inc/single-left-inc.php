@@ -93,9 +93,14 @@ if (carbon_get_theme_option('show_toc')) {
 
     <div id="the-content-wr">
 
-        <div id="the-content" class="sing-left-col" <?php echo $show_toc; ?>>
+        <div id="the-content-inner">
+
+            <div id="the-content" class="sing-left-col" <?php echo $show_toc; ?>>
+                <?php
+                the_content();
+                ?>
+            </div>
             <?php
-            the_content();
             get_template_part('components/post-tags-component');
             if (comments_open()) {
                 comment_form();
@@ -112,14 +117,12 @@ if (carbon_get_theme_option('show_toc')) {
                     echo '</div>';
                 }
             }
-
-
             ?>
         </div>
 
-        <div id="the-content-sidebar">
+        <div id="the-content-sidebar" data-sticky-container>
             <aside>
-                <h3 class="head smaller">ADS</h3>
+                <h3 class="head smaller">ADxxx</h3>
                 <div id="iklan">
                     <span>Lorem ipsum dolor sit amet.</span>
                     <a class="btn" href="#">Beli Dong</a>

@@ -118,11 +118,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //sticky start
 
-
-
         if (jQuery(window).width() >= 768) {
-            var sticky = new Sticky('#the-content-sidebar aside');
+            var $theContentSidebar = jQuery('#the-content-sidebar aside');
+            jQuery($theContentSidebar).sticky({
+                topSpacing: 20,
+                bottomSpacing: 750
+            });
         }
+
+
 
 
         //sticky end

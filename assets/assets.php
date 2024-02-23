@@ -81,10 +81,6 @@ function mm_load_assets()
         //load slick js
         wp_enqueue_script('slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '11.0.5', true);
 
-        //load stickyJs
-        wp_enqueue_script('sticky-js', 'https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js', array('jquery'), '1.3.0', true);
-
-
         //load home js
         wp_enqueue_script('mm-home-js', get_template_directory_uri() . '/assets/js/home.js', array(), $theme_version, true);
     }
@@ -95,12 +91,11 @@ function mm_load_assets()
         //load single.css from assets/css
         wp_enqueue_style('mm-single-style', get_template_directory_uri() . '/assets/css/single.css', array('mm-global-style'), $theme_version, 'all');
 
-
-        //load stickyJs
-        wp_enqueue_script('sticky-js', 'https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js', array('jquery'), '1.3.0', true);
+        //load jquery.sticky.js from assets/libs
+        wp_enqueue_script('mm-jquery-sticky', get_template_directory_uri() . '/assets/libs/jquery.sticky.js', array(), $theme_version, true);
 
         //load single-js.js from assets/js
-        wp_enqueue_script('mm-single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $theme_version, true);
+        wp_enqueue_script('mm-single-js', get_template_directory_uri() . '/assets/js/single.js', array(), $theme_version, true);
     }
 
 

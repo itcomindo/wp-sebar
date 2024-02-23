@@ -78,39 +78,6 @@ require_once get_template_directory() . '/queries/queries.php';
 
 
 // experimental 1 start
-
-function mm_check_theme_update()
-{
-    $theme_data = wp_get_theme('wp-sebar');
-    $current_version = $theme_data->Version;
-    $update_check_url = 'https://budiharyono.com/themes/sebar/latest_version.json';
-    $response = wp_remote_get($update_check_url);
-
-    if (is_wp_error($response) || wp_remote_retrieve_response_code($response) != 200) {
-        return;
-    }
-
-    $latest_info = json_decode(wp_remote_retrieve_body($response), true);
-    if (version_compare($current_version, $latest_info['version'], '<')) {
-        set_transient('mm_wp_sebar_theme_update', $latest_info, DAY_IN_SECONDS);
-    } else {
-        delete_transient('mm_wp_sebar_theme_update');
-    }
-}
-add_action('wp_update_themes', 'mm_check_theme_update');
-
-function mm_theme_update_notice()
-{
-    $theme_update = get_transient('mm_wp_sebar_theme_update');
-    if ($theme_update) {
-        echo '<div class="notice notice-warning is-dismissible">';
-        echo '<p>Ada versi baru dari tema WP Sebar tersedia. <a href="' . esc_url($theme_update['download_url']) . '">Unduh versi ' . esc_html($theme_update['version']) . '</a></p>';
-        echo '</div>';
-    }
-}
-add_action('admin_notices', 'mm_theme_update_notice');
-
-
 // experimental 1 end
 
 
