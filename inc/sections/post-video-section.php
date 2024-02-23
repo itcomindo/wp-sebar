@@ -8,7 +8,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 ?>
 
-<div id="postvid" class="section small">
+<div id="postvid" class="section small z-index-10">
     <div class="container">
         <div id="postvid-top">
             <h3 class="head smaller">Video</h3>
@@ -16,7 +16,7 @@ defined('ABSPATH') or die('No script kiddies please!');
         <div id="postvid-bot">
             <ul class="list-no-style postvid-item-list">
                 <?php
-                $video = new WP_Query(mm_get_post_video_query());
+                $video = new WP_Query(mm_get_post_video_query(10));
                 if ($video->have_posts()) {
                     while ($video->have_posts()) {
                         $video->the_post();
@@ -46,6 +46,9 @@ defined('ABSPATH') or die('No script kiddies please!');
                 }
                 ?>
             </ul>
+            <div class="post-vid-footer">
+                <a href="/video/" title="Load More Video Posts">Load More</a>
+            </div>
         </div>
     </div>
 </div>

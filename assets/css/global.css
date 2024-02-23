@@ -445,6 +445,24 @@ a.mp-cat-link {
   z-index: 66;
 }
 
+.post-vid-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+.post-vid-footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 6px 12px;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  border-radius: 5px;
+}
+
 /**
 =========================
 * Header
@@ -791,6 +809,10 @@ ul.vertical-menu li a {
 *=========================
 */
 
+#postvid {
+  background-color: var(--color-light-1);
+}
+
 .postvid-item-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -823,6 +845,11 @@ li.postvid-item .postvid-item-top img {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 1rem;
   background-color: var(--transparent-dark-5);
 }
@@ -925,6 +952,28 @@ li.postvid-item .postvid-item-top img {
   #afb.hide {
     transform: translateY(calc(100% + 30px));
     transition: 0.2s linear all;
+  }
+}
+
+/**
+=========================
+* 1054px
+* @todo 1054px
+*=========================
+*/
+@media screen and (max-width: 1054px) {
+  li.postvid-item:first-child {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-column: 1 / span 2;
+  }
+  li.postvid-item {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 10px;
+    overflow: hidden;
   }
 }
 
