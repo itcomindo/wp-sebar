@@ -117,7 +117,7 @@ if (carbon_get_theme_option('enable_floating_ads')) {
     get_template_part('inc/ads/ads-floating-lr-inc');
 }
 
-// get_template_part('inc/ads/ads-fixed-bottom-inc');
+get_template_part('inc/ads/ads-fixed-bottom-inc');
 
 //if user not login
 if (!is_user_logged_in()) {

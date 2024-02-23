@@ -412,6 +412,41 @@ a {
 
 /**
 =========================
+* Padding
+* @todo Padding
+*=========================
+*/
+
+.p-smallest {
+  padding: 2px 4px;
+}
+
+.p-smaller {
+  padding: 4px 8px;
+}
+
+.p-small {
+  padding: 6px 12px;
+}
+
+.p-medium {
+  padding: 8px 16px;
+}
+
+.p-big {
+  padding: 10px 20px;
+}
+
+.p-bigger {
+  padding: 12px 24px;
+}
+
+.p-biggest {
+  padding: 14px 28px;
+}
+
+/**
+=========================
 * Filter
 * @todo Filter
 *=========================
@@ -597,14 +632,13 @@ a.btn.email-bg:before {
   position: absolute;
   top: 0;
   left: 0;
-  background: black;
-  opacity: 0.5;
+  opacity: 0.1;
   z-index: 1;
   transition: 0.2s linear all;
 }
 
 .hover.overlay-color:hover:before {
-  opacity: 0.8;
+  opacity: 0.2;
   transition: 0.2s linear all;
 }
 

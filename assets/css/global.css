@@ -13,6 +13,10 @@
   min-height: 60px;
   width: 468px;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .ads.min-height-90.min-width-768 {
   min-height: 90px;
