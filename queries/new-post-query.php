@@ -61,6 +61,17 @@ function mm_get_new_posts_query()
 
 ?>
             <div class="np">
+
+
+                <?php
+                if (is_user_logged_in() && current_user_can('administrator')) {
+                    mm_get_admin_front_end_plugin();
+                }
+                ?>
+
+
+
+
                 <?php echo $post_type; ?>
 
                 <div class="np-top">

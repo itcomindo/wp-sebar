@@ -235,15 +235,27 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+        function mmStickySidebar() {
 
-        if (jQuery(window).width() >= 768) {
-            // var sticky = new Sticky('.the-sidebar aside');
-            var $theSidebar = jQuery('.the-sidebar aside');
-            jQuery($theSidebar).sticky({
-                topSpacing: 20,
-                bottomSpacing: 750
-            });
+            function mmTheSticky() {
+                var bodyClass = document.body.className;
+                if (bodyClass.includes('single')) {
+                    var $screenWidth = window.innerWidth;
+                    if ($screenWidth > 768) {
+                        var $theSidebar = jQuery('.the-sidebar aside');
+                        jQuery($theSidebar).sticky({
+                            topSpacing: 20,
+                            bottomSpacing: 750
+                        });
+                    }
+                }
+
+            }
+            mmTheSticky();
         }
+        mmStickySidebar();
+
+
 
 
 

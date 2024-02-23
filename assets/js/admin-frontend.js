@@ -28,6 +28,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
+        function mmAdminFrontEndPlugin() {
+            var afeTrigger = jQuery('.admin-front-end-trigger');
+            jQuery(afeTrigger).on('click', function () {
+                jQuery('.admin-front-end').removeClass('active');
+                jQuery(this).next('.admin-front-end').addClass('active');
+
+
+                //close
+                jQuery('.admin-front-end-close, .admin-front-end.active').on('click', function () {
+                    jQuery('.admin-front-end').removeClass('active');
+                });
+
+
+
+
+            });
+        }
+        mmAdminFrontEndPlugin();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //jq end above

@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     var kataPerMenit = 150;
                     var postContent = jQuery('#the-content').text();
                     var jumlahKata = postContent.split(' ').length;
-                    console.log(jumlahKata);
                     var waktuBaca = Math.ceil(jumlahKata / kataPerMenit);
                     jQuery('.ert').text('Reading Time: ' + waktuBaca + ' minutes');
                 }
@@ -48,7 +47,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             function theToc() {
                 var is_toc_enabled = jQuery('#the-content').attr('data-toc');
-                console.log(is_toc_enabled);
                 if (is_toc_enabled == 'true') {
                     var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
                     jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
