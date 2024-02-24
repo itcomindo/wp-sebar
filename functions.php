@@ -16,6 +16,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
+add_theme_support('widgets');
 
 
 
@@ -63,6 +64,11 @@ function crb_load()
 }
 
 
+
+
+
+
+
 /**
  * Load the Required Files
  */
@@ -75,10 +81,19 @@ require_once get_template_directory() . '/components/components.php';
 require_once get_template_directory() . '/plugins/plugins.php';
 require_once get_template_directory() . '/queries/queries.php';
 require_once get_template_directory() . '/assets/images/images.php';
-
+require_once get_template_directory() . '/widgets/widgets.php';
+require_once get_template_directory() . '/sidebars/sidebars.php';
 
 
 // experimental 1 start
+
+
+
+
+
+
+
+
 // experimental 1 end
 
 
