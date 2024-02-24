@@ -22,7 +22,7 @@ if (is_category()) {
 <div id="np-pr" class="section small">
     <div class="container">
         <div id="np-head-wr">
-            <h2 class="head small with-square-dot">
+            <h2 class="head smaller">
                 <?php echo esc_html($page_title); ?>
             </h2>
         </div>

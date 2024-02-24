@@ -73,7 +73,7 @@ function mm_get_pbc()
             $pbc_cat_url = get_category_link($pbc_cat_id);
 ?>
             <div class="pbcc-pr">
-                <div class="pbcc-name clip-90"><?php echo esc_html($pbc_cat_name); ?></div>
+                <div class="head smallest clip-90 color-accent-1-dark p-smallest"><?php echo esc_html($pbc_cat_name); ?></div>
                 <div class="pbcc-wr">
                     <?php
                     $post_not_in = $post_ids = post_to_exclude_query();

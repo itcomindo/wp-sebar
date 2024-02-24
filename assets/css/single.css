@@ -258,7 +258,7 @@ ul.post-tags li a {
   flex-wrap: wrap;
   gap: 8px;
   padding: 8px;
-  background-color: darkred;
+  background-color: var(--color-dark-3);
 }
 .vid-items-wr.one {
   display: none;

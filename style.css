@@ -665,6 +665,12 @@ a.btn.email-bg:before {
   padding-right: 1.5rem !important;
 }
 
+.clip-90.color-accent-1-dark {
+  background-color: var(--color-accent-1-dark);
+  width: max-content;
+  color: var(--color-light-1);
+}
+
 /**
 =========================
 * Box Shadows
