@@ -11,7 +11,11 @@ get_header();
 ?>
 <section>
     <div class="container">
-        <h1>under construction</h1>
+        <div class="content-inner flex-col">
+
+            <h1 class="head small">Underconstruction</h1>
+
+        </div>
     </div>
 </section>
 <?php

@@ -195,7 +195,10 @@ div {
 .over-flow-visible {
   overflow: visible !important;
 }
-
+.content-inner {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 /**
 =========================
 * Flexbox
@@ -537,7 +540,24 @@ a {
 a.btn {
   display: block;
   width: max-content;
+  padding: 2px 1rem;
 }
+
+a.btn.smaller {
+  padding: 2px 8px;
+}
+a.btn.small {
+  padding: 4px 12px;
+}
+
+a.btn.medium {
+  padding: 6px 16px;
+}
+
+a.btn.big {
+  padding: 8px 20px;
+}
+
 a.btn:hover {
   transform: translateY(-2px);
   transition: 0.2s linear all;
@@ -575,6 +595,13 @@ a.btn.wa-bg {
   background-color: black;
   color: white;
 }
+
+a.btn.call-bg i,
+a.btn.email-bg i,
+a.btn.wa-bg i {
+  margin-right: 4px;
+}
+
 a.btn.wa-bg:before {
   content: "";
   position: absolute;

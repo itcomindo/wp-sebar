@@ -22,13 +22,8 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
     $ads_fixed_bottom = 'data-ads-fixed-bottom="false"';
 }
 
-
-
-
-
-
-
 ?>
+
 <footer id="foo" class="section high" <?php echo $ads_floating . ' ' . $ads_fixed_bottom; ?>>
     <div class="container">
         <div id="foo-wr">
@@ -36,41 +31,10 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
                 <h2 class="head small">
                     WP Sebar
                 </h2>
-                <span>Jln. Mujahidin 1 No.112, Larangan, Kreo Selatan, Kota Tangerang, Banten Indonesia 15154</span>
-                <span>0813-9891-2341</span>
+                <span><?php echo mm_get_data_website_inc()['alamat-lengkap-perusahaan']; ?></span>
+                <span><span><?php echo mm_get_data_website_inc()['handphone-perusahaan']; ?></span></span>
                 <div class="sosmed-box">
-                    <ul class="list-no-style sosmed-box-list">
-                        <!-- facebook -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-facebook-square"></i></a></li>
-
-                        <!-- instagram -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-instagram-square"></i></a></li>
-
-                        <!-- twitter -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-twitter-square"></i></a></li>
-
-                        <!-- tiktok -->
-                        <li><a href="#" title="sosmed"><i class="fa-brands fa-tiktok"></i></a></li>
-
-                        <!-- youtube -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-youtube-square"></i></a></li>
-
-                        <!-- linkedin -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-linkedin"></i></a></li>
-
-                        <!-- pinterest -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-pinterest-square"></i></a></li>
-
-                        <!-- whatsapp -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-whatsapp-square"></i></a></li>
-
-                        <!-- telegram -->
-                        <li><a href="#" title="sosmed"><i class="fab fa-telegram"></i></a></li>
-
-
-
-
-                    </ul>
+                    <?php echo mm_get_social_media_component(); ?>
                 </div>
             </div>
             <div id="foo-bot">
@@ -78,9 +42,9 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
                 <div id="foo-left" class="foo-col">
                     <h3 class="head smaller">About</h3>
                     <div class="foo-col-inner">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?
-                        </p>
+                        <?php
+                        echo wpautop(mm_get_data_website_inc()['deskripsi-perusahaan']);
+                        ?>
                     </div>
                 </div>
 
