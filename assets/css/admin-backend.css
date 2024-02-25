@@ -7,3 +7,7 @@
   color: white;
   margin: 4px 0;
 }
+
+.danger .cf-field__help {
+  color: darkred !important;
+}

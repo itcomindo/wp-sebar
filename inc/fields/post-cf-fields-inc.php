@@ -78,20 +78,39 @@ function mm_post_custom_fields()
 
             //complex fields contain: text fields for gallery title, image field for custom thumbnail, and text for total images
             Field::make('complex', 'post_gallery', 'Photo Gallery')
+                ->set_help_text('Add your photo gallery here *required')
+                ->set_layout('tabbed-horizontal')
+                ->set_classes('danger')
+                ->set_required(true)
                 ->add_fields([
-                    Field::make('text', 'gallery_title', 'Gallery Title')
+                    // title
+                    Field::make('text', 'photo_title', 'Photo Title')
                         ->set_required(true),
+
+                    // image
                     Field::make('image', 'gallery_thumbnail', 'Custom Thumbnail')
-                        ->set_value_type('url'),
-                    Field::make('text', 'gallery_total_images', 'Total Images')
+                        ->set_value_type('url')
                         ->set_required(true),
+
+                    //textare photo_description
+                    Field::make('rich_text', 'photo_description', 'Photo Description'),
+
+
+
                 ])
                 ->set_conditional_logic([
                     [
                         'field' => 'the_post_type',
                         'value' => 'gallery',
                     ],
-                ]),
+                ])
+                ->set_header_template('
+                <% if (photo_title) { %>
+                    <%- photo_title %>
+                <% } else { %>
+                    Title
+                <% } %>
+            '),
 
 
 

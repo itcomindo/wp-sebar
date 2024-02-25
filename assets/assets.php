@@ -96,6 +96,18 @@ function mm_load_assets()
 
         //load single-js.js from assets/js
         wp_enqueue_script('mm-single-js', get_template_directory_uri() . '/assets/js/single.js', array(), $theme_version, true);
+
+        $the_post_type = carbon_get_post_meta(get_the_ID(), 'the_post_type');
+        if ($the_post_type == 'gallery') {
+            //load lightbox.css from assets/libs
+            wp_enqueue_style('mm-lightbox-css', get_template_directory_uri() . '/assets/libs/lightbox.css', array(), $theme_version, 'all');
+
+            //load lightbox.js from assets/libs
+            wp_enqueue_script('mm-lightbox-js', get_template_directory_uri() . '/assets/libs/lightbox.js', array(), $theme_version, true);
+
+            //load single-gallery.js from assets/js
+            wp_enqueue_script('mm-single-gallery-js', get_template_directory_uri() . '/assets/js/single-gallery.js', array(), $theme_version, true);
+        }
     }
 
 

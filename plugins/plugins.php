@@ -8,6 +8,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 require_once get_template_directory() . '/plugins/pageview-plugin.php';
 require_once get_template_directory() . '/plugins/admin-front-end-plugin.php';
+require_once get_template_directory() . '/plugins/clean-up-plugin.php';
 
 
 

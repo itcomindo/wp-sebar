@@ -83,6 +83,8 @@ if (carbon_get_theme_option('show_toc')) {
     $fim = carbon_get_post_meta(get_the_ID(), 'the_post_type');
     if ('video' === $fim) {
         echo  mm_single_video_player();
+    } elseif ('gallery' === $fim) {
+        echo  mm_single_gallery_player();
     } else {
         echo '<div id="sing-fim-wr">';
         echo mm_get_featured_image(get_the_ID());

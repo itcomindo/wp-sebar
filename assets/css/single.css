@@ -196,6 +196,15 @@ ul.toc-list li:hover {
   margin: 0.5rem 0;
   line-height: 1.5;
 }
+
+#the-content iframe,
+#the-content p iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .the-tags {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -284,6 +293,50 @@ ul.post-tags li a {
 }
 
 .vid-item img.find-this {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/**
+=========================
+* Single Gallery
+* @todo single gallery
+*=========================
+*/
+
+#gallery-player {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+#gallery-player img {
+  width: 100%;
+  height: auto;
+}
+#sing-fim-photo-wr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(100% / 4), 1fr));
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--color-light-5);
+  overflow: hidden;
+}
+
+.photo-item {
+  /* width: calc(33.3333% - 8px); */
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+.photo-item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.photo-item img.find-this {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
