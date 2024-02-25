@@ -12,7 +12,7 @@ if (carbon_get_theme_option('show_estimated_reading_time')) {
     $ert = '';
 }
 ?>
-<section id="sing" class="section medium" <?php echo $ert; ?>>
+<section id="sing" class="section medium" <?php echo $ert; ?> data-related-post="true" data-irp="2">
     <div class="container">
         <div id="sing-wr">
 

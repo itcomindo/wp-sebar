@@ -122,7 +122,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         function mmAdsFixedBottom() {
 
             var $adsFloBotStatus = jQuery('#foo').attr('data-ads-fixed-bottom');
-            console.log($adsFloBotStatus);
 
             function runAdsFloBottom() {
                 var $adsFloBottom = jQuery('#afb');

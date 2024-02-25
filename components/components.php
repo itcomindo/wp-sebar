@@ -14,3 +14,4 @@ require_once get_template_directory() . '/components/single-video-component.php'
 require_once get_template_directory() . '/components/buttons-component.php';
 require_once get_template_directory() . '/components/social-media-component.php';
 require_once get_template_directory() . '/components/single-gallery-component.php';
+require_once get_template_directory() . '/components/inline-related-post-component.php';

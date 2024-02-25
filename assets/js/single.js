@@ -5,6 +5,85 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //jq start below
 
 
+
+        //get all body classes start
+
+        function mm_single_body_classes() {
+            var bodyClasses = jQuery('body').attr('class');
+            if (bodyClasses.includes('single')) {
+                return true;
+            }
+        }
+
+
+        //get all body classes end
+
+        //inline related post start
+
+
+        // function mm_irp() {
+        //     if (mm_single_body_classes()) {
+        //         var $dataRelatedPost = jQuery('#sing').attr('data-related-post');
+        //         if ($dataRelatedPost === 'true') {
+        //             var $irpPositionAfter = parseInt(jQuery('#sing').attr('data-irp'), 10);
+        //             var $inlineRelatedPostContainer = jQuery('.inline-related-post');
+        //             if ($irpPositionAfter > 0) {
+        //                 var $targetP = jQuery('#the-content p').eq($irpPositionAfter - 1);
+        //                 if ($targetP.length) {
+        //                     $inlineRelatedPostContainer.insertAfter($targetP);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+
+        function mm_irp() {
+            if (mm_single_body_classes()) {
+                var dataRelatedPost = jQuery('#sing').attr('data-related-post');
+                if (dataRelatedPost === 'true') {
+                    var irpPositionAfter = parseInt(jQuery('#sing').attr('data-irp'), 10);
+                    var inlineRelatedPostContainer = jQuery('.inline-related-post');
+                    if (irpPositionAfter > 0) {
+                        var targetP = jQuery('#the-content p').eq(irpPositionAfter - 1);
+                        if (targetP.length) {
+                            inlineRelatedPostContainer.insertAfter(targetP);
+                        }
+                    }
+                }
+            }
+            jQuery(window).scroll(function () {
+                jQuery('span.irp-icon').each(function () {
+                    var span = jQuery(this);
+                    if (span.visible(true)) {
+                        span.addClass('animate__shakeX');
+                        setTimeout(function () {
+                            span.removeClass('animate__shakeX');
+                        }, 1000);
+                    }
+                });
+            });
+        }
+        jQuery.fn.visible = function (partial) {
+            var $t = jQuery(this),
+                $w = jQuery(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+
+
+        mm_irp();
+
+
+
+        //inline related post end
+
+
         //estimasi waktu baca start
         function mm_wrt() {
             function theErt() {
