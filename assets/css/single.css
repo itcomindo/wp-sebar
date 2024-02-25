@@ -326,7 +326,6 @@ ul.post-tags li a {
 }
 
 .photo-item {
-  /* width: calc(33.3333% - 8px); */
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
