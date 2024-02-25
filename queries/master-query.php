@@ -37,3 +37,39 @@ function mm_the_rest_post_query()
     }
     return $the_args;
 }
+
+
+function mm_get_post_gallery_query($post_perpage = 10)
+{
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $post_perpage,
+        'meta_query' => array(
+            array(
+                'key' => 'the_post_type',
+                'value' => 'gallery',
+                'compare' => '='
+            )
+        )
+    );
+
+    return $args;
+}
+
+
+function mm_get_post_custom_type($post_perpage = 10, $post_type = 'video')
+{
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $post_perpage,
+        'meta_query' => array(
+            array(
+                'key' => 'the_post_type',
+                'value' => $post_type,
+                'compare' => '='
+            )
+        )
+    );
+
+    return $args;
+}

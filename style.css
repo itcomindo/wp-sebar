@@ -336,17 +336,53 @@ a {
   font-weight: 700;
 }
 
+.text-smallest {
+  font-size: 70%;
+}
+.text-smaller {
+  font-size: 80%;
+}
+
 .text-small {
   font-size: 90%;
 }
 .text-medium {
   font-size: 1rem;
 }
-.text-smaller {
-  font-size: 80%;
+
+.text-center {
+  text-align: center;
 }
-.text-smallest {
-  font-size: 70%;
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /**
@@ -539,8 +575,9 @@ a {
 
 a.btn {
   display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
-  padding: 2px 1rem;
 }
 
 a.btn.smaller {
@@ -694,6 +731,8 @@ a.btn.email-bg:before {
 
 .clip-90.color-accent-1-dark {
   background-color: var(--color-accent-1-dark);
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   color: var(--color-light-1);
 }
@@ -787,15 +826,31 @@ a.btn.email-bg:before {
 .color-accent-1 {
   color: var(--color-accent-1);
 }
+.color-accent-1-dark {
+  color: var(--color-accent-1-dark);
+}
 .color-accent-2 {
   color: var(--color-accent-2);
 }
+
+.color-accent-2-dark {
+  color: var(--color-accent-2-dark);
+}
+
 .color-accent-3 {
   color: var(--color-accent-3);
 }
 
+.color-accent-3-dark {
+  color: var(--color-accent-3-dark);
+}
+
 .color-accent-4 {
   color: var(--color-accent-4);
+}
+
+.color-accent-4-dark {
+  color: var(--color-accent-4-dark);
 }
 
 /**
@@ -865,6 +920,7 @@ a.btn.email-bg:before {
   bottom: -4rem;
   background-color: var(--color-dark-1);
   border-radius: 50%;
+  -webkit-filter: blur(10px);
   filter: blur(10px);
   opacity: 0.4;
 }

@@ -295,6 +295,11 @@ h3.np-title {
   border-radius: 5px;
   overflow: hidden;
 }
+
+.pbc-head {
+  margin-top: 0;
+}
+
 #pbc.s1 .pbcc-top .post-views {
   position: absolute;
   z-index: 2;

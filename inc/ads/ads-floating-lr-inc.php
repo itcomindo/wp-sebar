@@ -12,8 +12,8 @@ defined('ABSPATH') or die('No script kiddies please!');
     <div class="ads-flo-wr text">
         <div class="ads-flo-text">
             <span>ADS</span>
-            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
-            <a class="ads-flo-btn" href="#">Cekit Now</a>
+            <span class="text-center text-smaller">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+            <a class="btn ads-flo-btn text-smaller p-small" href="#">Cekit Now</a>
         </div>
     </div>
 </div>

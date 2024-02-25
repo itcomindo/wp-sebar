@@ -40,6 +40,7 @@ function mm_load_assets()
     } elseif ($style_is == 'style-2') {
         wp_enqueue_style('mm-style-2', get_template_directory_uri() . '/assets/css/style-2.css', array('mm-global-style'), $theme_version, 'all');
     }
+    wp_enqueue_style('mm-custom-post-type', get_template_directory_uri() . '/assets/css/custom-post-type.css', array('mm-global-style'), $theme_version, 'all');
 
     //for logged admin user
     if (current_user_can('administrator') && is_user_logged_in()) {
