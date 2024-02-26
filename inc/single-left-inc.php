@@ -102,8 +102,18 @@ if (carbon_get_theme_option('show_toc')) {
                 the_content();
                 ?>
             </div>
+
+            <!-- share post component -->
             <?php
             get_template_part('components/post-tags-component');
+            mm_get_share_post_component();
+            ?>
+
+
+
+
+
+            <?php
             if (comments_open()) {
                 comment_form();
             }
@@ -120,6 +130,16 @@ if (carbon_get_theme_option('show_toc')) {
                 }
             }
             ?>
+
+
+
+
+
+
+
+
+
+
         </div>
 
         <div id="the-content-sidebar" data-sticky-container>

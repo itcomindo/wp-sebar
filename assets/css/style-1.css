@@ -450,7 +450,7 @@ p.comment-form-cookies-consent {
     var(--color-accent-1)
   );
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   color: var(--color-light-1);
 }
 

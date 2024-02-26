@@ -322,6 +322,36 @@ li.irp {
 
 /**
 =========================
+* Share Post
+* @todo share post
+*=========================
+*/
+
+.sharepost-wr {
+  background-color: var(--color-accent-2);
+  background-color: var(--color-accent-1-dark);
+  overflow: visible;
+  margin-top: 3.5rem;
+}
+.sharepost-wr:before {
+  content: "Share This Post";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 75%;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  /* transform: translateX(-50%); */
+  padding: 0 1rem;
+  /* border-radius: 5px 5px 0 0; */
+}
+
+ul.sharepost-list a {
+  color: var(--color-light-1);
+}
+
+/**
+=========================
 * Single Video
 * @todo single video
 *=========================
