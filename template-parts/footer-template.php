@@ -40,7 +40,7 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
             <div id="foo-bot">
 
                 <div id="foo-left" class="foo-col">
-                    <h3 class="head smaller">About</h3>
+                    <h3 class="head smallest color-light-2">About</h3>
                     <div class="foo-col-inner">
                         <?php
                         echo wpautop(mm_get_data_website_inc()['deskripsi-perusahaan']);
@@ -49,24 +49,16 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
                 </div>
 
                 <div id="foo-mid" class="foo-col">
-                    <h3 class="head smaller">Footer Menu</h3>
+                    <h3 class="head smallest color-light-2">Footer Menu</h3>
                     <div class="foo-col-inner">
-                        <nav id="footer-nav">
-                            <ul class="list-no-style footer-menu vertical-menu">
-                                <li><a href="#">Company</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Advertising</a></li>
-                                <li><a href="#">Disclamier</a></li>
-                                <li><a href="#">Term of use</a></li>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Sitemap</a></li>
-                            </ul>
-                        </nav>
+                        <?php
+                        mm_get_footer_menu();
+                        ?>
                     </div>
                 </div>
 
                 <div id="foo-right" class="foo-col">
-                    <h3 class="head smaller">Foo Header</h3>
+                    <h3 class="head smallest color-light-2">Foo Header</h3>
                     <div class="foo-col-inner">
                         <span>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eligendi aliquam deserunt iste voluptatibus totam quis at reprehenderit dolorem provident quod incidunt, aperiam quo facilis, ducimus nostrum sapiente nulla nobis?

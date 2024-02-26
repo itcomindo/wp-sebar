@@ -124,7 +124,7 @@ if (carbon_get_theme_option('show_toc')) {
 
         <div id="the-content-sidebar" data-sticky-container>
             <aside>
-                <h3 class="head smaller">ADxxx</h3>
+                <h3 class="head smallest">ADxxx</h3>
                 <div id="iklan">
                     <span>Lorem ipsum dolor sit amet.</span>
                     <a class="btn" href="#">Beli Dong</a>

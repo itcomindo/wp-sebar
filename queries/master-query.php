@@ -57,7 +57,7 @@ function mm_get_post_gallery_query($post_perpage = 10)
 }
 
 
-function mm_get_post_custom_type($post_perpage = 10, $post_type = 'video')
+function mm_get_post_custom_type_query($post_perpage = 10, $post_type = 'video')
 {
     $args = array(
         'post_type' => 'post',

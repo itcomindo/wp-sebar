@@ -20,24 +20,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //inline related post start
 
-
-        // function mm_irp() {
-        //     if (mm_single_body_classes()) {
-        //         var $dataRelatedPost = jQuery('#sing').attr('data-related-post');
-        //         if ($dataRelatedPost === 'true') {
-        //             var $irpPositionAfter = parseInt(jQuery('#sing').attr('data-irp'), 10);
-        //             var $inlineRelatedPostContainer = jQuery('.inline-related-post');
-        //             if ($irpPositionAfter > 0) {
-        //                 var $targetP = jQuery('#the-content p').eq($irpPositionAfter - 1);
-        //                 if ($targetP.length) {
-        //                     $inlineRelatedPostContainer.insertAfter($targetP);
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-
-
         function mm_irp() {
             if (mm_single_body_classes()) {
                 var dataRelatedPost = jQuery('#sing').attr('data-related-post');
@@ -56,9 +38,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('span.irp-icon').each(function () {
                     var span = jQuery(this);
                     if (span.visible(true)) {
-                        span.addClass('animate__shakeX');
+                        span.addClass('animate__swing');
                         setTimeout(function () {
-                            span.removeClass('animate__shakeX');
+                            span.removeClass('animate__swing');
                         }, 1000);
                     }
                 });
@@ -121,27 +103,70 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //toc start
 
+        // function mm_toc() {
+        //     function theToc() {
+        //         var is_toc_enabled = jQuery('#the-content').attr('data-toc');
+        //         if (is_toc_enabled == 'true') {
+        //             var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
+        //             jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
+        //                 var current = jQuery(this);
+        //                 current.attr("id", "mm_toc" + i);
+        //                 toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
+        //             });
+        //             toc += "</ul></div>";
+        //             jQuery("#the-content").prepend(toc);
+        //         }
+        //     }
+        //     theToc();
+        // }
+        // mm_toc();
+
+        // function mm_toc() {
+        //     function theToc() {
+        //         var is_toc_enabled = jQuery('#the-content').attr('data-toc');
+        //         if (is_toc_enabled == 'true' && jQuery("#the-content").find("h2, h3, h4, h5, h6").length > 0) {
+        //             var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
+        //             jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
+        //                 var current = jQuery(this);
+        //                 current.attr("id", "mm_toc" + i);
+        //                 toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
+        //             });
+        //             toc += "</ul></div>";
+        //             jQuery("#the-content").prepend(toc);
+        //         }
+        //     }
+        //     theToc();
+        // }
+        // mm_toc();
+
         function mm_toc() {
-
-
             function theToc() {
                 var is_toc_enabled = jQuery('#the-content').attr('data-toc');
                 if (is_toc_enabled == 'true') {
-                    var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
-                    jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
-                        var current = jQuery(this);
-                        current.attr("id", "mm_toc" + i);
-                        toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
-                    });
-                    toc += "</ul></div>";
-                    jQuery("#the-content").prepend(toc);
+                    if (jQuery("#the-content").find("h2, h3, h4, h5, h6").length == 0) {
+                        jQuery('#the-toc').remove();
+                    } else {
+                        var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
+                        jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
+                            var current = jQuery(this);
+                            current.attr("id", "mm_toc" + i);
+                            toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
+                        });
+                        toc += "</ul></div>";
+                        jQuery("#the-content").prepend(toc);
+                    }
                 }
             }
             theToc();
-
-
         }
         mm_toc();
+
+
+
+
+
+
+
         //toc end
 
 

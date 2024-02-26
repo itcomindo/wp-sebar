@@ -18,20 +18,43 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                 <div class="cpt-bot">
                     <ul class="list-no-style cpt-item-list">
                         <?php
-                        $gallery = mm_get_post_custom_type($post_perpage, $post_type);
-                        $video = new WP_Query($gallery);
-                        if ($video->have_posts()) {
-                            while ($video->have_posts()) {
-                                $video->the_post();
+                        $cpts = mm_get_post_custom_type_query($post_perpage, $post_type);
+                        $cpt = new WP_Query($cpts);
+                        if ($cpt->have_posts()) {
+                            while ($cpt->have_posts()) {
+                                $cpt->the_post();
                                 $title = get_the_title();
                                 $permalink = get_the_permalink();
-                        ?>
-                                <li class="cpt-item">
-                                    <div class="cpt-item-top">
 
-                                        <?php
-                                        the_post_thumbnail('full', array('class' => 'fim'));
-                                        ?>
+                                if ($post_type === 'video') {
+                                    $readmore = '<a class="readmore text-small color-accent-1 p-smaller" href="' . $permalink . '">Tonton Video</a>';
+                                    $vids = carbon_get_post_meta(get_the_ID(), 'post_videos');
+                                    if ($vids) {
+                                        $vid = $vids[0]['video_duration'];
+                                        $duration = '<span class="cpt-duration text-smallest absolute z-index-10 p-smallest">' . esc_html($vid) . '</span>';
+                                    }
+                                } elseif ($post_type === 'gallery') {
+                                    $readmore = '<a class="readmore text-small color-accent-1 p-smaller" href="' . $permalink . '">Lihat Photo</a>';
+                                    $duration = '';
+                                } else {
+                                    $readmore = '<a class="readmore text-small color-accent-1 p-smaller" href="' . $permalink . '">Selengkapnya</a>';
+                                    $duration = '';
+                                }
+
+
+
+
+
+
+                        ?>
+                                <li class="cpt-item hover-to-top">
+                                    <div class="cpt-item-top">
+                                        <?php echo $duration; ?>
+                                        <a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>">
+                                            <?php
+                                            the_post_thumbnail('full', array('class' => 'fim'));
+                                            ?>
+                                        </a>
                                     </div>
 
                                     <div class="cpt-item-bot">
@@ -42,6 +65,7 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                                                 ?>
                                             </a>
                                         </h4>
+                                        <?php echo $readmore; ?>
                                     </div>
                                 </li>
                         <?php
@@ -50,7 +74,7 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                         ?>
                     </ul>
                     <div class="cpt-footer">
-                        <a href="/gallery/" title="Load More Video Posts">Load More</a>
+                        <a class="btn text-small bg-color-accent-1-dark color-light-1 borad-5 w-max-content p-small" href="/<?php echo esc_html($post_type); ?>/" title="Load More gallery Posts">Load More <?php echo esc_html($post_type); ?></a>
                     </div>
                 </div>
             </div>

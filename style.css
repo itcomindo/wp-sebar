@@ -217,6 +217,66 @@ div {
   gap: 1rem;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
+}
+
 /**
 =========================
 * Grid
@@ -250,6 +310,40 @@ div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
+}
+
+/**
+=========================
+* Position
+* @todo Position
+*=========================
+*/
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
 }
 
 /**
@@ -686,6 +780,57 @@ a.btn.email-bg:before {
   overflow: hidden;
   z-index: 0;
 }
+
+.hover.color-accent-1 a:hover {
+  color: var(--color-accent-1);
+}
+
+.hover.color-accent-1-dark a:hover {
+  color: var(--color-accent-1-dark);
+}
+
+.hover.color-accent-2 a:hover {
+  color: var(--color-accent-2);
+}
+
+.hover.color-accent-2-dark a:hover {
+  color: var(--color-accent-2-dark);
+}
+
+.hover.color-accent-3 a:hover {
+  color: var(--color-accent-3);
+}
+
+.hover.color-accent-3-dark a:hover {
+  color: var(--color-accent-3-dark);
+}
+
+.hover.color-accent-4 a:hover {
+  color: var(--color-accent-4);
+}
+
+.hover.color-accent-4-dark a:hover {
+  color: var(--color-accent-4-dark);
+}
+.hover.color-light-1 a:hover {
+  color: var(--color-light-1);
+}
+
+.hover.color-light-2 a:hover {
+  color: var(--color-light-2);
+}
+
+.hover.color-light-3 a:hover {
+  color: var(--color-light-3);
+}
+
+.hover.color-light-4 a:hover {
+  color: var(--color-light-4);
+}
+.hover.color-light-5 a:hover {
+  color: var(--color-light-5);
+}
+
 .hover div * {
   z-index: 1;
 }
@@ -805,6 +950,18 @@ a.btn.email-bg:before {
 }
 .color-light-2 {
   color: var(--color-light-2);
+}
+
+.color-light-3 {
+  color: var(--color-light-3);
+}
+
+.color-light-4 {
+  color: var(--color-light-4);
+}
+
+.color-light-5 {
+  color: var(--color-light-5);
 }
 
 .color-dark-1 {

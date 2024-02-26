@@ -829,11 +829,12 @@ ul.sosmed-box-list li a {
   display: flex;
   flex-direction: column;
 }
-.foo-col-inner p {
+.foo-col-inner p,
+.foo-col-inner span {
   margin: 4px 0;
   font-size: 95%;
 }
-nav#footer-nav {
+nav#footer-menu-nav {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -853,6 +854,7 @@ ul.vertical-menu li {
 ul.vertical-menu li a {
   width: 100%;
   display: flex;
+  color: var(--color-light-1);
 }
 
 #cp {
