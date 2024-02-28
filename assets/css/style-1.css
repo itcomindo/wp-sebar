@@ -117,9 +117,11 @@ a.np-cat {
 }
 
 .np-post-date {
-  position: absolute;
-  right: 1rem;
-  bottom: 8px;
+  position: relative;
+  /* right: 1rem; */
+  /* bottom: 8px; */
+  margin: 0 auto;
+  width: max-content;
   background-color: var(--transparent-dark-3);
   color: var(--color-light-1);
   padding: 4px 8px;
@@ -168,6 +170,7 @@ a.np-cat {
 }
 #np-wr.s1 .np-bot .post-views {
   color: var(--color-light-1);
+  z-index: 5;
 }
 
 #np-wr.s1 .np:first-child h3.query-head {

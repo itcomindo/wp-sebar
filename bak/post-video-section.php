@@ -12,7 +12,7 @@ defined('ABSPATH') or die('No script kiddies please!');
     <div class="container">
         <div class="content-inner">
             <div id="postvid-top">
-                <h3 class="head smaller">Video</h3>
+                <h3 class="head text-smaller">Video</h3>
             </div>
             <div id="postvid-bot">
                 <ul class="list-no-style postvid-item-list">

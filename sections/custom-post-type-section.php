@@ -13,7 +13,7 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
         <div class="container">
             <div class="content-inner">
                 <div class="cpt-top">
-                    <h3 class="head smaller text-capitalize color-accent-1"><?php echo esc_html($post_type); ?></h3>
+                    <h3 class="head text-medium text-capitalize color-accent-1"><?php echo esc_html($post_type); ?></h3>
                 </div>
                 <div class="cpt-bot">
                     <ul class="list-no-style cpt-item-list">

@@ -72,8 +72,8 @@ function mm_get_most_post_view_posts()
 
                 </div>
                 <div class="mp-item-bot">
-                    <h3 class="head smallest font-secondary">
-                        <a class="fw500" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
+                    <h3 class="head text-small text-center fw500">
+                        <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
                     </h3>
                 </div>
             </li>
