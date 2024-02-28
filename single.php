@@ -7,12 +7,24 @@
 defined('ABSPATH') or die('No script kiddies please!');
 get_header();
 if (carbon_get_theme_option('show_estimated_reading_time')) {
-    $ert = 'data-ert="true"';
+    $estimate_reading_time = 'data-ert="true"';
 } else {
-    $ert = '';
+    $estimate_reading_time = '';
 }
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
-<section id="sing" class="section medium" <?php echo $ert; ?> data-related-post="true" data-irp="2">
+<section id="sing" class="section medium" <?php echo $estimate_reading_time . ' ' . mm_set_inline_related_post()['enable'] . ' ' . mm_set_inline_related_post()['insert-after']; ?>>
     <div class="container">
         <div id="sing-wr">
 

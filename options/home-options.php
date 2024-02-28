@@ -8,9 +8,14 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 use Carbon_Fields\Field;
 
-function mm_home_field_inc()
+function home_options()
 {
     return [
+
+        // Home Options
+        Field::make('separator', 'homesep', 'Homepage')
+            ->set_classes('mm-sep'),
+
 
         Field::make('checkbox', 'enable_most_view_post', 'Enable Most View Post')
             ->set_option_value('yes')

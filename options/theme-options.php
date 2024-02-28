@@ -37,7 +37,7 @@ function mm_theme_options()
     Container::make('theme_options', 'Website')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_website_data_field_inc(),
+            ...website_data_options(),
         ]);
 
 
@@ -46,31 +46,30 @@ function mm_theme_options()
     Container::make('theme_options', 'Topbar')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_topbar_left_field_inc(),
-            ...mm_topbar_right_field_inc()
+            ...topbar_left_options(),
+            ...topbar_right_options()
         ]);
 
     //Header
     Container::make('theme_options', 'Header')
         ->set_page_parent($container)
         ->add_fields([
-            // ...mm_get_topbar_left_field(),
-            ...mm_header_left_field_inc(),
-            // ...mm_get_topbar_right_field()
+            ...header_left_options(),
         ]);
 
     //Home
     Container::make('theme_options', 'Home')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_home_field_inc(),
+
+
+            ...home_options(),
 
 
 
-            Field::make('separator', 'pbc_sep', 'Home Section Post By Category')
-                ->set_classes('mm-sep'),
 
-            ...mm_pbc_field_inc(),
+
+            ...post_by_category_options(),
 
 
         ]);
@@ -80,14 +79,23 @@ function mm_theme_options()
     Container::make('theme_options', 'Single')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_single_fields_inc(),
+            ...single_options(),
         ]);
 
     //Ads
     Container::make('theme_options', 'Ads')
         ->set_page_parent($container)
         ->add_fields([
-            ...mm_ads_header_field_inc(),
-            ...mm_ads_floating_field_inc(),
+
+
+            ...ads_header_options(),
+
+
+
+            ...ads_fixed_bottom_options(),
+
+
+
+            ...ads_floating_lr_options(),
         ]);
 }

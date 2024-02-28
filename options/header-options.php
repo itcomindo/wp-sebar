@@ -8,9 +8,14 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 use Carbon_Fields\Field;
 //topbar left field
-function mm_header_left_field_inc()
+function header_left_options()
 {
     return [
+
+
+        Field::make('separator', 'headersep', 'Header Options')
+            ->set_classes('mm-sep'),
+
 
         //fields start below this line
         Field::make('select', 'header_left_content', 'Header Logo Option')

@@ -11,9 +11,13 @@ use Carbon_Fields\Field;
 
 
 //topbar left field
-function mm_topbar_left_field_inc()
+function topbar_left_options()
 {
     return [
+
+        Field::make('separator', 'topbarsep', 'Topbar Options')
+            ->set_classes('mm-sep'),
+
         Field::make('checkbox', 'enable_topbar', 'Enable Topbar')
             ->set_option_value('yes')
             ->set_default_value(true),
@@ -50,7 +54,7 @@ function mm_get_topbar_left_inc()
 
 
 //topbar right field
-function mm_topbar_right_field_inc()
+function topbar_right_options()
 {
     return [
         Field::make('select', 'topbar_right_content', 'Topbar Right Content')

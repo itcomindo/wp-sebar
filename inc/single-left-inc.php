@@ -124,9 +124,7 @@ if (carbon_get_theme_option('show_toc')) {
                 if ('tag' === carbon_get_theme_option('related_post_by')) {
                     mm_get_related_post_by_tag_query();
                 } else {
-                    echo '<div class="related-post-wr">';
-                    echo 'related post by category is under construction';
-                    echo '</div>';
+                    mm_get_related_post_by_category_query();
                 }
             }
             ?>

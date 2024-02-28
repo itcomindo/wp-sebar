@@ -22,9 +22,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         function mm_irp() {
             if (mm_single_body_classes()) {
-                var dataRelatedPost = jQuery('#sing').attr('data-related-post');
+                var dataRelatedPost = jQuery('#sing').attr('data-inline-post');
                 if (dataRelatedPost === 'true') {
-                    var irpPositionAfter = parseInt(jQuery('#sing').attr('data-irp'), 10);
+                    var irpPositionAfter = parseInt(jQuery('#sing').attr('data-insert-after'), 10);
                     var inlineRelatedPostContainer = jQuery('.inline-related-post');
                     if (irpPositionAfter > 0) {
                         var targetP = jQuery('#the-content p').eq(irpPositionAfter - 1);
@@ -98,46 +98,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         addAltTitle();
 
-        //add alt and title to img start
+        //add alt and title to img end
 
 
         //toc start
-
-        // function mm_toc() {
-        //     function theToc() {
-        //         var is_toc_enabled = jQuery('#the-content').attr('data-toc');
-        //         if (is_toc_enabled == 'true') {
-        //             var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
-        //             jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
-        //                 var current = jQuery(this);
-        //                 current.attr("id", "mm_toc" + i);
-        //                 toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
-        //             });
-        //             toc += "</ul></div>";
-        //             jQuery("#the-content").prepend(toc);
-        //         }
-        //     }
-        //     theToc();
-        // }
-        // mm_toc();
-
-        // function mm_toc() {
-        //     function theToc() {
-        //         var is_toc_enabled = jQuery('#the-content').attr('data-toc');
-        //         if (is_toc_enabled == 'true' && jQuery("#the-content").find("h2, h3, h4, h5, h6").length > 0) {
-        //             var toc = "<div id='the-toc'><ul class='list-no-style toc-list'>";
-        //             jQuery("#the-content").find("h2, h3, h4, h5, h6").not("#respond h2, #respond h3, #respond h4, #respond h5, #respond h6").each(function (i) {
-        //                 var current = jQuery(this);
-        //                 current.attr("id", "mm_toc" + i);
-        //                 toc += "<li class='" + current.prop("tagName").toLowerCase() + "'><a href='#mm_toc" + i + "'>" + current.text() + "</a></li>";
-        //             });
-        //             toc += "</ul></div>";
-        //             jQuery("#the-content").prepend(toc);
-        //         }
-        //     }
-        //     theToc();
-        // }
-        // mm_toc();
 
         function mm_toc() {
             function theToc() {

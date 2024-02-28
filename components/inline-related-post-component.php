@@ -7,11 +7,12 @@
 defined('ABSPATH') or die('No script kiddies please!');
 
 
-function mm_inline_related_post($what = 'category')
+function mm_inline_related_post()
 {
     if (is_single()) {
 
-        $what = 'category';
+        $what = carbon_get_theme_option('inline_related_post_by');
+        $number_posts_show = carbon_get_theme_option('inline_related_post_number');
         global $post;
 
         if ($what === 'category') {
@@ -22,7 +23,7 @@ function mm_inline_related_post($what = 'category')
                 $args = array(
                     'category__in' => array($cat_id),
                     'post__not_in' => array($post->ID),
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $number_posts_show,
                     'orderby' => 'date',
                 );
             }
@@ -34,7 +35,7 @@ function mm_inline_related_post($what = 'category')
                 $args = array(
                     'tag__in' => array($tag_id),
                     'post__not_in' => array($post->ID),
-                    'posts_per_page' => 3,
+                    'posts_per_page' => $number_posts_show,
                     'orderby' => 'date',
                 );
             }
@@ -77,4 +78,11 @@ function mm_inline_related_post($what = 'category')
     }
 }
 
-add_action('wp_body_open', 'mm_inline_related_post', 100);
+function mm_show_inline_related_post()
+{
+
+    if (carbon_get_theme_option('show_inline_related_post')) {
+        add_action('wp_body_open', 'mm_inline_related_post', 100);
+    }
+}
+add_action('wp', 'mm_show_inline_related_post');

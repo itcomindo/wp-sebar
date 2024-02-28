@@ -8,9 +8,13 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 use Carbon_Fields\Field;
 
-function mm_pbc_field_inc()
+function post_by_category_options()
 {
     return [
+
+        Field::make('separator', 'pbc_sep', 'Post By Category')
+            ->set_classes('mm-sep'),
+
         Field::make('complex', 'pbc', 'Post by Category Section Selection')
             ->set_min(2)
             ->set_max(4)
