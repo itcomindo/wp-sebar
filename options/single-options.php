@@ -123,8 +123,8 @@ function single_options()
         Field::make('select', 'inline_related_post_style', 'Inline Related Post Style')
             ->add_options([
                 'irp-1' => 'Style 1',
-                'irp-2' => 'Style 2',
-                'irp-3' => 'Style 3',
+                // 'irp-2' => 'Style 2',
+                // 'irp-3' => 'Style 3',
             ])
             ->set_default_value('irp-1'),
 

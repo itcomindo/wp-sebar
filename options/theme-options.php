@@ -29,6 +29,18 @@ function mm_theme_options()
                 ]),
 
 
+
+
+
+        ]);
+
+
+
+    // Basic_options
+    Container::make('theme_options', 'Basic')
+        ->set_page_parent($container)
+        ->add_fields([
+            ...basic_options(),
         ]);
 
 
@@ -87,15 +99,20 @@ function mm_theme_options()
         ->set_page_parent($container)
         ->add_fields([
 
-
             ...ads_header_options(),
-
-
 
             ...ads_fixed_bottom_options(),
 
-
-
             ...ads_floating_lr_options(),
+        ]);
+
+
+
+    //Custom CSS
+    Container::make('theme_options', 'Code')
+        ->set_page_parent($container)
+        ->add_fields([
+
+            ...custom_css_options(),
         ]);
 }

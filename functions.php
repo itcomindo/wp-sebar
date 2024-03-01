@@ -88,7 +88,35 @@ require_once get_template_directory() . '/sidebars/sidebars.php';
 
 // experimental 1 start
 
+function mm_enqueue_monaco_editor()
+{
+    wp_enqueue_script('monaco-editor', '//cdn.jsdelivr.net/npm/monaco-editor/min/vs/loader.js', array(), null, true);
+    // Inisialisasi Monaco Editor pada textarea
+    wp_add_inline_script('monaco-editor', '
+        require.config({ paths: { vs: "//cdn.jsdelivr.net/npm/monaco-editor/min/vs" }});
+        require(["vs/editor/editor.main"], function () {
+            var editor = monaco.editor.create(document.querySelector(".custcss"), {
+                language: "css",
+                theme: "vs-dark"
+            });
+            // Simpan nilai editor ke textarea asli saat form disubmit
+            document.querySelector("form").addEventListener("submit", function() {
+                document.querySelector(".custcss").value = editor.getValue();
+            });
+        });
+    ');
+}
+// add_action('admin_enqueue_scripts', 'mm_enqueue_monaco_editor');
 
+
+function mm_apply_custom_css()
+{
+    $custom_css = carbon_get_theme_option('custom_css');
+    if (!empty($custom_css)) {
+        echo '<style>' . esc_html($custom_css) . '</style>';
+    }
+}
+// add_action('wp_head', 'mm_apply_custom_css');
 
 
 

@@ -8,6 +8,16 @@
   margin: 4px 0;
 }
 
+.mm-sep.child {
+  background-color: darkred;
+  color: white;
+}
+.mm-sep.child h3 {
+  font-size: 12px;
+  color: white;
+  margin: 0;
+}
+
 .danger .cf-field__help {
   color: darkred !important;
 }

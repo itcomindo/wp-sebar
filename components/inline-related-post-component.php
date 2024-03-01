@@ -9,7 +9,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 function mm_inline_related_post()
 {
-    if (is_single()) {
+    if (is_single() && !is_attachment()) {
 
         $what = carbon_get_theme_option('inline_related_post_by');
         $number_posts_show = carbon_get_theme_option('inline_related_post_number');
