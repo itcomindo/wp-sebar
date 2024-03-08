@@ -4,6 +4,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //jq start below
 
+        //get screen width start
+
+        function mmGetScreenWidth() {
+            var $screenWidth = jQuery(window).width();
+            return $screenWidth;
+        }
+
+
+
+        //get screen width end
+
 
 
         //get all body classes start
@@ -184,14 +195,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //sticky start
 
-        if (jQuery(window).width() >= 768) {
-            var $theContentSidebar = jQuery('#the-content-sidebar aside');
-            jQuery($theContentSidebar).sticky({
-                topSpacing: 20,
-                bottomSpacing: 750
+
+
+
+        function mmSingleSticky() {
+
+
+            function mmSingleStickySidebar() {
+                if (mmGetScreenWidth() >= 803) {
+                    var $theContentSidebar = jQuery('#the-content-sidebar aside');
+                    jQuery($theContentSidebar).sticky({
+                        topSpacing: 20,
+                        bottomSpacing: 750
+                    });
+                }
+            }
+            mmSingleStickySidebar();
+
+            jQuery(window).resize(function () {
+                mmSingleStickySidebar();
             });
+
         }
 
+        mmSingleSticky();
 
 
 

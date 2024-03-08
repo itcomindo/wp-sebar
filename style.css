@@ -143,7 +143,9 @@ body.no-scroll {
 * @todo block
 *=========================
 */
-
+aside {
+  box-sizing: border-box;
+}
 .section {
   padding: 0 1rem;
   box-sizing: border-box;
@@ -199,6 +201,7 @@ div {
   padding-left: 8px;
   padding-right: 8px;
 }
+
 /**
 =========================
 * Flexbox
@@ -1013,6 +1016,7 @@ a.btn.email-bg:before {
   left: 0;
   transform: translateY(-50%);
 }
+
 /**
 =========================
 * Coloring

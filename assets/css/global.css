@@ -675,6 +675,7 @@ ul.header-menu li.menu-item-has-children ul.sub-menu.active {
 *=========================
 */
 .the-sidebar {
+  width: 316px;
   background-color: var(--color-dark-3);
   padding: 1rem;
   overflow: hidden !important;
