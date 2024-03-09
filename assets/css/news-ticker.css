@@ -77,15 +77,10 @@ ul.nt-list li {
   font-size: 130%;
   font-style: italic;
 }
-ul.nt-list li:hover a {
-  border-bottom: none;
-}
 ul.nt-list li:before {
   content: "";
   width: 10px;
   height: 10px;
-  /* background-color: var(--color-dark-1); */
-  /* background-color: var(--color-light-1); */
   background-color: var(--color-accent-4);
   position: absolute;
   left: 0;
@@ -99,4 +94,5 @@ ul.nt-list li a {
   color: var(--color-accent-4);
   font-weight: normal;
   /* border-bottom: 1px dashed var(--transparent-light-3); */
+  z-index: 2;
 }

@@ -322,6 +322,11 @@
   *=========================
   */
 @media screen and (max-width: 768px) {
+  #nt-left {
+    width: calc(100% / 4);
+    padding-left: unset;
+    padding-right: unset;
+  }
   .section {
     padding-left: 4px;
     padding-right: 4px;
@@ -391,6 +396,9 @@
   *=========================
   */
 @media screen and (max-width: 600px) {
+  #nt-left {
+    width: calc(100% / 3);
+  }
   #ads-before-header {
     display: block;
   }
