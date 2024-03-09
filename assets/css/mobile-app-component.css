@@ -1,0 +1,110 @@
+#mc-pr {
+  display: none;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* background-color: var(--color-dark-3); */
+  background-color: var(--color-dark-2);
+  color: var(--color-light-1);
+  height: 80px;
+  padding: 8px;
+}
+/* #mc-pr:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-3),
+    var(--color-dark-1)
+  );
+} */
+
+#mc-home {
+  width: 110px;
+  height: 110px;
+  border-radius: 25px 25px 50% 50%;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  padding: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.3rem;
+  cursor: pointer;
+  /* background: linear-gradient(
+    to bottom,
+    var(--color-dark-1),
+    var(--color-dark-2),
+    var(--color-dark-3)
+  ); */
+  background-color: var(--color-dark-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+#mc-home:before {
+  content: "";
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: -75%;
+  top: 30px;
+  background-color: var(--color-dark-2);
+  border-radius: 40px 10px 0 0;
+  z-index: -1;
+}
+#mc-home:after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  right: -75%;
+  top: 30px;
+  background-color: var(--color-dark-2);
+  border-radius: 0 40px 0 0;
+  z-index: -1;
+}
+
+#mc-wr {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 4px;
+}
+
+.mc {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-1),
+    var(--color-dark-3)
+  );
+  box-shadow: 0 0 2px 0 rgb(0, 0, 0, 0.1) inset;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/**
+=========================
+* 600px
+* @todo 600px
+*=========================
+*/
+@media screen and (max-width: 600px) {
+  #mc-pr {
+    display: block;
+    z-index: 1000;
+  }
+}
