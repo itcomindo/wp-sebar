@@ -1,0 +1,165 @@
+/**
+=========================
+* Header Menu style.css
+* @todo Header Menu style.css
+*=========================
+*/
+#header-menu-pr {
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-1),
+    var(--color-dark-2)
+  );
+  color: var(--color-light-1);
+}
+
+#header-menu-wr {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-menu-trigger {
+  width: 40px;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+nav#header-menu-nav {
+  height: 100%;
+  /* overflow: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+nav#header-menu-nav::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+  background-color: var(--color-accent-1);
+}
+ul.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+ul.header-menu li {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0 10px;
+  position: relative;
+}
+
+ul.header-menu li a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--color-light-1);
+}
+ul.header-menu li a:hover {
+  color: var(--color-accent-1-light);
+}
+
+ul.header-menu li.menu-item-has-children .iwr {
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%) rotate(0);
+  color: var(--color-light-1);
+  transition: 0.2s linear all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+}
+ul.header-menu li.menu-item-has-children .iwr i {
+  position: relative;
+  top: 2px;
+}
+ul.header-menu li.menu-item-has-children.active .iwr {
+  transform: translateY(-50%) rotate(180deg);
+  transition: 0.2s linear all;
+}
+
+ul.header-menu li.menu-item-has-children ul.sub-menu {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  position: absolute;
+  min-width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: calc(100% + 4px);
+  left: 10px;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-3),
+    var(--color-dark-1),
+    var(--color-dark-3)
+  );
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 85%;
+  visibility: hidden;
+  display: none;
+  z-index: -1;
+  overflow: hidden;
+}
+ul.header-menu li.menu-item-has-children ul.sub-menu li {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed var(--transparent-light-2);
+}
+ul.header-menu li.menu-item-has-children ul.sub-menu li:last-child {
+  margin-bottom: 0;
+  border-bottom: unset;
+}
+ul.header-menu li.menu-item-has-children ul.sub-menu li a {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+ul.header-menu li.menu-item-has-children ul.sub-menu.active {
+  visibility: visible;
+  display: flex;
+  z-index: 2;
+}
+
+#mobm {
+  display: none;
+}

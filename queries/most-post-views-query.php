@@ -57,7 +57,9 @@ function mm_get_most_post_view_posts()
             <li class="mp-item">
                 <div class="mp-item-top">
 
-                    <a href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" class="mp-cat-link text-smallest" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category"><?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?></a>
+                    <a class="mp-catlink text-smallest catlink p28" href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category">
+                        <?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>
+                    </a>
 
                     <a class="fim-wr" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
                         <?php
@@ -67,7 +69,7 @@ function mm_get_most_post_view_posts()
 
 
                     <!-- post views -->
-                    <span class="post-views text-smallest"><?php echo mm_get_post_meta_inc($post_id)['post-views']; ?></span>
+                    <span class="post-views text-smallest p28"><?php echo mm_get_post_meta_inc($post_id)['post-views']; ?></span>
 
 
                 </div>

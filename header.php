@@ -28,6 +28,16 @@ defined('ABSPATH') || exit;
     }
     get_template_part('template-parts/header-template');
     get_template_part('template-parts/header-menu-template');
+
+
+
+    if (is_home()) {
+        $news_ticker = true;
+        if ($news_ticker == true) {
+            get_template_part('sections/news-ticker-section');
+        }
+    }
+
     get_template_part('inc/ads/ads-after-header-menu-inc');
     wp_body_open();
     ?>

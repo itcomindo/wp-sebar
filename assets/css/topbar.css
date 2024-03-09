@@ -1,0 +1,78 @@
+/**
+=========================
+* Topbar
+* @todo Topbar style.css
+*=========================
+*/
+
+#topbar {
+  height: 40px;
+  overflow: hidden;
+  background: var(--color-dark-1);
+  color: var(--color-light-1);
+  z-index: 1;
+}
+#topbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-accent-1-dark),
+    var(--color-accent-1),
+    var(--color-accent-1-dark)
+  );
+  z-index: -1;
+}
+
+#topbar-wr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+#topbar-left,
+#topbar-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#topbar-left {
+  align-items: flex-start;
+}
+
+#topbar-right {
+  align-items: flex-end;
+}
+
+.search-form-wr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.trigger-social-box {
+  position: absolute;
+  right: 1rem;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trigger-search-box {
+  display: none;
+  position: absolute;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  z-index: 66;
+}

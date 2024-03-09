@@ -1,0 +1,48 @@
+/**
+=========================
+* Header
+* @todo Header style.css
+*=========================
+*/
+
+#header {
+  height: 120px;
+  background-color: var(--color-accent-1-dark);
+  color: white;
+}
+#header-wr {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 468px;
+}
+
+#header-left,
+#header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header-left {
+  align-items: flex-start;
+  padding: 0 8px;
+  overflow: hidden;
+}
+#header.image #header-left a.header-logo-wr {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#header.image #header-left a.header-logo-wr img.find-this {
+  width: auto;
+  height: 100px;
+}
+
+#header-right {
+  align-items: flex-end;
+  padding: 0 8px;
+}

@@ -1,0 +1,53 @@
+/**
+=========================
+* Post Video Section
+* @todo Post Video Section style.css
+*=========================
+*/
+
+#postvid {
+  background-color: var(--color-light-1);
+}
+
+.postvid-item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem 8px;
+}
+
+li.postvid-item {
+  overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-light-5);
+}
+li.postvid-item .postvid-item-top {
+  width: 100%;
+  background-color: darkcyan;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+li.postvid-item .postvid-item-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.postvid-item-bot {
+  width: 100%;
+  /* position: absolute; */
+  /* top: 0;
+    left: 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  /* background-color: var(--transparent-dark-5); */
+}
+/* .postvid-item-bot h4 a {
+    color: var(--color-light-1);
+  } */

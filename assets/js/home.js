@@ -3,6 +3,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
     jQuery(function () {
 
 
+        //newsticker start
+
+        function newsTicker() {
+            jQuery(".nt-list").webTicker({
+                // height: '75px',
+                duplicate: false,
+                rssfrequency: 0,
+                startEmpty: false,
+                hoverpause: true,
+                transition: "ease"
+            });
+        }
+        newsTicker();
+
+
+        //newsticker end
+
+
+
+
+
+
         // most view posts slider start
         function mostViewPostsSlider() {
             var $isAutoSlide = jQuery('#mp').attr('data-autoplay');

@@ -1,0 +1,295 @@
+/**
+=========================
+* Ads
+* @todo Ads style.css
+*=========================
+*/
+
+.ads {
+  overflow: hidden;
+}
+
+.ads.min-height-60.min-width-468 {
+  min-height: 60px;
+  width: 468px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ads.min-height-90.min-width-768 {
+  min-height: 90px;
+  width: 768px;
+  max-width: 100%;
+}
+
+.ads.max-width-540 {
+  width: 540px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ads.max-width-600 {
+  width: 600px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ads a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.ads a img.find-this {
+  width: 100%;
+  height: auto;
+}
+
+#ads-before-header {
+  background: black;
+  color: white;
+  display: none;
+}
+#ads-before-header span.close-ads {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  line-height: 1;
+  padding: 4px 8px;
+  font-size: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+}
+.ads-header-ads-mobile {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ads-header-ads-mobile a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.ads-header-ads-mobile a img.find-this {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.section.afs {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--color-background-primary);
+}
+.ads-72890 {
+  width: 728px;
+  max-width: 100%;
+  min-height: 90px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ads-72890 a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.ads-72890 a img.find-this {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+#afb {
+  background-color: black;
+  position: fixed;
+  z-index: 99;
+  width: 300px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  margin-left: -377px;
+  visibility: visible;
+  transition: 0.2s linear all;
+}
+#afb.hide {
+  visibility: hidden;
+  transform: translate(-50%, calc(100% + 30px));
+  transition: 0.2s linear all;
+}
+
+#afb.active {
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: 0.2s linear all;
+}
+
+#afb.active .afb-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  top: -30px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.afb-wr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: red;
+}
+
+.afb-content {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+.afb-content a.afb-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.afb-content a.afb-image img.find-this {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/**
+  =========================
+  * Ads Floating Left and Right
+  * @todo Ads Floating Left and Right style.css
+  *=========================
+  */
+
+.ads-flo {
+  position: fixed;
+  width: 160px;
+  min-width: 160px;
+  min-height: 608px;
+  height: 608px;
+  max-height: 608px;
+  overflow: hidden;
+  top: 40px;
+  z-index: 99;
+  transition: 0.2s linear all;
+}
+.ads-flo.fixed {
+  transform: translateY(-40px);
+  transition: 0.2s linear all;
+}
+
+#ads-flo-left {
+  left: 50%;
+  color: var(--color-light-1);
+  margin-left: -690px;
+}
+
+.ads-flo-wr.text {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-3);
+}
+.ads-flo-wr.image {
+  padding: 0;
+}
+
+.ads-flo-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+}
+
+.ads-flo-image {
+  height: 100%;
+}
+.ads-flo-image a.ads-flo-link {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 0 4px;
+}
+.ads-flo-image a.ads-flo-link img.find-this {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.ads-flo-text a.ads-flo-btn {
+  height: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--color-accent-1-dark);
+  color: var(--color-light-1);
+  line-height: 1.2;
+  display: block;
+}
+
+#ads-flo-right {
+  right: 50%;
+  margin-right: -686px;
+}
+
+/**
+  =========================
+  * Ads After Header Menu
+  * @todo Ads After Header Menu style.css
+  *=========================
+  */
+
+#afm.ads-text {
+  min-height: 250px;
+  height: 250px;
+  background-color: var(--color-dark-1);
+  color: var(--color-light-1);
+}
+#afm.ads-text .container,
+#afm.ads-text #afm-wr,
+#afm.ads-text .afm-content {
+  height: 100%;
+}
+
+.afm-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}

@@ -1,0 +1,75 @@
+/**
+=========================
+* Most View Post Style.css
+* @todo Most View Post Style.css
+*=========================
+*/
+#mp {
+  background-color: var(--color-background-primary);
+}
+
+ul.mp-list {
+  width: 100%;
+  padding: 1rem;
+}
+ul.mp-list li.mp-item {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    var(--color-light-1),
+    var(--transparent-light-5)
+  );
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px;
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset; */
+  border: 1px solid var(--transparent-dark-1);
+}
+
+.mp-item-top {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.mp-item-top .post-views {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: var(--transparent-dark-3);
+  color: var(--color-light-1);
+  z-index: 2;
+}
+
+a.mp-catlink {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  color: var(--color-light-1);
+  background-color: var(--transparent-dark-6);
+}
+
+.mp-item-top a.fim-wr {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mp-item-top a img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 0.2s linear all;
+}
+.mp-item-bot {
+  padding: 1rem;
+}
+.mp-item-bot a {
+  font-family: var(--font-display);
+}

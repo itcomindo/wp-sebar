@@ -7,8 +7,16 @@
 defined('ABSPATH') or die('No script kiddies please!');
 
 
-function mm_get_master_query()
+function mm_get_master_query($what = 'news-ticker')
 {
+    if ($what == 'news-ticker') {
+        $mq = [
+            'post_type' => 'post',
+            'posts_per_page' => 5,
+        ];
+    }
+
+    return $mq;
 }
 
 
@@ -35,6 +43,9 @@ function mm_the_rest_post_query()
             'paged' => $paged,
         ];
     }
+
+
+
     return $the_args;
 }
 

@@ -1,0 +1,39 @@
+/**
+=========================
+* RestPost Style.css
+* @todo RestPost Style.css
+*=========================
+*/
+
+.rp-wr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  gap: 1.75rem 1rem;
+}
+.rp {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  overflow: hidden;
+  gap: 8px;
+  border-bottom: 1px dashed var(--transparent-dark-2);
+}
+.dtop {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+
+.dtop a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.dtop a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
