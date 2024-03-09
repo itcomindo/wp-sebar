@@ -71,8 +71,6 @@ function mm_inline_related_post()
             }
             echo '</ul>';
             echo '</div>';
-        } else {
-            echo 'No related posts found';
         }
         wp_reset_postdata();
     }

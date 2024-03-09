@@ -30,7 +30,7 @@ if (carbon_get_theme_option('show_toc')) {
 
 
 ?>
-<div id="sing-left">
+<div id="sing-left" class="has-sidebar-left">
 
 
     <div id="sing-title-wr" class="sing-left-col">

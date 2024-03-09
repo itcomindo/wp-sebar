@@ -19,7 +19,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
         <div id="pbc-wr" class="has-sidebar">
 
-            <div id="pbc-left">
+            <div id="pbc-left" class="has-sidebar-left">
 
                 <div id="pbc-left-top">
                     <div class="ads ads-horizontal">

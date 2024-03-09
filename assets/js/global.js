@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         function mmGetScreenWidth() {
             var $screenWidth = window.innerWidth;
             return $screenWidth;
-
         }
 
 
@@ -267,11 +266,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         function mmStickySidebar() {
 
-            function mmTheSticky() {
+            function mmTheStickyHomeAndSingle() {
                 var bodyClass = document.body.className;
-                if (bodyClass.includes('single')) {
-                    var $screenWidth = window.innerWidth;
-                    if ($screenWidth > 768) {
+                if (bodyClass.includes('single') || bodyClass.includes('home')) {
+                    var $screenWidth = mmGetScreenWidth();
+                    if ($screenWidth > 992) {
                         var $theSidebar = jQuery('.the-sidebar aside');
                         jQuery($theSidebar).sticky({
                             topSpacing: 20,
@@ -281,7 +280,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
 
             }
-            mmTheSticky();
+            mmTheStickyHomeAndSingle();
+
+            //stick single only
+            function mmTheStickySingleOnly() {
+                var bodyClass = document.body.className;
+                if (bodyClass.includes('single')) {
+                    var $screenWidth = mmGetScreenWidth();
+                    if ($screenWidth > 767) {
+                        var $theSidebar = jQuery('#the-content-sidebar aside');
+                        jQuery($theSidebar).sticky({
+                            topSpacing: 20,
+                            bottomSpacing: 750
+                        });
+                    }
+                }
+
+            }
+            mmTheStickySingleOnly();
+
+
+            //resize event
+            jQuery(window).resize(function () {
+                mmTheStickyHomeAndSingle();
+                mmTheStickySingleOnly();
+            });
+
+
+
         }
         mmStickySidebar();
 

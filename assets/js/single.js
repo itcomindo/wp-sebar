@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 moveRespond();
             });
         }
-        mm_move_respond();
+        // mm_move_respond();
 
 
         //move #respond to #the-sidebar end
@@ -190,52 +190,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         //video end
-
-
-
-        //sticky start
-
-
-
-
-        function mmSingleSticky() {
-
-
-            function mmSingleStickySidebar() {
-                if (mmGetScreenWidth() >= 803) {
-                    var $theContentSidebar = jQuery('#the-content-sidebar aside');
-                    jQuery($theContentSidebar).sticky({
-                        topSpacing: 20,
-                        bottomSpacing: 750
-                    });
-                }
-            }
-            mmSingleStickySidebar();
-
-            jQuery(window).resize(function () {
-                mmSingleStickySidebar();
-            });
-
-        }
-
-        mmSingleSticky();
-
-
-
-        //sticky end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //jq end above

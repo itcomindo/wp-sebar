@@ -104,8 +104,7 @@ function mm_load_assets()
 
 
 
-    //responsive.css
-    wp_enqueue_style('mm-responsive-css', get_template_directory_uri() . '/assets/css/responsive.css', array(), $theme_version, 'all');
+
 
 
 
@@ -196,3 +195,15 @@ function mm_admin_backend()
 }
 
 add_action('admin_enqueue_scripts', 'mm_admin_backend');
+
+
+
+
+
+function mm_load_responsive_css()
+{
+    //responsive.css
+    wp_enqueue_style('mm-responsive-css', get_template_directory_uri() . '/assets/css/responsive.css', array(), $theme_version, 'all');
+}
+
+add_action('wp_head', 'mm_load_responsive_css', 101);

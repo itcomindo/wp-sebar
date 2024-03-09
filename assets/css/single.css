@@ -2,16 +2,8 @@
   background-color: var(--color-background-primary);
 }
 
-/* #sing-wr {
-  display: grid;
-  grid-template-columns: 1fr 316px;
-  gap: 8px;
-  overflow: hidden;
-} */
 #sing-wr {
-  display: flex;
-  gap: 8px;
-  /* overflow: hidden; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 ul.sing-post-meta-list {
@@ -36,15 +28,6 @@ ul.sing-post-meta-list .post-view {
   bottom: unset;
   left: unset;
 }
-#sing-left {
-  background-color: var(--color-light-1);
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-  gap: 1rem;
-  width: calc(100% - 316px - 8px);
-}
-
 .post-published:before {
   content: "";
   position: absolute;
@@ -67,7 +50,8 @@ ul.sing-post-meta-list .post-view {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: calc(-1rem - 5px);
+  /* top: calc(-1rem - 5px); */
+  top: -8px;
   right: 0;
   padding-top: 4px;
 }
@@ -150,19 +134,19 @@ ul.toc-list li:hover {
 }
 
 #the-content-wr {
-  display: flex;
-  max-width: 100%;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 188px;
 }
 #the-content-inner {
   padding: 0 8px;
-  width: calc(100% - 188px);
+  background: var(--transparent-light-4);
 }
 #the-content-sidebar {
   padding: 1rem 8px;
-  background-color: var(--color-background-primary);
+  background-color: var(--color-accent-1-dark);
   border-radius: 10px;
-  width: 180px;
+  color: var(--color-light-1);
 }
 
 #the-content {
@@ -258,7 +242,7 @@ ul.post-tags li a {
 *=========================
 */
 .inline-related-post {
-  background-color: aliceblue;
+  background-color: var(--color-accent-1-dark);
   font-size: 90%;
   padding: 1.75rem 1rem;
   border-radius: 10px;
@@ -267,6 +251,7 @@ ul.post-tags li a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: var(--color-light-1);
 }
 
 .irp-icon {
@@ -280,7 +265,7 @@ ul.post-tags li a {
   align-items: center;
   justify-content: center;
   font-size: var(--font-clamp-4);
-  color: var(--color-accent-1);
+  color: var(--color-accent-4);
 }
 
 .irp-title.head.smallest {
@@ -511,114 +496,4 @@ ul.related-post-list li {
 
 .relpos-right {
   padding: 0 1rem;
-}
-
-/**
-=========================
-* Media Queries single.css
-* @todo media queries single-css
-*=========================
-*/
-
-/**
-=========================
-* 991px
-* @todo 991px
-*=========================
-*/
-@media screen and (max-width: 991px) {
-  #the-content-wr {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: unset;
-  }
-  #the-content-sidebar {
-    margin-top: 1rem;
-    width: 100%;
-  }
-  #the-content-inner {
-    padding: 0 8px;
-    width: calc(100% - 8px);
-  }
-}
-
-/**
-=========================
-* 804px
-* @todo 804px
-*=========================
-*/
-@media screen and (max-width: 804px) {
-  #sing-wr {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: unset;
-    gap: 1.75rem;
-  }
-  #sing-left {
-    background-color: var(--color-light-1);
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    gap: 1rem;
-    width: 100%;
-  }
-  .the-sidebar {
-    width: 100%;
-  }
-}
-
-/**
-=========================
-* 540px
-* @todo 540px
-*=========================
-*/
-@media screen and (max-width: 540px) {
-  ul.sing-post-meta-list {
-    justify-content: center;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-  }
-}
-
-/**
-=========================
-* 490px
-* @todo 490px
-*=========================
-*/
-@media screen and (max-width: 490px) {
-  ul.sing-post-meta-list {
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: 4px;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-  }
-  ul.sing-post-meta-list li {
-    padding-left: 0;
-  }
-  ul.sing-post-meta-list li:before,
-  ul.sing-post-meta-list li:after {
-    display: none;
-  }
-}
-
-/**
-=========================
-* 424px
-* @todo 424px
-*=========================
-*/
-@media screen and (max-width: 424px) {
-  ul.related-post-list li {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: start;
-    border-bottom: 1px dashed var(--transparent-dark-1);
-  }
-  .relpos-right {
-    padding: 1.75rem 1rem;
-  }
 }

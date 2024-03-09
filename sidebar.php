@@ -10,7 +10,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 <div class="the-sidebar">
-    <aside class="aside">
+    <aside class="aside w100">
 
         <!-- widget 1 start -->
         <div class="widget">
