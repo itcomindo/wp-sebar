@@ -24,10 +24,10 @@ defined('ABSPATH') || exit;
 
     <?php
     if (carbon_get_theme_option('enable_topbar')) {
-        get_template_part('template-parts/topbar-template');
+        get_template_part('sections/topbar-section');
     }
-    get_template_part('template-parts/header-template');
-    get_template_part('template-parts/header-menu-template');
+    get_template_part('sections/header-section');
+    get_template_part('sections/header-menu-section');
 
 
 

@@ -7,7 +7,7 @@
  */
 defined('ABSPATH') || exit;
 
-get_template_part('template-parts/footer-template');
+get_template_part('sections/footer-section');
 
 
 wp_footer();

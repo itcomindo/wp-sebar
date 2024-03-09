@@ -27,7 +27,7 @@
   border-bottom: 1px solid var(--color-accent-1-dark);
   border-top: 1px solid var(--color-accent-4);
   border-bottom: 1px solid var(--color-accent-4);
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 #nt-wr {
@@ -54,9 +54,20 @@
   align-items: center;
   color: var(--color-light-1);
 }
+#nt-left:after {
+  content: "";
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--color-accent-1-dark);
+  right: -20px;
+  z-index: 2;
+}
 
 #nt-right {
   overflow: hidden;
+  padding-left: 10px;
 }
 
 ul.nt-list li {
@@ -87,5 +98,5 @@ ul.nt-list li a {
   /* color: var(--color-light-1); */
   color: var(--color-accent-4);
   font-weight: normal;
-  border-bottom: 1px dashed var(--transparent-light-3);
+  /* border-bottom: 1px dashed var(--transparent-light-3); */
 }
