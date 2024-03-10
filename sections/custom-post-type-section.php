@@ -86,6 +86,7 @@ function mm_get_post_custom_type_query($post_perpage = 10, $post_type = 'video')
     $args = array(
         'post_type' => 'post',
         'posts_per_page' => $post_perpage,
+        'ignore_sticky_posts' => 1,
         'meta_query' => array(
             array(
                 'key' => 'the_post_type',
