@@ -54,7 +54,7 @@ function mm_inline_related_post()
 ?>
                 <li class="irp">
                     <div class="irp-left">
-                        <a href="<?php echo $permalink; ?>" title="<?php echo esc_html($title); ?>">
+                        <a class="borad-5" href="<?php echo $permalink; ?>" title="<?php echo esc_html($title); ?>">
                             <?php
                             echo mm_get_featured_image($post_id);
                             ?>

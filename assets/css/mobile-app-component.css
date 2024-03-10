@@ -1,3 +1,7 @@
+li.ticker-spacer {
+  display: none !important;
+}
+
 #mc-pr {
   display: none;
   z-index: -1;
@@ -92,7 +96,7 @@
     var(--color-dark-3)
   );
   box-shadow: 0 0 2px 0 rgb(0, 0, 0, 0.1) inset;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 

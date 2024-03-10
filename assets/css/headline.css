@@ -40,7 +40,7 @@
   background-color: whitesmoke;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--transparent-dark-1);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* #np-wr.s1 .np:nth-child(4n) {

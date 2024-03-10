@@ -14,7 +14,7 @@ if (carbon_get_theme_option('show_estimated_reading_time')) {
 
 
 ?>
-<section id="sing" class="section medium" <?php echo $estimate_reading_time . ' ' . mm_set_inline_related_post()['enable'] . ' ' . mm_set_inline_related_post()['insert-after']; ?>>
+<section id="sing" class="section" <?php echo $estimate_reading_time . ' ' . mm_set_inline_related_post()['enable'] . ' ' . mm_set_inline_related_post()['insert-after']; ?>>
     <div class="container">
         <div id="sing-wr" class="has-sidebar">
 

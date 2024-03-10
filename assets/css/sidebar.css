@@ -9,4 +9,5 @@
   color: var(--color-light-1);
   padding: 1rem;
   overflow: hidden !important;
+  border-radius: 5px;
 }

@@ -13,6 +13,34 @@
 
 /**
 =========================
+* Whats in this file?
+* 1. Basic Style
+* 2. Background
+* 3. Block
+* 4. Flexbox
+* 5. Grid
+* 6. Position
+* 7. Heading and Typography
+* 8. Lists
+* 9. GAP
+* 10. Border and Border Radius
+* 11. Sizing
+* 12. Padding
+* 13. Margin
+* 14. Filter
+* 15. Fields and Input
+* 16. Button and Links
+* 17. Effect
+* 18. Z-Index
+* 19. Clip Path
+* 20. Box Shadows
+* 21. Pseudo Elements
+* 22. Coloring
+*=========================
+*/
+
+/**
+=========================
 * Basic Style
 * @todo basic style
 *=========================
@@ -204,6 +232,11 @@ div {
 .over-flow-visible {
   overflow: visible !important;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .content-inner {
   padding-left: 8px;
   padding-right: 8px;

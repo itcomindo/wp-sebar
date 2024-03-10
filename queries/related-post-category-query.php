@@ -31,7 +31,7 @@ function mm_get_related_post_by_category_query()
                         <div class="relpos-left">
                             <a href="<?php echo get_the_permalink(); ?>">
                                 <?php
-                                the_post_thumbnail('full', array('alt' => get_the_title(), 'title' => get_the_title(), 'class' => 'relpost-thumb'));
+                                the_post_thumbnail('full', array('alt' => get_the_title(), 'title' => get_the_title(), 'class' => 'relpost-thumb borad-5'));
                                 ?>
                             </a>
                         </div>

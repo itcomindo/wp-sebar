@@ -28,6 +28,7 @@
   width: max-content;
   padding: 4px 8px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 #commentform {

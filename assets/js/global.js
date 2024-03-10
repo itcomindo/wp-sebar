@@ -5,17 +5,39 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //jq start below
 
         //get screen width start
-
-
         function mmGetScreenWidth() {
             var $screenWidth = window.innerWidth;
             return $screenWidth;
         }
-
-
-
-
         //get screen width end
+
+        //topbar dateTime start
+
+        function mmTopbarDateTime() {
+            var mm_elem = jQuery('[data-element="tbtz"]');
+            if (mm_elem.length) {
+                var mm_wktu = function (sekarang) {
+                    var tgl = sekarang.getDate();
+                    var bln = sekarang.getMonth() + 1;
+                    var jam = sekarang.getHours();
+                    var mnt = sekarang.getMinutes();
+                    var dtk = sekarang.getSeconds();
+                    return tgl + '/' + bln + '/' + sekarang.getFullYear() + ' ' + jam + ':' + (mnt < 10 ? '0' : '') + mnt + ':' + (dtk < 10 ? '0' : '') + dtk;
+                };
+
+                var mm_updt = function () {
+                    var sekarang = new Date();
+                    mm_elem.text(mm_wktu(sekarang));
+                };
+
+                mm_updt();
+                setInterval(mm_updt, 1000);
+            }
+        }
+        mmTopbarDateTime();
+
+
+        //topbar dateTime end
 
         function mm_find_image_width_height() {
             var imgs = jQuery('img.find-this');

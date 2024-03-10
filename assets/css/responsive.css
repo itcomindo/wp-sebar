@@ -70,14 +70,14 @@
   }
   li.postvid-item {
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     grid-column: auto;
   }
   li.postvid-item:first-child {
     aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     grid-column: 1 / span 3;
   }
@@ -156,9 +156,13 @@
     padding: 3.5rem 1rem 0 1rem;
     box-sizing: border-box;
     transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
     transition: 0.3s linear all;
   }
   nav#header-menu-nav.active {
+    visibility: visible;
+    opacity: 1;
     transform: translateX(0);
     transition: 0.3s linear all;
   }
@@ -447,7 +451,7 @@
   li.postvid-item:first-child {
     aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     grid-column: 1 / span 2;
   }
@@ -645,7 +649,7 @@
   li.postvid-item:first-child {
     aspect-ratio: unset;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     grid-column: 1 / span 2;
   }

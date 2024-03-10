@@ -8,7 +8,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 ?>
 
-<div id="ads-flo-left" class="ads ads-flo">
+<div id="ads-flo-left" class="ads ads-flo borad-5 overflow-hidden">
     <div class="ads-flo-wr text">
         <div class="ads-flo-text">
             <span>ADS</span>
@@ -19,7 +19,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 </div>
 
 
-<div id="ads-flo-right" class="ads ads-flo">
+<div id="ads-flo-right" class="ads ads-flo borad-5 overflow-hidden">
     <div class="ads-flo-wr image">
         <div class="ads-flo-image">
             <a class="ads-flo-link" href="#">

@@ -44,10 +44,11 @@ function mm_get_topbar_left_inc()
 {
     $topbar_left_content = carbon_get_theme_option('topbar_left_content');
     if ($topbar_left_content == 'text') {
-        $topbar_left = carbon_get_theme_option('topbar_left_text');
+        $topbar_left = '<span>' . carbon_get_theme_option('topbar_left_text') . '</span>';
         return $topbar_left;
     } else {
-        $timezone = mm_get_timezone()['full'];
+        // $timezone = '<span data-element="tbtz">' . mm_get_timezone()['full'] . '</span>';
+        $timezone = '<span data-element="tbtz"></span>';
         return $timezone;
     }
 }
