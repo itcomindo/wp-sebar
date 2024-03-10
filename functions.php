@@ -84,6 +84,7 @@ require_once get_template_directory() . '/queries/queries.php';
 require_once get_template_directory() . '/assets/images/images.php';
 require_once get_template_directory() . '/widgets/widgets.php';
 require_once get_template_directory() . '/sidebars/sidebars.php';
+require_once get_template_directory() . '/fields/fields.php';
 
 
 // experimental 1 start

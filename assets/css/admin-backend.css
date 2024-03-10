@@ -21,3 +21,10 @@
 .danger .cf-field__help {
   color: darkred !important;
 }
+
+#carbon_fields_container_post_options .postbox-header {
+  background-color: black;
+}
+#carbon_fields_container_post_options .postbox-header h2 {
+  color: whitesmoke;
+}

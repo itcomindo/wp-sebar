@@ -10,10 +10,11 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 ?>
 
-
+<!-- posts that have most views -->
 <div id="mp" class="section small" <?php echo most_view_post_auto_slide(); ?>>
     <div class="container">
         <div id="mp-wr">
+            <h3 class="head smallest">Most Views Posts:</h3>
             <?php
             mm_get_most_post_view_posts();
             ?>

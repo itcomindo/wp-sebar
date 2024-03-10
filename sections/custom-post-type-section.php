@@ -40,12 +40,6 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                                     $readmore = '<a class="readmore text-small color-accent-1 p-smaller" href="' . $permalink . '">Selengkapnya</a>';
                                     $duration = '';
                                 }
-
-
-
-
-
-
                         ?>
                                 <li class="cpt-item hover-to-top">
                                     <div class="cpt-item-top">
@@ -81,4 +75,25 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
         </div>
     </div>
 <?php
+}
+
+
+
+
+
+function mm_get_post_custom_type_query($post_perpage = 10, $post_type = 'video')
+{
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $post_perpage,
+        'meta_query' => array(
+            array(
+                'key' => 'the_post_type',
+                'value' => $post_type,
+                'compare' => '='
+            )
+        )
+    );
+
+    return $args;
 }

@@ -9,15 +9,26 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 function mm_get_master_query($what = 'news-ticker')
 {
+    $post_type = 'post';
+    $posts_per_page = 5;
     if ($what == 'news-ticker') {
         $mq = [
             'post_type' => 'post',
             'posts_per_page' => 5,
         ];
+    } elseif ($what == 'hot-topic') {
+        $sticky = get_option('sticky_posts');
+        $mq = [
+            'post_type' => 'post',
+            'posts_per_page' => 10,
+            'post__in' => $sticky,
+            'ignore_sticky_posts' => 1,
+        ];
     }
 
     return $mq;
 }
+
 
 
 function mm_the_rest_post_query()
@@ -59,24 +70,6 @@ function mm_get_post_gallery_query($post_perpage = 10)
             array(
                 'key' => 'the_post_type',
                 'value' => 'gallery',
-                'compare' => '='
-            )
-        )
-    );
-
-    return $args;
-}
-
-
-function mm_get_post_custom_type_query($post_perpage = 10, $post_type = 'video')
-{
-    $args = array(
-        'post_type' => 'post',
-        'posts_per_page' => $post_perpage,
-        'meta_query' => array(
-            array(
-                'key' => 'the_post_type',
-                'value' => $post_type,
                 'compare' => '='
             )
         )

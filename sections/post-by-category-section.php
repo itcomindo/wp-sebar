@@ -9,7 +9,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 ?>
 
 
-<div id="pbc" class="s1 section small">
+<div id="pbc" class="s1 section medium">
     <div class="container">
 
 

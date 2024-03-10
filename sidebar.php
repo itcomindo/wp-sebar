@@ -14,7 +14,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 
         <!-- widget 1 start -->
         <div class="widget">
-            <h3 class="head smaller">Recent Post</h3>
+            <h3 class="head smallest">Recent Post</h3>
             <ul class="list-no-style recpost-list">
                 <?php
                 for ($i = 0; $i < 5; $i++) {
@@ -41,7 +41,7 @@ defined('ABSPATH') or die('No script kiddies please!');
         <!-- widget 2 start -->
 
         <div class="widget">
-            <h3 class="head smaller">Ads</h3>
+            <h3 class="head smallest">Ads</h3>
             <a class="widget-link-image" href="#">
                 <img class="find-this" src="<?php echo mm_get_dummy_image(); ?>" alt="Widget">
             </a>

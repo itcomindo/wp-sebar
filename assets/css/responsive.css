@@ -54,6 +54,13 @@
     transform: translateY(calc(100% + 30px));
     transition: 0.2s linear all;
   }
+
+  .ht-item-wr {
+    justify-content: flex-start;
+  }
+  .ht-item {
+    width: calc(100% / 4 - 16px);
+  }
 }
 
 /**
@@ -268,6 +275,9 @@
     padding-left: 4px;
     padding-right: 4px;
   }
+  .ht-item {
+    width: calc(100% / 3 - 16px);
+  }
 }
 
 /**
@@ -418,6 +428,12 @@
   }
   h3.query-head {
     font-size: var(--font-clamp-1);
+  }
+  .ht-item-wr {
+    justify-content: center;
+  }
+  .ht-item {
+    width: calc(100% / 2 - 16px);
   }
 }
 
@@ -627,6 +643,9 @@
   }
   .relpos-right {
     padding: 1.75rem 1rem;
+  }
+  .ht-item {
+    width: calc(100% - 16px);
   }
 }
 

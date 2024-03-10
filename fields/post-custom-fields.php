@@ -12,18 +12,10 @@ use Carbon_Fields\Field;
 add_action('carbon_fields_register_fields', 'mm_post_custom_fields');
 function mm_post_custom_fields()
 {
-    Container::make('post_meta', 'Custom Fields')
+    Container::make('post_meta', 'Post Options')
         ->where('post_type', '=', 'post')
         ->add_fields([
 
-            //separator
-            Field::make('separator', 'postcustomsep', 'Post Options')
-                ->set_classes('mm-sep'),
-
-
-            //html
-            Field::make('html', 'crb_information_text')
-                ->set_html('<span>Custom field ini untuk mengelompokan artikel berdasarkan tipe-tipe nya termasuk juga menampilkan schema microdata.</span>'),
 
             //select to chose what post type
             Field::make('select', 'the_post_type', 'Post Type')
@@ -35,19 +27,6 @@ function mm_post_custom_fields()
                     'code' => 'Code Snippet',
                 ])
                 ->set_default_value('article'),
-
-            //checkbox to show schema for video, gallery, recipe only
-            Field::make('checkbox', 'show_schema', 'Show Schema')
-                ->set_option_value('yes')
-                ->set_default_value(false)
-                ->set_conditional_logic([
-                    [
-                        'field' => 'the_post_type',
-                        'value' => ['video', 'gallery', 'recipe'],
-                        'compare' => 'IN',
-
-                    ],
-                ]),
 
             //complex fields contain: text fields for video title, video url, image field for custom thumbnail, and text for duration
             Field::make('complex', 'post_videos', 'Video')

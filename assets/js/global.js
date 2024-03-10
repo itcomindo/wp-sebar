@@ -288,9 +288,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         function mmStickySidebar() {
 
-            function mmTheStickyHomeAndSingle() {
+
+            function mmTheStickyHome() {
                 var bodyClass = document.body.className;
-                if (bodyClass.includes('single') || bodyClass.includes('home')) {
+                if (bodyClass.includes('home')) {
+                    var $screenWidth = mmGetScreenWidth();
+                    if ($screenWidth > 992) {
+                        var $theSidebar = jQuery('.the-sidebar aside');
+                        jQuery($theSidebar).sticky({
+                            topSpacing: 20,
+                            bottomSpacing: 3000
+                        });
+                    }
+                }
+
+            }
+            // mmTheStickyHome();
+
+
+
+
+            function mmStickySidebarSingle() {
+                var bodyClass = document.body.className;
+                if (bodyClass.includes('single')) {
                     var $screenWidth = mmGetScreenWidth();
                     if ($screenWidth > 992) {
                         var $theSidebar = jQuery('.the-sidebar aside');
@@ -302,7 +322,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
 
             }
-            mmTheStickyHomeAndSingle();
+            mmStickySidebarSingle();
 
             //stick single only
             function mmTheStickySingleOnly() {

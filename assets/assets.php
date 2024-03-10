@@ -86,6 +86,9 @@ function mm_load_assets()
     //widget.css
     wp_enqueue_style('mm-widget-css', get_template_directory_uri() . '/assets/css/widget.css', array('mm-global-style'), $theme_version, 'all');
 
+    //hot-topic.css
+    wp_enqueue_style('mm-hot-topic-css', get_template_directory_uri() . '/assets/css/hot-topic.css', array('mm-global-style'), $theme_version, 'all');
+
     //footer.css
     wp_enqueue_style('mm-footer-css', get_template_directory_uri() . '/assets/css/footer.css', array('mm-global-style'), $theme_version, 'all');
 
@@ -142,6 +145,9 @@ function mm_load_assets()
 
         //load slick js
         wp_enqueue_script('slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '11.0.5', true);
+
+        //load jquery.sticky.js from assets/libs
+        wp_enqueue_script('mm-jquery-sticky', get_template_directory_uri() . '/assets/libs/jquery.sticky.js', array(), $theme_version, true);
 
         //load home js
         wp_enqueue_script('mm-home-js', get_template_directory_uri() . '/assets/js/home.js', array(), $theme_version, true);

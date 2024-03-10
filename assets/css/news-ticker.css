@@ -91,5 +91,5 @@ ul.nt-list li a {
   color: var(--color-accent-4);
   font-weight: normal;
   /* border-bottom: 1px dashed var(--transparent-light-3); */
-  z-index: 2;
+  /* z-index: 2; */
 }

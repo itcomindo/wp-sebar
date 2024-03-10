@@ -237,6 +237,7 @@ div {
   overflow: hidden;
 }
 
+.inner-content,
 .content-inner {
   padding-left: 8px;
   padding-right: 8px;
@@ -662,6 +663,15 @@ ul.vertical-menu li a {
 *=========================
 */
 
+img.hw100 {
+  height: 100%;
+  width: 100%;
+}
+a.hw100 {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 .w100 {
   width: 100%;
 }
@@ -675,6 +685,13 @@ ul.vertical-menu li a {
   display: block;
   max-width: 75%;
   width: 100%;
+}
+
+.aspect-ratio-11 {
+  aspect-ratio: 1 / 1;
+}
+.aspect-ratio-169 {
+  aspect-ratio: 16 / 9;
 }
 
 /**
