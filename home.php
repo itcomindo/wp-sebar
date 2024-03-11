@@ -13,7 +13,8 @@ if (carbon_get_theme_option('enable_most_view_post')) {
 }
 
 
-get_template_part('sections/new-post-section');
+// get_template_part('sections/new-post-section');
+get_template_part('sections/headline-section');
 
 get_template_part('sections/hot-topic-section');
 

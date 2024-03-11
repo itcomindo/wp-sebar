@@ -69,6 +69,7 @@ a.mp-catlink {
 }
 .mp-item-bot {
   padding: 1rem;
+  min-height: 150px;
 }
 .mp-item-bot a {
   font-family: var(--font-display);

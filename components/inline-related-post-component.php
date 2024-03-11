@@ -42,7 +42,7 @@ function mm_inline_related_post()
         }
         $query = new WP_Query($args);
         if ($query->have_posts()) {
-            echo '<div class="inline-related-post">';
+            echo '<div class="inline-related-post hide">';
             echo '<span class="irp-icon animate__animated"><i class="fa-solid fa-bell"></i></span>';
             echo '<span class="irp-title head smallest">Yuk Baca Juga: </span>';
             echo '<ul class="list-no-style irp-list">';

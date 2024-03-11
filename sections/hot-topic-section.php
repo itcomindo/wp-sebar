@@ -35,13 +35,13 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 function mm_get_hot_topic_posts()
 {
-    $ht = mm_get_master_query('hot-topic');
-    $htq = new WP_Query($ht);
+    // $htq = new WP_Query($ht);
+    $htq = mm_get_master_query('hot-topic');
     if ($htq->have_posts()) {
         while ($htq->have_posts()) {
             $htq->the_post();
             $post_id = get_the_ID();
-            $title = get_the_title();
+            $title = mm_get_custom_post_title(9);
             $permalink = get_the_permalink();
 ?>
             <div class="ht-item borad-5 overflow-hidden">

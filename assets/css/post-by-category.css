@@ -19,14 +19,8 @@
   gap: 8px;
   background-color: var(--color-background-primary);
   padding: 8px;
-  /* overflow: hidden; */
 }
 
-/* #pbc.s1 #pbc-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-} */
 .has-sidebar-left {
   display: flex;
   flex-direction: column;
@@ -166,7 +160,7 @@
   color: var(--color-light-1);
 }
 
-a.pbcc-load-more {
+/* a.pbcc-load-more {
   display: flex;
   margin-top: 1rem;
   line-height: 1.2;
@@ -177,4 +171,4 @@ a.pbcc-load-more {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
+} */

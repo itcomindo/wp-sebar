@@ -37,25 +37,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (dataRelatedPost === 'true') {
                     var irpPositionAfter = parseInt(jQuery('#sing').attr('data-insert-after'), 10);
                     var inlineRelatedPostContainer = jQuery('.inline-related-post');
-
-                    setTimeout(function () {
-                        inlineRelatedPostContainer.removeClass('hide');
-
-
-
+                    if (irpPositionAfter > 0) {
                         var targetP = jQuery('#the-content p').eq(irpPositionAfter - 1);
-                        var totalParagraphs = jQuery('#the-content p').length;
-
-                        if (totalParagraphs >= irpPositionAfter && targetP.length) {
+                        if (targetP.length) {
                             inlineRelatedPostContainer.insertAfter(targetP);
-                        } else {
-                            jQuery('#the-content').append(inlineRelatedPostContainer);
                         }
-
-                    }, 200);
-
-
-
+                    }
                 }
             }
             jQuery(window).scroll(function () {
@@ -82,8 +69,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
         };
 
-        mm_irp();
 
+        mm_irp();
 
 
 

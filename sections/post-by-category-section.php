@@ -85,7 +85,7 @@ function mm_get_pbc()
                     if ($pbcq->have_posts()) {
                         while ($pbcq->have_posts()) {
                             $pbcq->the_post();
-                            $title = mm_get_custom_post_title(80);
+                            $title = mm_get_custom_post_title(8);
                             $permalink = get_the_permalink();
                             $post_id = get_the_ID();
                             $post_type = mm_get_post_type($post_id);
@@ -119,7 +119,7 @@ function mm_get_pbc()
                     wp_reset_query();
                     ?>
                 </div>
-                <a class="pbcc-load-more" href="<?php echo esc_html($pbc_cat_url); ?>" title="<?php echo $pbc_cat_name; ?>">Load More</a>
+                <a class="pbcc-load-more text-small color-accent-1-dark fw600" href="<?php echo esc_html($pbc_cat_url); ?>" title="<?php echo $pbc_cat_name; ?>">Load More</a>
             </div>
     <?php
         }
@@ -158,7 +158,7 @@ function mm_get_pbc_fallback()
             }
             ?>
         </div>
-        <a class="pbcc-load-more" href="#">Load More</a>
+        <a class="pbcc-load-more text-small" href="#">Load More</a>
     </div>
 
     <div class="pbcc-pr">

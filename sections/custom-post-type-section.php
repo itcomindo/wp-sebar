@@ -23,7 +23,7 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                         if ($cpt->have_posts()) {
                             while ($cpt->have_posts()) {
                                 $cpt->the_post();
-                                $title = get_the_title();
+                                $title = mm_get_custom_post_title(9);
                                 $permalink = get_the_permalink();
 
                                 if ($post_type === 'video') {

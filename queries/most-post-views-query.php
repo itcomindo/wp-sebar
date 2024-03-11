@@ -39,6 +39,8 @@ function mm_get_most_post_view_posts()
         'orderby' => 'meta_value_num',
         'order' => 'DESC',
         'meta_key' => 'mm_post_views_count',
+        //ignore sticky posts
+        'ignore_sticky_posts' => 1,
         'meta_query' => array(
             array(
                 'key' => 'mm_post_views_count',
@@ -76,7 +78,7 @@ function mm_get_most_post_view_posts()
                 </div>
                 <div class="mp-item-bot">
                     <h3 class="head text-small text-center fw500">
-                        <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(50); ?></a>
+                        <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(9); ?></a>
                     </h3>
                 </div>
             </li>

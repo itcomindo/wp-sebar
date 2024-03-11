@@ -245,6 +245,9 @@ ul.post-tags li a {
 * @todo inline related post
 *=========================
 */
+.inline-related-post.hide {
+  display: none;
+}
 .inline-related-post {
   background-color: var(--color-accent-1-dark);
   font-size: 90%;

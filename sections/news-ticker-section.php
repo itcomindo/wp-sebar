@@ -7,8 +7,9 @@
 defined('ABSPATH') or die('No script kiddies please!');
 
 
-$newstickers = mm_get_master_query('news-ticker');
-$nt = new WP_Query($newstickers);
+// $newstickers = mm_get_master_query('news-ticker');
+// $nt = new WP_Query($newstickers);
+$nt = mm_get_master_query('news-ticker');
 
 ?>
 <section id="nt-pr" class="section">

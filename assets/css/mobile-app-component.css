@@ -8,30 +8,25 @@ li.ticker-spacer {
   position: fixed;
   left: 0;
   bottom: 0;
-  /* background-color: var(--color-dark-3); */
   background-color: var(--color-dark-2);
   color: var(--color-light-1);
-  height: 80px;
   padding: 8px;
 }
-/* #mc-pr:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    to bottom,
-    var(--color-dark-3),
-    var(--color-dark-1)
-  );
-} */
+
+#mc-pr.hide {
+  transform: translateY(100%);
+  transition: 0.3s linear all;
+}
+
+#mc-pr.show {
+  transform: translateY(0);
+  transition: 0.3s linear all;
+}
 
 #mc-home {
   width: 110px;
   height: 110px;
-  border-radius: 25px 25px 50% 50%;
+  border-radius: 50%;
   position: absolute;
   top: -40px;
   left: 50%;
@@ -41,39 +36,15 @@ li.ticker-spacer {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  /* background: linear-gradient(
-    to bottom,
-    var(--color-dark-1),
-    var(--color-dark-2),
-    var(--color-dark-3)
-  ); */
   background-color: var(--color-dark-2);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 0;
+  color: var(--color-light-1);
 }
-#mc-home:before {
-  content: "";
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  left: -75%;
-  top: 30px;
-  background-color: var(--color-dark-2);
-  border-radius: 40px 10px 0 0;
-  z-index: -1;
-}
-#mc-home:after {
-  content: "";
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  right: -75%;
-  top: 30px;
-  background-color: var(--color-dark-2);
-  border-radius: 0 40px 0 0;
-  z-index: -1;
+#mc-home.active {
+  color: var(--color-accent-1-light);
 }
 
 #mc-wr {
@@ -98,6 +69,44 @@ li.ticker-spacer {
   box-shadow: 0 0 2px 0 rgb(0, 0, 0, 0.1) inset;
   border-radius: 5px;
   overflow: hidden;
+}
+
+ul.mobile-app-menu {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 4px;
+}
+ul.mobile-app-menu li {
+  width: calc(100% / 5 - 4px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+ul.mobile-app-menu li a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+ul.mobile-app-menu li a i {
+  font-size: 1.3rem;
+  color: var(--transparent-light-6);
+}
+ul.mobile-app-menu li a:hover i {
+  color: var(--color-accent-1-light);
+}
+ul.mobile-app-menu li a span {
+  font-size: 13px;
+  color: var(--transparent-light-6);
 }
 
 /**

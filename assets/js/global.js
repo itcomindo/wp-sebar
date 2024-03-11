@@ -4,6 +4,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //jq start below
 
+
+
+
+
+
+
+
+
         //get screen width start
         function mmGetScreenWidth() {
             var $screenWidth = window.innerWidth;
@@ -11,8 +19,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         //get screen width end
 
-        //topbar dateTime start
+        //mobile app start
 
+        function mmMobileApp() {
+            if (mmGetScreenWidth() < 992) {
+                jQuery('#mc-home').on('click', function (e) {
+                    e.preventDefault();
+                    jQuery(this).toggleClass('active');
+                    jQuery('#mc-pr').toggleClass('show');
+                });
+            }
+        }
+        mmMobileApp();
+
+        //mobile app end
+
+
+
+
+
+
+
+        //topbar dateTime start
         function mmTopbarDateTime() {
             var mm_elem = jQuery('[data-element="tbtz"]');
             if (mm_elem.length) {
@@ -103,24 +131,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             function toggleHeaderMenu() {
                 var screenWidth = window.innerWidth;
+                console.log(screenWidth);
                 var mobMenuHeader = jQuery('#mobm');
                 if (screenWidth < 992) {
+
+                    jQuery('nav#header-menu-nav').addClass('hide');
+
+
                     if (!jQuery('.chm').length) {
                         var chm = '<span class="chm">X</span>';
                         jQuery('nav#header-menu-nav').prepend(chm);
-                        jQuery('nav#header-menu-nav').prepend(mobMenuHeader);
                     }
+
+                    //open
                     jQuery('.header-menu-trigger').on('click', function () {
-                        jQuery('nav#header-menu-nav').toggleClass('active');
+                        jQuery('nav#header-menu-nav').addClass('active');
                         jQuery('body').toggleClass('no-scroll');
+                        jQuery('nav#header-menu-nav').prepend(mobMenuHeader);
+                        mobMenuHeader.show();
                     });
+
+                    //close
                     jQuery('.chm').on('click', function () {
                         jQuery('nav#header-menu-nav').removeClass('active');
                         jQuery('body').removeClass('no-scroll');
+                        mobMenuHeader.hide();
                     });
                 } else {
-                    jQuery('.chm').remove();
-                    mobMenuHeader.remove();
+                    jQuery('.chm').hide();
+                    mobMenuHeader.hide();
+                    jQuery('nav#header-menu-nav').removeClass('hide');
                 }
             }
 

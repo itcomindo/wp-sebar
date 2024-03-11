@@ -7,44 +7,49 @@
 defined('ABSPATH') or die('No script kiddies please!');
 
 
-function mm_get_master_query($what = 'news-ticker', $post_perpage = 10)
+function mm_get_master_query($what = 'news-ticker')
 {
+    $post_type = 'post';
+    $posts_per_page = 5;
 
 
     if ($what == 'news-ticker') {
         $mq = [
             'post_type' => 'post',
-            'posts_per_page' => $post_perpage,
-            'ignore_sticky_posts' => 1,
+            'posts_per_page' => 5,
         ];
+        return $mq;
     } elseif ($what == 'hot-topic') {
         $sticky = get_option('sticky_posts');
         $mq = [
             'post_type' => 'post',
-            'posts_per_page' => $post_perpage,
+            'posts_per_page' => 10,
             'post__in' => $sticky,
+            'ignore_sticky_posts' => 1,
         ];
+        return $mq;
     } elseif ($what == 'headline') {
 
-        $mq = array(
+        $mm_args = array(
             'post_type' => 'post',
-            'posts_per_page' => $post_perpage,
+            'posts_per_page' => 7,
             'orderby' => 'date',
             'order' => 'DESC',
-            'ignore_sticky_posts' => 1
+            'ignore_sticky_posts' => true
         );
 
         if (is_tag()) {
-            $mq['tag__in'] = array(get_queried_object_id());
+            $mm_args['tag__in'] = array(get_queried_object_id());
         } elseif (is_category()) {
-            $mq['category__in'] = array(get_queried_object_id());
+            $mm_args['category__in'] = array(get_queried_object_id());
         } elseif (is_search()) {
-            $mq['s'] = get_search_query();
+            $mm_args['s'] = get_search_query();
         }
-    }
 
-    $master_query = new WP_Query($mq);
-    return $master_query;
+        $np_query = new WP_Query($mm_args);
+
+        return $np_query;
+    }
 }
 
 
