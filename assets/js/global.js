@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             });
 
             function toggleHeaderMenu() {
-                var screenWidth = window.innerWidth;
+                var screenWidth = mmGetScreenWidth();
                 console.log(screenWidth);
                 var mobMenuHeader = jQuery('#mobm');
                 if (screenWidth < 992) {
@@ -141,21 +141,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     if (!jQuery('.chm').length) {
                         var chm = '<span class="chm">X</span>';
                         jQuery('nav#header-menu-nav').prepend(chm);
+                        jQuery('nav#header-menu-nav').prepend(mobMenuHeader);
+                        mobMenuHeader.show();
                     }
 
                     //open
                     jQuery('.header-menu-trigger').on('click', function () {
                         jQuery('nav#header-menu-nav').addClass('active');
                         jQuery('body').toggleClass('no-scroll');
-                        jQuery('nav#header-menu-nav').prepend(mobMenuHeader);
-                        mobMenuHeader.show();
+
                     });
 
                     //close
                     jQuery('.chm').on('click', function () {
                         jQuery('nav#header-menu-nav').removeClass('active');
                         jQuery('body').removeClass('no-scroll');
-                        mobMenuHeader.hide();
                     });
                 } else {
                     jQuery('.chm').hide();
