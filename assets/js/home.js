@@ -34,16 +34,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //specialEventPost end
 
 
+
+
         //newsticker start
         function newsTicker() {
-            jQuery(".nt-list").webTicker({
-                // height: '75px',
-                duplicate: false,
-                rssfrequency: 0,
-                startEmpty: false,
-                hoverpause: true,
-                transition: "ease"
-            });
+
+            setTimeout(function () {
+                jQuery('#nt-right').removeClass('hide');
+                jQuery(".nt-list").webTicker({
+                    // height: '75px',
+                    duplicate: false,
+                    rssfrequency: 0,
+                    startEmpty: false,
+                    hoverpause: true,
+                    transition: "ease"
+                });
+            }, 700);
+
+
+
+
         }
         newsTicker();
         //newsticker end

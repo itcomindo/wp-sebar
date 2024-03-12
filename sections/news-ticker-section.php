@@ -16,7 +16,7 @@ $nt = mm_get_master_query('news-ticker');
     <div class="container h100">
         <div id="nt-wr" class="h100">
             <div id="nt-left" class="text-small">New News:</div>
-            <div id="nt-right">
+            <div id="nt-right" class="hide">
                 <ul class="list-no-style nt-list">
 
                     <?php

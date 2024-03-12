@@ -298,13 +298,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                         setTimeout(function () {
                             jQuery('#uc-wr').addClass('active');
-                        }, 2000);
+                        }, 800);
 
                         jQuery('.close-uc, #uc.active').on('click', function () {
                             jQuery('#uc').remove();
                             // jQuery('body').removeClass('no-scroll');
                         });
-                    }, 1000);
+                    }, 700);
 
                 }
             }
