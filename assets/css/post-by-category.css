@@ -69,6 +69,21 @@
   align-items: flex-start;
   border-bottom: 1px dashed var(--transparent-dark-1);
 }
+#pbc.s1 .pbcc.promotion {
+  border-radius: 5px;
+  border-bottom: none;
+}
+#pbc.s1 .pbcc.promotion:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: wheat;
+  opacity: 0.2;
+  border-radius: 5px;
+}
 
 .pbcc-post-date {
   position: relative;
@@ -86,6 +101,7 @@
   aspect-ratio: 16/9;
   border-radius: 5px;
   overflow: hidden;
+  height: 100%;
 }
 
 .pbc-head {

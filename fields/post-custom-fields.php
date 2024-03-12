@@ -25,8 +25,54 @@ function mm_post_custom_fields()
                     'gallery' => 'Photo Gallery',
                     'recipe' => 'Recipe',
                     'code' => 'Code Snippet',
+                    'promo' => 'Promotion',
                 ])
                 ->set_default_value('article'),
+
+
+            //select field (limit by view, limit by date) if the_post_type is promo
+            Field::make('select', 'promo_limit', 'Promotion Limit')
+                ->add_options([
+                    'view' => 'View Limit',
+                    'date' => 'Date Limit',
+                ])
+                ->set_conditional_logic([
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'promo',
+                    ],
+                ]),
+
+            //text field for promo limit value is date
+            Field::make('text', 'promo_view_limit', 'Disable Post if View Limit is reached')
+                ->set_default_value('1000')
+                ->set_conditional_logic([
+                    'relation' => 'AND',
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'promo',
+                    ],
+                    [
+                        'field' => 'promo_limit',
+                        'value' => 'view',
+                    ],
+                ]),
+
+
+
+            //date field for promo limit value is date
+            Field::make('date', 'promo_date_limit', 'Disable Post if Date Limit is reached')
+                ->set_conditional_logic([
+                    'relation' => 'AND',
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'promo',
+                    ],
+                    [
+                        'field' => 'promo_limit',
+                        'value' => 'date',
+                    ],
+                ]),
 
             //complex fields contain: text fields for video title, video url, image field for custom thumbnail, and text for duration
             Field::make('complex', 'post_videos', 'Video')
@@ -48,19 +94,23 @@ function mm_post_custom_fields()
                 <% } %>
             ')
                 ->set_conditional_logic([
+                    'relation' => 'OR',
                     [
                         'field' => 'the_post_type',
                         'value' => 'video',
+                    ],
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'promo',
                     ],
                 ]),
 
 
             //complex fields contain: text fields for gallery title, image field for custom thumbnail, and text for total images
             Field::make('complex', 'post_gallery', 'Photo Gallery')
-                ->set_help_text('Add your photo gallery here *required')
+                ->set_help_text('Add your photo gallery here')
                 ->set_layout('tabbed-horizontal')
                 ->set_classes('danger')
-                ->set_required(true)
                 ->add_fields([
                     // title
                     Field::make('text', 'photo_title', 'Photo Title')
@@ -74,14 +124,6 @@ function mm_post_custom_fields()
                     //textare photo_description
                     Field::make('rich_text', 'photo_description', 'Photo Description'),
 
-
-
-                ])
-                ->set_conditional_logic([
-                    [
-                        'field' => 'the_post_type',
-                        'value' => 'gallery',
-                    ],
                 ])
                 ->set_header_template('
                 <% if (photo_title) { %>
@@ -89,7 +131,18 @@ function mm_post_custom_fields()
                 <% } else { %>
                     Title
                 <% } %>
-            '),
+            ')
+                ->set_conditional_logic([
+                    'relation' => 'OR',
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'gallery',
+                    ],
+                    [
+                        'field' => 'the_post_type',
+                        'value' => 'promo',
+                    ],
+                ]),
 
 
 

@@ -71,17 +71,15 @@ function mm_get_pbc()
                 <div class="head text-smaller clip-90 color-accent-1-dark p-smallest"><?php echo esc_html($pbc_cat_name); ?></div>
                 <div class="pbcc-wr">
                     <?php
-                    $args = [
+                    $post_not_in = $post_ids = post_to_exclude_query();
+                    $pbcq = new WP_Query(array(
                         'cat' => $pbc_cat_id,
                         'posts_per_page' => $pbc_number_of_posts,
                         'post__not_in' => $post_not_in,
-                    ];
-                    $pbcq = new WP_Query($args);
-
+                    ));
                     if ($pbcq->have_posts()) {
                         while ($pbcq->have_posts()) {
                             $pbcq->the_post();
-                            $posts = $pbcq->posts;
                             $post_id = get_the_ID();
                             $title = mm_get_custom_post_title(8);
                             $permalink = get_the_permalink();
