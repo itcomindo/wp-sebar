@@ -86,10 +86,10 @@ if (carbon_get_theme_option('enable_fixed_bottom_ads')) {
 
 require_once get_template_directory() . '/inc/admin-shortcut-inc.php';
 if (carbon_get_theme_option('enable_floating_ads')) {
-    get_template_part('inc/ads/ads-floating-lr-inc');
+    get_template_part('ads/ads-floating-lr');
 }
 
-get_template_part('inc/ads/ads-fixed-bottom-inc');
+get_template_part('ads/ads-fixed-bottom');
 
 //if user not login
 if (!is_user_logged_in()) {

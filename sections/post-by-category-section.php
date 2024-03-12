@@ -12,11 +12,6 @@ defined('ABSPATH') or die('No script kiddies please!');
 <div id="pbc" class="s1 section medium">
     <div class="container">
 
-
-
-
-
-
         <div id="pbc-wr" class="has-sidebar">
 
             <div id="pbc-left" class="has-sidebar-left">
@@ -92,6 +87,10 @@ function mm_get_pbc()
                             $featured_image = mm_get_featured_image(get_the_ID());
                     ?>
                             <div class="pbcc">
+
+
+
+
                                 <?php echo $post_type; ?>
                                 <div class="pbcc-top">
                                     <!-- post view -->
@@ -105,6 +104,11 @@ function mm_get_pbc()
                                     </a>
                                 </div>
                                 <div class="pbcc-bot">
+
+                                    <!-- post date -->
+                                    <span class="post-date pbcc-post-date text-smallest"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['published-post'])); ?></span>
+
+                                    <!-- post title -->
                                     <h3 class="pbc-head head text-smaller">
                                         <a class="fw500" href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>">
                                             <?php echo esc_html($title); ?>

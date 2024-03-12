@@ -42,6 +42,11 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                                 }
                         ?>
                                 <li class="cpt-item hover-to-top">
+
+                                    <!-- category link -->
+                                    <a class="np-cat p28 catlink text-smallest z2" href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category"><?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?></a>
+
+
                                     <div class="cpt-item-top">
                                         <?php echo $duration; ?>
                                         <a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>">
@@ -52,6 +57,11 @@ function mm_get_custom_post_type_section($post_perpage = 10, $post_type = '')
                                     </div>
 
                                     <div class="cpt-item-bot">
+
+                                        <!-- post date -->
+                                        <span class="post-date pbcc-post-date text-smallest"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['published-post'])); ?></span>
+
+
                                         <h4 class="head text-small fw500">
                                             <a href="<?php echo esc_html($permalink); ?>" title="<?php echo esc_html($title); ?>">
                                                 <?php

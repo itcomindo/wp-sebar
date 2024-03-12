@@ -45,8 +45,15 @@ function mm_get_hot_topic_posts()
             $permalink = get_the_permalink();
 ?>
             <div class="ht-item borad-5 overflow-hidden">
+
+                <a class="mp-catlink text-smallest catlink p28" href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category">
+                    <?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>
+                </a>
+
+
                 <!-- ht item top -->
                 <div class="ht-item-top aspect-ratio-169 overflow-hidden">
+
                     <a class="fhw hw100" href="<?php echo $permalink; ?>" <?php echo $title; ?>>
                         <?php
                         echo mm_get_featured_image($post_id);
@@ -56,12 +63,20 @@ function mm_get_hot_topic_posts()
 
                 <!-- ht item bot -->
                 <div class="ht-item-bot">
+
+                    <!-- post date -->
+                    <span class="post-date mp-post-date text-smallest p28"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['published-post'])); ?></span>
+
+
                     <h3 class="head text-small fw500">
                         <a href="<?php echo $permalink; ?>" title="<?php echo $title; ?>">
                             <?php echo $title; ?>
                         </a>
                     </h3>
                 </div>
+
+                <!-- post views -->
+                <span class="post-views text-smallest p28 z2"><?php echo mm_get_post_meta_inc($post_id)['post-views']; ?></span>
             </div>
         <?php
         }

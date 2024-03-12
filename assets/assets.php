@@ -74,6 +74,9 @@ function mm_load_assets()
     //header.css
     wp_enqueue_style('mm-header-css', get_template_directory_uri() . '/assets/css/header.css', array('mm-global-style'), $theme_version, 'all');
 
+    //special-event.css
+    wp_enqueue_style('mm-special-event-css', get_template_directory_uri() . '/assets/css/special-event.css', array('mm-global-style'), $theme_version, 'all');
+
     //header-menu.css
     wp_enqueue_style('mm-header-menu-css', get_template_directory_uri() . '/assets/css/header-menu.css', array('mm-global-style'), $theme_version, 'all');
 

@@ -27,6 +27,10 @@ ul.mp-list li.mp-item {
   border: 1px solid var(--transparent-dark-1);
 }
 
+.mp-post-date {
+  margin: 0 auto;
+}
+
 .mp-item-top {
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -47,7 +51,8 @@ a.mp-catlink {
   left: 8px;
   z-index: 2;
   color: var(--color-light-1);
-  background-color: var(--transparent-dark-6);
+  /* background-color: var(--transparent-dark-6); */
+  background-color: var(--color-accent-1-dark);
 }
 
 .mp-item-top a.fim-wr {

@@ -11,14 +11,14 @@ if (is_category()) {
 } elseif (is_tag()) {
     $page_title = single_tag_title('', false);
 } else {
-    $page_title = 'Berita Terbaru';
+    $page_title = 'Headline News';
 }
 
 ?>
-<div id="np-pr" class="section small">
+<div id="np-pr" class="section medium">
     <div class="container">
         <div id="np-head-wr">
-            <h2 class="head smaller">
+            <h2 class="head smallest">
                 <?php echo esc_html($page_title); ?>
             </h2>
         </div>

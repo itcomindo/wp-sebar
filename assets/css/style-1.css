@@ -18,8 +18,10 @@
   --color-accent-1-dark: #6b0000;
   --color-accent-2: #006c00;
   --color-accent-2-dark: #004c00;
-  --color-accent-3: #0000b4;
-  --color-accent-3-dark: #00006b;
+  --color-accent-3-light: #019493;
+  --color-accent-3: #01807f;
+  --color-accent-3-dark: #016c6b;
+  --color-accent-3-darker: #015a5a;
   --color-accent-4: #b4b400;
   --color-accent-4-dark: #7f7f00;
   --font-primary: "Open Sans", sans-serif;

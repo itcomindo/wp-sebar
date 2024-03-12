@@ -85,6 +85,7 @@ require_once get_template_directory() . '/assets/images/images.php';
 require_once get_template_directory() . '/widgets/widgets.php';
 require_once get_template_directory() . '/sidebars/sidebars.php';
 require_once get_template_directory() . '/fields/fields.php';
+require_once get_template_directory() . '/ads/ads.php';
 
 
 // experimental 1 start

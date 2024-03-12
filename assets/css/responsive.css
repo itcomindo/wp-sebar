@@ -278,6 +278,13 @@
   .ht-item-wr {
     grid-template-columns: repeat(4, 1fr);
   }
+  .sep-item-wr {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .sep-item:first-child {
+    grid-column: 1 / span 4;
+  }
 }
 
 /**
@@ -403,6 +410,16 @@
   }
   .ht-item-wr {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .sep-item-wr {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 8px;
+  }
+  .sep-item:first-child {
+    grid-column: 1 / span 2;
+  }
+  .sep-item-bot {
+    padding: 2rem 1rem;
   }
 }
 

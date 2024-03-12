@@ -17,6 +17,18 @@ function home_options()
             ->set_classes('mm-sep'),
 
 
+        //checkbox to enable special_eve_post
+        Field::make('checkbox', 'enable_special_event_post', 'Enable Special Event Post')
+            ->set_option_value('yes')
+            ->set_default_value(false)
+            ->set_help_text('Enable special event post section akan menampilkan post yang memiliki tag khusus max 5 post per section tapi sudah disertai link view more'),
+
+        //tag id for special event post
+        Field::make('text', 'special_event_post_id', 'Special Event Post ID')
+            ->set_attribute('type', 'number')
+            ->set_help_text('Tag ID for special event post ketik hanya angka saja'),
+
+
         Field::make('checkbox', 'enable_most_view_post', 'Enable Most View Post')
             ->set_option_value('yes')
             ->set_default_value(false),

@@ -3,7 +3,7 @@
 * Theme Name: 	WP Sebar
 * Theme URI: 	https://budiharyono.id/
 * Description: 	Sebar is a simple and clean WordPress theme for personal blog
-* Version: 		2.0.2
+* Version: 		2.0.2.1
 * Author: 		Budi Haryono
 * Author URI: 	https://budiharyono.id/
 * License: 		GPL-2.0+
@@ -1004,6 +1004,14 @@ a.btn.email-bg:before {
 * @todo Z-Index
 *=========================
 */
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
 .z-index-10 {
   z-index: 10;
 }

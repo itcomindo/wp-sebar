@@ -77,6 +77,11 @@ function mm_get_most_post_view_posts()
 
                 </div>
                 <div class="mp-item-bot">
+
+                    <!-- post date -->
+                    <span class="post-date mp-post-date text-smallest p28"><?php echo esc_html(esc_html(mm_get_post_meta_inc($post_id)['published-post'])); ?></span>
+
+
                     <h3 class="head text-small text-center fw500">
                         <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo mm_get_custom_post_title(9); ?></a>
                     </h3>

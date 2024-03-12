@@ -2,9 +2,39 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     jQuery(function () {
 
+        //get all body classes start
+        // function mmGetBodyClasses() {
+        //     var bodyClasses = jQuery('body').attr('class');
+        //     if (bodyClasses.includes('single')) {
+        //         return true;
+        //     }
+        // }
+        //get all body classes end
+
+
+        //specialEventPost start
+        function specialEventPost() {
+            jQuery('#close-sep').on('click', function () {
+                jQuery('#sep').removeClass('high');
+                jQuery('#sep-wr').slideToggle();
+                jQuery(this).addClass('hide');
+                jQuery('#open-sep').removeClass('hide').addClass('active');
+            });
+
+            jQuery('#open-sep').on('click', function () {
+                jQuery('#sep').addClass('high');
+                jQuery('#sep-wr').slideToggle();
+                jQuery(this).addClass('hide');
+                jQuery('#close-sep').removeClass('hide');
+            });
+
+
+        }
+        specialEventPost();
+        //specialEventPost end
+
 
         //newsticker start
-
         function newsTicker() {
             jQuery(".nt-list").webTicker({
                 // height: '75px',
@@ -16,8 +46,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             });
         }
         newsTicker();
-
-
         //newsticker end
 
 

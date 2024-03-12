@@ -76,7 +76,7 @@ li.cpt-item .cpt-item-top img {
 
 .cpt-duration {
   right: 8px;
-  top: 8px;
+  bottom: 8px;
   background-color: var(--transparent-dark-5);
   color: var(--color-light-1);
 }

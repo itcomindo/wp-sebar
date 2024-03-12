@@ -36,9 +36,16 @@ defined('ABSPATH') || exit;
         if ($news_ticker == true) {
             get_template_part('sections/news-ticker-section');
         }
+
+        $show_special_event = carbon_get_theme_option('enable_special_event_post');
+        if ($show_special_event) {
+            get_template_part('sections/special-event-post-section');
+        }
     }
 
-    get_template_part('inc/ads/ads-after-header-menu-inc');
+
+
+    get_template_part('ads/ads-after-header-menu');
     wp_body_open();
     ?>
 
