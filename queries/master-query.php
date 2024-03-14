@@ -26,7 +26,8 @@ function mm_get_master_query($what = 'news-ticker', $post_perpage = 10, $ignore_
         $mq = [
             'post_type' => $post_type,
             'posts_per_page' => $post_perpage,
-            'post__in' => $sticky
+            'post__in' => $sticky,
+            'ignore_sticky_posts' => $ignore_sticky
         ];
     } elseif ($what == 'headline') {
 

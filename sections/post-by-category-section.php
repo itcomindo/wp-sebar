@@ -62,20 +62,25 @@ function mm_get_pbc()
     $pbcs = carbon_get_theme_option('pbc');
     if ($pbcs) {
         foreach ($pbcs as $pbc) {
-            $pbc_cat_id = $pbc['pbc_id'];
+            // $pbc_cat_id = $pbc['pbc_id'];
+            // $pbc_cat_name = get_cat_name($pbc_cat_id);
             $pbc_number_of_posts = $pbc['pbc_num'];
-            $pbc_cat_name = get_cat_name($pbc_cat_id);
-            $pbc_cat_url = get_category_link($pbc_cat_id);
+
+            $pbc_cat_name = $pbc['pbc_name'];
+            $the_cat = get_term_by('name', $pbc['pbc_name'], 'category');
+            $pbc_cat_url = $the_cat->slug . '/';
 ?>
             <div class="pbcc-pr">
                 <div class="head text-smaller clip-90 color-accent-1-dark p-smallest"><?php echo esc_html($pbc_cat_name); ?></div>
                 <div class="pbcc-wr">
                     <?php
                     $args = [
-                        'cat' => $pbc_cat_id,
+                        'cat' => $the_cat->term_id,
                         'posts_per_page' => $pbc_number_of_posts,
-                        'post__not_in' => $post_not_in,
+                        'post_type' => 'post',
                     ];
+
+
                     $pbcq = new WP_Query($args);
 
                     if ($pbcq->have_posts()) {

@@ -36,15 +36,25 @@ defined('ABSPATH') or die('No script kiddies please!');
 function mm_get_hot_topic_posts()
 {
     // $htq = new WP_Query($ht);
-    $htq = mm_get_master_query('hot-topic');
+    $htq = mm_get_master_query('hot-topic', 10, 1, 'post');
     if ($htq->have_posts()) {
         while ($htq->have_posts()) {
             $htq->the_post();
             $post_id = get_the_ID();
             $title = mm_get_custom_post_title(9);
             $permalink = get_the_permalink();
+
+            $post_type = mm_get_post_type($post_id);
+
+            if (carbon_get_post_meta($post_id, 'the_post_type') == 'promo') {
+                $promotion = 'promotion';
+                $promo_date_limit = carbon_get_post_meta($post_id, 'promo_date_limit');
+            } else {
+                $promotion = '';
+            }
 ?>
-            <div class="ht-item borad-5 overflow-hidden">
+            <div class="ht-item borad-5 overflow-hidden <?php echo $promotion; ?>">
+
 
                 <a class="mp-catlink text-smallest catlink p28" href="<?php echo mm_get_post_meta_inc($post_id)['category-link']; ?>" title="<?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>" rel="category">
                     <?php echo esc_html(mm_get_post_meta_inc($post_id)['category-name']); ?>

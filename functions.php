@@ -129,6 +129,31 @@ function mm_apply_custom_css()
 
 
 //experimental 2 start
+
+function mm_add_promo_date_column($columns)
+{
+    $columns['promo_date'] = 'Tanggal Akhir';
+    $columns['post_type'] = 'Tipe Post'; // Menambahkan kolom baru untuk tipe post
+    $columns['promo_limit_by'] = 'Promo Limit By'; // Menambahkan kolom baru untuk tipe post
+    return $columns;
+}
+// add_filter('manage_posts_columns', 'mm_add_promo_date_column');
+
+function mm_show_promo_date_column_content($column, $post_id)
+{
+    if ('promo_date' === $column) {
+        $promo_date = carbon_get_post_meta($post_id, 'promo_date_limit');
+        echo $promo_date ? $promo_date : 'N/A';
+    } elseif ('post_type' === $column) { // Menampilkan tipe post dalam kolom baru
+        $post_type = carbon_get_post_meta($post_id, 'the_post_type');
+        echo $post_type ? $post_type : 'N/A';
+    } elseif ('promo_limit_by' === $column) { // Menampilkan tipe post dalam kolom baru
+        $promo_limit_by = carbon_get_post_meta($post_id, 'promo_limit');
+        echo $promo_limit_by ? $promo_limit_by : 'N/A';
+    }
+}
+// add_action('manage_posts_custom_column', 'mm_show_promo_date_column_content', 10, 2);
+
 // experimental 2 end
 
 //experimental 3 start

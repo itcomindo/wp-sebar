@@ -93,10 +93,7 @@ ul.nt-list li:before {
   border-radius: 50%;
 }
 ul.nt-list li a {
-  /* color: var(--color-dark-1); */
-  /* color: var(--color-light-1); */
   color: var(--color-accent-4);
   font-weight: normal;
-  /* border-bottom: 1px dashed var(--transparent-light-3); */
-  /* z-index: 2; */
+  z-index: 1;
 }

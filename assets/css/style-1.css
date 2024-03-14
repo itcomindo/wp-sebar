@@ -6,7 +6,8 @@
   --color-background-primary: aliceblue;
   --color-text-primary: #333;
   --color-light-1: #ffffff;
-  --color-light-2: #008080;
+  /* --color-light-2: #008080; */
+  --color-light-2: #f5f5f5;
   --color-light-3: #6e6a86;
   --color-light-4: #bc7868;
   --color-light-5: #f4f4f4;
@@ -30,7 +31,8 @@
 }
 
 body {
-  background-color: var(--color-background-primary);
+  /* background-color: var(--color-background-primary); */
+  background-color: var(--color-light-1);
   color: var(--color-text-primary);
 }
 

@@ -5,7 +5,8 @@
 *=========================
 */
 #mp {
-  background-color: var(--color-background-primary);
+  /* background-color: var(--color-background-primary); */
+  background-color: var(--color-light-2);
 }
 
 ul.mp-list {

@@ -16,6 +16,13 @@
   font-size: 12px;
   color: white;
   margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.mm-sep.child em {
+  color: white;
+  font-size: 11px;
+  margin: 0;
 }
 
 .danger .cf-field__help {
