@@ -663,6 +663,49 @@ ul.vertical-menu li a {
 *=========================
 */
 
+.h40 {
+  height: 40px;
+}
+
+.h60 {
+  height: 60px;
+}
+
+.h80 {
+  height: 80px;
+}
+
+.h100px {
+  height: 100px;
+}
+
+.h120 {
+  height: 120px;
+}
+.h100 {
+  height: 100%;
+}
+
+.minh40 {
+  min-height: 40px;
+}
+
+.minh60 {
+  min-height: 60px;
+}
+
+.minh80 {
+  min-height: 80px;
+}
+
+.minh100 {
+  min-height: 100px;
+}
+
+.minh120 {
+  min-height: 120px;
+}
+
 img.hw100 {
   height: 100%;
   width: 100%;
@@ -678,9 +721,7 @@ a.hw100 {
 .hauto {
   height: auto;
 }
-.h100 {
-  height: 100%;
-}
+
 .lw75-mw100 {
   display: block;
   max-width: 75%;

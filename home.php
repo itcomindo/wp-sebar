@@ -18,11 +18,14 @@ get_template_part('sections/headline-section');
 
 get_template_part('sections/hot-topic-section');
 
+mm_get_ads_full_section_1();
+
+
 get_template_part('sections/post-by-category-section');
 
 mm_get_custom_post_type_section($post_perpage = 5, $post_type = 'video');
 mm_get_custom_post_type_section($post_perpage = 5, $post_type = 'gallery');
 
-get_template_part('ads/ads-full-section');
+
 
 get_footer();
